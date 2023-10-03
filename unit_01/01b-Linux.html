@@ -490,7 +490,7 @@ document.write(`
 <h2>Trying Linux<a class="headerlink" href="#trying-linux" title="Permalink to this headline">#</a></h2>
 <p>There are many ways to try Linux and form an opionion yourself.</p>
 <ul class="simple">
-<li><p><strong>At the University of Innsbruck</strong>: In order to use Linux in the computer room you have to register for an account <a class="reference external" href="http://orawww.uibk.ac.at/public_prod/owa/uvw$web$10.p001">here</a>. After an hour or so you will be able to connect to any computer using your username and password. The Linux distribution used at the university is <a class="reference external" href="https://www.centos.org/">CentOS</a>. If you are a student of another university, it is likely that you have access to Linux environments, too.</p></li>
+<li><p><strong>At the University of Innsbruck</strong>: In order to use Linux in the computer room you have to register for an account <a class="reference external" href="http://orawww.uibk.ac.at/public_prod/owa/uvw$web$10.p001">here</a>. After an hour or so you will be able to connect to any computer using your username and password. The Linux distribution used at the university is <a class="reference external" href="https://www.rockylinux.org/">Rocky Linux</a>. If you are a student of another university, it is likely that you have access to Linux environments, too.</p></li>
 <li><p><strong>On your laptop with Windows 10, with <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windows Subsystem for Linux</a></strong>: if you want to stay on Windows while still enjoying the powerful Linux command line. It can be a bit confusing (this is <em>Linux</em> working <em>within</em> Windows) - for a feel of the linux command line without much hassle you might as well install and run <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">bash</span></code> (see below).</p></li>
 <li><p><strong>On your laptop, with a live USB</strong>: this is the <a class="reference external" href="https://tutorials.ubuntu.com/tutorial/try-ubuntu-before-you-install">best way to try it at no risk</a> and get a feeling for the general usage of a linux distribution. This is not permanent though.</p></li>
 <li><p><strong>On your laptop, in a virtual machine</strong>: This is a relatively easy and non-destructive way to try Linux. There are tons of tutorials online, <a class="reference external" href="https://helpdeskgeek.com/linux-tips/how-to-install-ubuntu-in-virtualbox/">this one</a> seems OK. The problem with virtual machines is that they need a lot of resources (about double) to run both OS at the same time.</p></li>
@@ -529,7 +529,7 @@ document.write(`
 </ul>
 <div class="dropdown tip admonition">
 <p class="admonition-title">Open a terminal window on MyBinder</p>
-<img alt="lauch-gif" src="img/lauch_terminal.gif" />
+<img alt="lauch-gif" src="../_images/lauch_terminal.gif" />
 </div>
 <p>Open the terminal window. A terminal line starts with a <code class="docutils literal notranslate"><span class="pre">$</span></code> prompt, waiting for you to start entering commands. The command line has a very important role in linux (as compared to windows where nobody uses it), since many tasks can be done much more efficiently with simple commands.</p>
 <p><em>Copyright notice: the rest of this section was largely inspired from the first parts of Michael Stonebank’s <a class="reference external" href="http://www.ee.surrey.ac.uk/Teaching/Unix/index.html">UNIX tutorial</a></em></p>
@@ -555,7 +555,7 @@ document.write(`
 <section id="the-directory-structure">
 <h3>The directory structure<a class="headerlink" href="#the-directory-structure" title="Permalink to this headline">#</a></h3>
 <p>All the files are grouped together in the directory structure. The file-system is arranged in a hierarchical structure, like an inverted tree. The top of the hierarchy is traditionally called root (written as a slash <code class="docutils literal notranslate"><span class="pre">/</span></code> )</p>
-<img alt="unix-tree" src="img/unix-tree.png" />
+<img alt="unix-tree" src="../_images/unix-tree.png" />
 <p>When loging in we are automatically located in our personal <code class="docutils literal notranslate"><span class="pre">home</span></code> directory, which is aptly named because:</p>
 <ul class="simple">
 <li><p>we won’t need to leave <code class="docutils literal notranslate"><span class="pre">home</span></code> during our exercises</p></li>
@@ -807,7 +807,7 @@ $ ls
 <p>In your <code class="docutils literal notranslate"><span class="pre">unixstuff</span></code> directory, create a new file name <code class="docutils literal notranslate"><span class="pre">myscript.sh</span></code>. You can do this using the default (graphical) text editor in MyBinder.</p>
 <div class="dropdown tip admonition">
 <p class="admonition-title">Open a new text file on MyBinder</p>
-<img alt="img/open_editor.gif" src="img/open_editor.gif" />
+<img alt="../_images/open_editor.gif" src="../_images/open_editor.gif" />
 </div>
 <p>Just type one simple line in the file:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>echo Hello World!
