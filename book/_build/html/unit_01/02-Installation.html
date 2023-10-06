@@ -178,6 +178,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="03-Getting-Started.html">Getting started with Python</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Assignment-01.html">Assignment #01</a></li>
 </ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 02 - Python language fundamentals</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_02/01-install-packages.html">Installing python packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_02/02-ipython-spyder.html">Scientific development environment: ipython and spyder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_02/03-Language-Fundamentals.html">Language fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_02/Assignment-02.html">Assignment #02</a></li>
+</ul>
 
     </div>
 </nav></div>
@@ -460,7 +467,7 @@ document.write(`
 <section id="on-windows">
 <h3>On Windows<a class="headerlink" href="#on-windows" title="Permalink to this headline">#</a></h3>
 <p>Go to the miniforge download website: <a class="github reference external" href="https://github.com/conda-forge/miniforge#mambaforge">conda-forge/miniforge</a></p>
-<p>Download the <strong>Mambaforge</strong> installers for Windows.
+<p>Download the <strong>Miniforge</strong> installers for Windows.
 Unless you have an uncommon architecture (unlikely), you should choose the <code class="docutils literal notranslate"><span class="pre">x86_64</span></code> files.</p>
 <p><a class="reference internal" href="../_images/download_options.png"><img alt="../_images/download_options.png" src="../_images/download_options.png" style="width: 400px;" /></a> <br></p>
 <p>Double-click the <code class="docutils literal notranslate"><span class="pre">.exe</span></code> file.</p>
@@ -471,13 +478,13 @@ Unless you have an uncommon architecture (unlikely), you should choose the <code
 <section id="on-mac-os-and-linux">
 <h3>On Mac OS and Linux<a class="headerlink" href="#on-mac-os-and-linux" title="Permalink to this headline">#</a></h3>
 <p>For these platforms, no need to download the files yourself. Open a terminal and do:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>curl -L -O &quot;https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh&quot;
-bash Mambaforge-$(uname)-$(uname -m).sh
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>curl -L -O &quot;https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh&quot;
+bash Miniforge3-$(uname)-$(uname -m).sh
 </pre></div>
 </div>
 <p>or, if this doesn’t work:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>wget &quot;https://github.com/conda-forge/miniforge/releases/latest/download/Mambaforge-$(uname)-$(uname -m).sh&quot;
-bash Mambaforge-$(uname)-$(uname -m).sh
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>wget &quot;https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh&quot;
+bash Miniforge3-$(uname)-$(uname -m).sh
 </pre></div>
 </div>
 <p>The first command downloads the tool, and the second installs it. Follow the prompts on the installer screens.</p>
