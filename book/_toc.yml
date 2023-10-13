@@ -28,3 +28,8 @@ parts:
     - file: unit_02/02-ipython-spyder
     - file: unit_02/03-Language-Fundamentals
     - file: unit_02/Assignment-02
+  - caption: Unit 03 - Variables scopes, modules, and strings
+    chapters:
+    - file: unit_03/01-Import-Scopes
+    - file: unit_03/02-Strings-Paths
+    - file: unit_03/Assignment-03
