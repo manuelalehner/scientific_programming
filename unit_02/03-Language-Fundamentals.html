@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Language fundamentals &#8212; Scientific Programming</title>
   
@@ -45,6 +45,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Assignment #02" href="Assignment-02.html" />
     <link rel="prev" title="Scientific development environment: ipython and spyder" href="02-ipython-spyder.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -197,6 +198,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../unit_04/02-Tips-and-Tricks.html">Tips and tricks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../unit_04/03-Python-and-ChatGPT.html">Coding and ChatGPT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../unit_04/Assignment-04.html">Assignment #04</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 05 - Floating point arithmetics, Numpy basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_05/01-Why-Numpy.html">Introduction to numpy: why does numpy exist?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_05/02-Numbers.html">Number representation in computers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_05/Assignment-05.html">Assignment #05</a></li>
 </ul>
 
     </div>
@@ -480,10 +487,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="language-fundamentals">
-<h1>Language fundamentals<a class="headerlink" href="#language-fundamentals" title="Permalink to this headline">#</a></h1>
+<h1>Language fundamentals<a class="headerlink" href="#language-fundamentals" title="Permalink to this heading">#</a></h1>
 <p>This chapter will start with a short tutorial to familiarize you with the Python language. You will quickly see the similarities with the programming language you learned in your bachelors. Remember, our goal here is to formalize and name the programming constructs (<strong>semantics</strong>). As we discussed last week, using clear semantics is crucial to understand software documentation and to “ask questions the right way” in search engines.</p>
 <section id="an-entry-level-tutorial">
-<h2>An entry level tutorial<a class="headerlink" href="#an-entry-level-tutorial" title="Permalink to this headline">#</a></h2>
+<h2>An entry level tutorial<a class="headerlink" href="#an-entry-level-tutorial" title="Permalink to this heading">#</a></h2>
 <p>Let’s start by following a simple tutorial together.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
@@ -491,7 +498,7 @@ document.write(`
 </div>
 <p><strong>Copyright notice</strong>: many of these examples and explanations are copy-pasted from the <a class="reference external" href="https://docs.python.org/3/tutorial/">official python tutorial</a>.</p>
 <section id="python-as-a-calculator">
-<h3>Python as a Calculator<a class="headerlink" href="#python-as-a-calculator" title="Permalink to this headline">#</a></h3>
+<h3>Python as a Calculator<a class="headerlink" href="#python-as-a-calculator" title="Permalink to this heading">#</a></h3>
 <p>The interpreter acts as a simple calculator: you can type an expression and it will write the value. Expression syntax is straightforward: the operators <code class="docutils literal notranslate"><span class="pre">+</span></code>, <code class="docutils literal notranslate"><span class="pre">-</span></code>, <code class="docutils literal notranslate"><span class="pre">*</span></code> and <code class="docutils literal notranslate"><span class="pre">/</span></code> work just like in most other languages:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -634,7 +641,7 @@ document.write(`
 <p><code class="docutils literal notranslate"><span class="pre">_</span></code> should be treated as a read-only variable, to use in the interpreter only.</p>
 </section>
 <section id="strings">
-<h3>Strings<a class="headerlink" href="#strings" title="Permalink to this headline">#</a></h3>
+<h3>Strings<a class="headerlink" href="#strings" title="Permalink to this heading">#</a></h3>
 <p>Besides numbers, Python can also manipulate strings, which can be expressed in several ways. They can be enclosed in single quotes (<code class="docutils literal notranslate"><span class="pre">'...'</span></code>) or double quotes (<code class="docutils literal notranslate"><span class="pre">&quot;...&quot;</span></code>) with the same result:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -878,12 +885,12 @@ ame
 </section>
 </section>
 <section id="basic-data-types">
-<h2>Basic data types<a class="headerlink" href="#basic-data-types" title="Permalink to this headline">#</a></h2>
+<h2>Basic data types<a class="headerlink" href="#basic-data-types" title="Permalink to this heading">#</a></h2>
 <p>Now that you are more familiar with the basics, let’s start to name things “the right way”. For example: an informal way to describe a programming language is to say that it “does things with stuff”.</p>
 <p>These “stuff” are formally called “objects” in python. We will define objects more precisely towards the end of the course, but for now remember one important thing: <strong>in python, everything is an object</strong>. Yes, everything.</p>
 <p>Python objects have a <strong>type</strong> (synonym: <a class="reference external" href="https://en.wikipedia.org/wiki/Data_type">data type</a>). In the previous tutorial, you used exclusively <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html">built-in</a> types. <strong>Built-in data types</strong> are directly available in the interpreter, as opposed to other data types which may be obtained either by importing them (e.g. <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">collections</span> <span class="pre">import</span> <span class="pre">OrderedDict</span></code>) or by creating new data types yourselves.</p>
 <section id="asking-for-the-type-of-an-object">
-<h3>Asking for the type of an object<a class="headerlink" href="#asking-for-the-type-of-an-object" title="Permalink to this headline">#</a></h3>
+<h3>Asking for the type of an object<a class="headerlink" href="#asking-for-the-type-of-an-object" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">type</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
@@ -918,11 +925,11 @@ ame
 </div>
 </section>
 <section id="numeric-types">
-<h3>Numeric types<a class="headerlink" href="#numeric-types" title="Permalink to this headline">#</a></h3>
+<h3>Numeric types<a class="headerlink" href="#numeric-types" title="Permalink to this heading">#</a></h3>
 <p>There are three distinct numeric types: <strong>integers</strong> (<code class="docutils literal notranslate"><span class="pre">int</span></code>), <strong>floating point numbers</strong> (<code class="docutils literal notranslate"><span class="pre">float</span></code>), and <strong>complex numbers</strong> (<code class="docutils literal notranslate"><span class="pre">complex</span></code>). We will talk about these in more detail in the numerics chapter.</p>
 </section>
 <section id="booleans">
-<h3>Booleans<a class="headerlink" href="#booleans" title="Permalink to this headline">#</a></h3>
+<h3>Booleans<a class="headerlink" href="#booleans" title="Permalink to this heading">#</a></h3>
 <p>There is a built-in boolean data type (<code class="docutils literal notranslate"><span class="pre">bool</span></code>) useful to test for truth value. Examples:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -986,7 +993,7 @@ ame
 <p>Refer to the <a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#truth-value-testing">docs</a> for an exhaustive list of boolean operations and comparison operators.</p>
 </section>
 <section id="text">
-<h3>Text<a class="headerlink" href="#text" title="Permalink to this headline">#</a></h3>
+<h3>Text<a class="headerlink" href="#text" title="Permalink to this heading">#</a></h3>
 <p>In python (and many other languages) text sequences are named <strong>strings</strong> (<code class="docutils literal notranslate"><span class="pre">str</span></code>), which can be of any length:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1068,7 +1075,7 @@ g &lt;class &#39;str&#39;&gt;
 </div>
 </section>
 <section id="sequence-types-list-tuple-range">
-<h3>Sequence types - list, tuple, range<a class="headerlink" href="#sequence-types-list-tuple-range" title="Permalink to this headline">#</a></h3>
+<h3>Sequence types - list, tuple, range<a class="headerlink" href="#sequence-types-list-tuple-range" title="Permalink to this heading">#</a></h3>
 <p>Python knows a number of sequence data types, used to group together other values. The most versatile is the list, which can be written as a list of comma-separated values (items) between square brackets. Lists might contain items of different types, but usually the items all have the same type.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1393,7 +1400,7 @@ g &lt;class &#39;str&#39;&gt;
 <p>It is their immutability which makes tuples useful, but for beginners this is not really obvious at the first sight. We will get back to tuples later in the lecture.</p>
 </section>
 <section id="sets">
-<h3>Sets<a class="headerlink" href="#sets" title="Permalink to this headline">#</a></h3>
+<h3>Sets<a class="headerlink" href="#sets" title="Permalink to this heading">#</a></h3>
 <p>Sets are an unordered collection of <strong>distinct</strong> objects:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1425,7 +1432,7 @@ g &lt;class &#39;str&#39;&gt;
 <p>Sets are useful for operations such as intersection, union, difference, and symmetric difference between sequences. You won’t see much use for them in this semester, but remember that they exist.</p>
 </section>
 <section id="mapping-types-dictionaries">
-<h3>Mapping types - dictionaries<a class="headerlink" href="#mapping-types-dictionaries" title="Permalink to this headline">#</a></h3>
+<h3>Mapping types - dictionaries<a class="headerlink" href="#mapping-types-dictionaries" title="Permalink to this heading">#</a></h3>
 <p>A <strong>mapping object</strong> maps values (<strong>keys</strong>) to arbitrary objects (<strong>values</strong>): the most frequently used mapping object is called a <strong>dictionary</strong>. It is a collection of (key, value) pairs:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1521,7 +1528,7 @@ g &lt;class &#39;str&#39;&gt;
 </div>
 </section>
 <section id="semantics-parenthesis-literals">
-<h3>Semantics parenthesis: “literals”<a class="headerlink" href="#semantics-parenthesis-literals" title="Permalink to this headline">#</a></h3>
+<h3>Semantics parenthesis: “literals”<a class="headerlink" href="#semantics-parenthesis-literals" title="Permalink to this heading">#</a></h3>
 <p><strong>Literals</strong> are the fixed values of a programming language (“notations”). Some of them are pretty universal, like numbers or strings (<code class="docutils literal notranslate"><span class="pre">9</span></code>, <code class="docutils literal notranslate"><span class="pre">3.14</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;Hi!&quot;</span></code>, all literals) some are more language specific and belong to the language’s syntax. Curly brackets <code class="docutils literal notranslate"><span class="pre">{}</span></code> for example are the literal representation of a <code class="docutils literal notranslate"><span class="pre">dict</span></code>. The literal syntax has been added for convenience only:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1541,9 +1548,9 @@ g &lt;class &#39;str&#39;&gt;
 </section>
 </section>
 <section id="control-flow">
-<h2>Control flow<a class="headerlink" href="#control-flow" title="Permalink to this headline">#</a></h2>
+<h2>Control flow<a class="headerlink" href="#control-flow" title="Permalink to this heading">#</a></h2>
 <section id="first-steps-towards-programming">
-<h3>First steps towards programming<a class="headerlink" href="#first-steps-towards-programming" title="Permalink to this headline">#</a></h3>
+<h3>First steps towards programming<a class="headerlink" href="#first-steps-towards-programming" title="Permalink to this heading">#</a></h3>
 <p>Of course, we can use Python for more complicated tasks than adding two and two together. For instance, we can write an initial sub-sequence of the <a class="reference external" href="https://en.wikipedia.org/wiki/Fibonacci_number">Fibonacci series</a> as follows:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1606,7 +1613,7 @@ g &lt;class &#39;str&#39;&gt;
 </div>
 </section>
 <section id="the-if-statement">
-<h3>The <code class="docutils literal notranslate"><span class="pre">if</span></code> statement<a class="headerlink" href="#the-if-statement" title="Permalink to this headline">#</a></h3>
+<h3>The <code class="docutils literal notranslate"><span class="pre">if</span></code> statement<a class="headerlink" href="#the-if-statement" title="Permalink to this heading">#</a></h3>
 <p>Perhaps the most well-known statement type is the if statement:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1632,7 +1639,7 @@ g &lt;class &#39;str&#39;&gt;
 <p>There can be zero or more <code class="docutils literal notranslate"><span class="pre">elif</span></code> parts, and the <code class="docutils literal notranslate"><span class="pre">else</span></code> part is optional. The keyword <code class="docutils literal notranslate"><span class="pre">elif</span></code> is short for “else if”, and is useful to avoid excessive indentation.</p>
 </section>
 <section id="the-for-statement">
-<h3>The <code class="docutils literal notranslate"><span class="pre">for</span></code> statement<a class="headerlink" href="#the-for-statement" title="Permalink to this headline">#</a></h3>
+<h3>The <code class="docutils literal notranslate"><span class="pre">for</span></code> statement<a class="headerlink" href="#the-for-statement" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">for</span></code> loops in python can be quite different than in other languages: <strong>in python, one iterates over sequences, not indexes</strong>. This is a feature I very much like for its readability:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1710,7 +1717,7 @@ pythonic
 </div>
 </section>
 <section id="the-break-and-continue-statements">
-<h3>The <code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> statements<a class="headerlink" href="#the-break-and-continue-statements" title="Permalink to this headline">#</a></h3>
+<h3>The <code class="docutils literal notranslate"><span class="pre">break</span></code> and <code class="docutils literal notranslate"><span class="pre">continue</span></code> statements<a class="headerlink" href="#the-break-and-continue-statements" title="Permalink to this heading">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">break</span></code> statement breaks out of the innermost enclosing for or while loop:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1756,9 +1763,9 @@ Found a number 9
 </section>
 </section>
 <section id="defining-functions">
-<h2>Defining  functions<a class="headerlink" href="#defining-functions" title="Permalink to this headline">#</a></h2>
+<h2>Defining  functions<a class="headerlink" href="#defining-functions" title="Permalink to this heading">#</a></h2>
 <section id="a-first-example">
-<h3>A first example<a class="headerlink" href="#a-first-example" title="Permalink to this headline">#</a></h3>
+<h3>A first example<a class="headerlink" href="#a-first-example" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fib</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
@@ -1852,7 +1859,7 @@ Found a number 9
 </div>
 </section>
 <section id="positional-and-keyword-arguments">
-<h3>Positional and keyword arguments<a class="headerlink" href="#positional-and-keyword-arguments" title="Permalink to this headline">#</a></h3>
+<h3>Positional and keyword arguments<a class="headerlink" href="#positional-and-keyword-arguments" title="Permalink to this heading">#</a></h3>
 <p>Functions have two types of arguments: <strong>positional arguments</strong> and <strong>keyword arguments</strong>.</p>
 <p><strong>keyword arguments</strong> are preceded by an identifier (e.g. <code class="docutils literal notranslate"><span class="pre">name=</span></code>) and are attributed a default value. They are therefore <em>optional</em>:</p>
 <div class="cell docutils container">
@@ -1951,7 +1958,7 @@ Found a number 9
 </section>
 </section>
 <section id="importing-modules-and-functions">
-<h2>Importing modules and functions<a class="headerlink" href="#importing-modules-and-functions" title="Permalink to this headline">#</a></h2>
+<h2>Importing modules and functions<a class="headerlink" href="#importing-modules-and-functions" title="Permalink to this heading">#</a></h2>
 <p>Although python ships with some built-in functions available in the interpreter (e.g. <code class="docutils literal notranslate"><span class="pre">len()</span></code>, <code class="docutils literal notranslate"><span class="pre">print()</span></code>), it is by far not enough to do real world programming. Thankfully, python comes with a mechanism which allows us to access <em>much</em> more functionality:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1962,7 +1969,7 @@ Found a number 9
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;module &#39;math&#39; from &#39;/home/c707201/mambaforge/envs/scipro/lib/python3.11/lib-dynload/math.cpython-311-x86_64-linux-gnu.so&#39;&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;module &#39;math&#39; from &#39;/home/c707201/mambaforge/envs/scipro_3.10/lib/python3.10/lib-dynload/math.cpython-310-x86_64-linux-gnu.so&#39;&gt;
 3.141592653589793
 </pre></div>
 </div>
@@ -1985,7 +1992,7 @@ Found a number 9
 <p>Modules often have a thematic grouping, i.e. <code class="docutils literal notranslate"><span class="pre">math</span></code>, <code class="docutils literal notranslate"><span class="pre">time</span></code>, <code class="docutils literal notranslate"><span class="pre">multiprocessing</span></code>. You will learn more about them in the next lecture.</p>
 </section>
 <section id="take-home-points">
-<h2>Take home points<a class="headerlink" href="#take-home-points" title="Permalink to this headline">#</a></h2>
+<h2>Take home points<a class="headerlink" href="#take-home-points" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>in python, everything is an object - we’ll learn more about them later</p></li>
 <li><p>for now you can remember that python objects have methods (“services”) attached to them, such as <code class="docutils literal notranslate"><span class="pre">.split()</span></code> for strings or <code class="docutils literal notranslate"><span class="pre">.append()</span></code> for lists</p></li>

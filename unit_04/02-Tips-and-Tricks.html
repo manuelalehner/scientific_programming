@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Tips and tricks &#8212; Scientific Programming</title>
   
@@ -45,6 +45,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Coding and ChatGPT" href="03-Python-and-ChatGPT.html" />
     <link rel="prev" title="Good practices, programming style and conventions" href="01-Good-practices.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -197,6 +198,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Tips and tricks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03-Python-and-ChatGPT.html">Coding and ChatGPT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="Assignment-04.html">Assignment #04</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 05 - Floating point arithmetics, Numpy basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_05/01-Why-Numpy.html">Introduction to numpy: why does numpy exist?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_05/02-Numbers.html">Number representation in computers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_05/Assignment-05.html">Assignment #05</a></li>
 </ul>
 
     </div>
@@ -459,19 +466,19 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="tips-and-tricks">
-<h1>Tips and tricks<a class="headerlink" href="#tips-and-tricks" title="Permalink to this headline">#</a></h1>
+<h1>Tips and tricks<a class="headerlink" href="#tips-and-tricks" title="Permalink to this heading">#</a></h1>
 <p>It is early in the lecture, but you are now already well equipped to write more complex scripts and algorithms: you know (almost ;)) everything you need to know about the syntax, but you might be a little lost in all the possibilities that the python language is now offering to you. <em>Which tool should I use to do this and that? What was this function signature again?</em> are very common interrogations, and it is normal to feel a bit overwhelmed.</p>
 <p>This chapter will give you some brief tips to help you during your assignments.</p>
 <section id="batteries-included">
-<h2>Batteries included<a class="headerlink" href="#batteries-included" title="Permalink to this headline">#</a></h2>
+<h2>Batteries included<a class="headerlink" href="#batteries-included" title="Permalink to this heading">#</a></h2>
 <p>You may have read this expression (“batteries included”) during your research about the Python language. It is widely used to indicate that if you choose python, it’s not only for its syntax: it’s for all the tools that come with it. And there are PLENTY. Spend a minute or two to scroll through the list of tools available in the <a class="reference external" href="https://docs.python.org/3/library/index.html">standard library</a>. The <strong>standard library</strong> is available per default with any python installation. It is very robust and provides the core functionality of the language.</p>
 <p>As you will see, there is not much for us scientists in this list though (no plotting library for example). This is why <strong>third party packages</strong> were developed. And there are so many of them that one can easily be overwhelmed.</p>
 </section>
 <section id="getting-help">
-<h2>Getting help<a class="headerlink" href="#getting-help" title="Permalink to this headline">#</a></h2>
+<h2>Getting help<a class="headerlink" href="#getting-help" title="Permalink to this heading">#</a></h2>
 <p>In order to become a good programmer, <strong>nothing is more important than being able to find help</strong>, either online or from your friends and colleagues.</p>
 <section id="online-resources">
-<h3>Online resources<a class="headerlink" href="#online-resources" title="Permalink to this headline">#</a></h3>
+<h3>Online resources<a class="headerlink" href="#online-resources" title="Permalink to this heading">#</a></h3>
 <p>Fortunately, getting help has become quite easy nowadays. Here are some resources to get you started:</p>
 <ul class="simple">
 <li><p>the <a class="reference external" href="https://docs.python.org/3/">official python documentation</a> is definitely the best place to look for everything related to the standard library. It is also THE reference, and as such can sometimes be too detailed or complex. If this fails, then you’ll have to refer to</p></li>
@@ -487,17 +494,17 @@ document.write(`
 <p>The latter is the one you want and will lead you to the right answer. With time, you are going to get used to using the search engine more efficiently, but if everything else fails, then you might have to ask a question yourself:</p>
 </section>
 <section id="ask-questions-the-smart-way">
-<h3>Ask questions the smart way<a class="headerlink" href="#ask-questions-the-smart-way" title="Permalink to this headline">#</a></h3>
+<h3>Ask questions the smart way<a class="headerlink" href="#ask-questions-the-smart-way" title="Permalink to this heading">#</a></h3>
 <p>If you want to ask a question on stackoverflow or somewhere else (e.g. by sending an email to your teacher), please spend some time reading <a class="reference external" href="http://www.catb.org/esr/faqs/smart-questions.html">this resource</a>. Believe me, this will help you to get better answers!</p>
 </section>
 <section id="getting-help-vs-learning">
-<h3>Getting help VS learning<a class="headerlink" href="#getting-help-vs-learning" title="Permalink to this headline">#</a></h3>
+<h3>Getting help VS learning<a class="headerlink" href="#getting-help-vs-learning" title="Permalink to this heading">#</a></h3>
 <p>I’ll be honest: without an internet connection, I am a very bad python programmer. I don’t expect you to learn all the python commands by heart for the exam (yes, you will have an internet access during the exam). Similarly, I encourage you to use the internet to find help to solve the weekly exercises.</p>
 <p>However, there is a difference between “getting help to find how to realize a specific task” and “asking for someone to do my homework for me”. The border line between the two might be subtle, but I’m sure you’ll know when you cross it: at the moment you stopped using your brain and simply copy/pasted code from one site to your assignment script, you crossed it.</p>
 </section>
 </section>
 <section id="python-ides">
-<h2>Python IDEs<a class="headerlink" href="#python-ides" title="Permalink to this headline">#</a></h2>
+<h2>Python IDEs<a class="headerlink" href="#python-ides" title="Permalink to this heading">#</a></h2>
 <p><a id='python_ides'></a></p>
 <p>While it is possible to write python programs using a basic text editor, the majority of you will find it useful to use an <a class="reference external" href="https://en.wikipedia.org/wiki/Integrated_development_environment">integrated development environment</a> (short: IDE) instead. The advantage of IDEs is that they ship with tools that make your life easier when programming.</p>
 <p>Here is a non-exhaustive (and subjective) list of the tools a good IDE should have:</p>
@@ -520,7 +527,7 @@ document.write(`
 </ul>
 </section>
 <section id="debugging-code">
-<h2>Debugging code<a class="headerlink" href="#debugging-code" title="Permalink to this headline">#</a></h2>
+<h2>Debugging code<a class="headerlink" href="#debugging-code" title="Permalink to this heading">#</a></h2>
 <p><strong>It is impossible to write bug free code in one go</strong> (just accept it and get used to it). There will always be mistakes. Syntax errors and other obvious problems (e.g. <code class="docutils literal notranslate"><span class="pre">NameError</span></code>) will most often be picked up by your IDE’s linter. The other “easier ones” (e.g. <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>) are also likely to be corrected after a first couple of test runs of your code. But then, sometimes, the error is not obvious: the code runs, but doesn’t produce the expected output. What to do in these cases?</p>
 <ul class="simple">
 <li><p>use <code class="docutils literal notranslate"><span class="pre">print</span></code> statements (bad): with this method, you can inspect variables at run time by printing their values. It is a quick and dirty way to debug, and should not be used too often because error prone (indeed, by adding print statements you modify your code, might forget about them afterwards, and they are often not very useful). If you need more than 3 or 4 print statements to track the source of an issue, it’s time for opening a debugger.</p></li>

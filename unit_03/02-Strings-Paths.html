@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>String formatting and file paths &#8212; Scientific Programming</title>
   
@@ -45,6 +45,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Assignment #03" href="Assignment-03.html" />
     <link rel="prev" title="Modules, import mechanism, namespaces, scope(s)" href="01-Import-Scopes.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -197,6 +198,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../unit_04/02-Tips-and-Tricks.html">Tips and tricks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../unit_04/03-Python-and-ChatGPT.html">Coding and ChatGPT</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../unit_04/Assignment-04.html">Assignment #04</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Week 05 - Floating point arithmetics, Numpy basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_05/01-Why-Numpy.html">Introduction to numpy: why does numpy exist?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_05/02-Numbers.html">Number representation in computers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_05/Assignment-05.html">Assignment #05</a></li>
 </ul>
 
     </div>
@@ -466,13 +473,13 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="string-formatting-and-file-paths">
-<h1>String formatting and file paths<a class="headerlink" href="#string-formatting-and-file-paths" title="Permalink to this headline">#</a></h1>
+<h1>String formatting and file paths<a class="headerlink" href="#string-formatting-and-file-paths" title="Permalink to this heading">#</a></h1>
 <p>A scientific data analysis workflow almost invariably implies downloading, manipulating and opening files. Often, it also implies writing new files (for example with post-processed data). Fortunately, python comes with many handy tools to format strings.</p>
 <section id="string-formatting">
-<h2>String Formatting<a class="headerlink" href="#string-formatting" title="Permalink to this headline">#</a></h2>
+<h2>String Formatting<a class="headerlink" href="#string-formatting" title="Permalink to this heading">#</a></h2>
 <p>“String formatting” refers to formatting the content of variables (strings, numbers, paths, etc.) into strings, for example to display them on screen or to write them to a text file. Unfortunately, there is more than one way to format strings in python (actually there are at least 4!). This short section will guide you to the ones you should preferably use.</p>
 <section id="the-modern-way-formatted-string-f-string-literals">
-<h3>The modern way: formatted string (“f-string”) literals<a class="headerlink" href="#the-modern-way-formatted-string-f-string-literals" title="Permalink to this headline">#</a></h3>
+<h3>The modern way: formatted string (“f-string”) literals<a class="headerlink" href="#the-modern-way-formatted-string-f-string-literals" title="Permalink to this heading">#</a></h3>
 <p>Consider the following example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -531,7 +538,7 @@ document.write(`
 <p>This feature is to be used with care, you probably don’t want to have very complicated expressions within your f-strings!</p>
 </section>
 <section id="formatting-numbers-in-strings">
-<h3>Formatting numbers in strings<a class="headerlink" href="#formatting-numbers-in-strings" title="Permalink to this headline">#</a></h3>
+<h3>Formatting numbers in strings<a class="headerlink" href="#formatting-numbers-in-strings" title="Permalink to this heading">#</a></h3>
 <p>Very often, you want your strings to be of predictable length and format. For example, you may want float numbers to be printed only with a chosen precision:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -558,7 +565,7 @@ Formatted to a rounded integer with leading zeros: 0001
 </div>
 </section>
 <section id="formatting-dates-in-strings">
-<h3>Formatting dates in strings<a class="headerlink" href="#formatting-dates-in-strings" title="Permalink to this headline">#</a></h3>
+<h3>Formatting dates in strings<a class="headerlink" href="#formatting-dates-in-strings" title="Permalink to this heading">#</a></h3>
 <p>Also possible:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -571,18 +578,18 @@ Formatted to a rounded integer with leading zeros: 0001
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-10-20 08:35:51.648560
-2023-10-20 08:35
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2023-10-25 10:29:50.331174
+2023-10-25 10:29
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="the-old-ways-to-format-strings">
-<h3>The old ways to format strings<a class="headerlink" href="#the-old-ways-to-format-strings" title="Permalink to this headline">#</a></h3>
+<h3>The old ways to format strings<a class="headerlink" href="#the-old-ways-to-format-strings" title="Permalink to this heading">#</a></h3>
 <p>f-strings have been added to python in version 3.6 (end of 2016: that’s only a few years back!). Before that, two other string formatting tools were available and are still used today. Therefore, you should learn them as well.</p>
 <section id="the-not-too-old-way-format-still-useful">
-<h4>The “not too old” way: <code class="docutils literal notranslate"><span class="pre">.format()</span></code> (still useful!)<a class="headerlink" href="#the-not-too-old-way-format-still-useful" title="Permalink to this headline">#</a></h4>
+<h4>The “not too old” way: <code class="docutils literal notranslate"><span class="pre">.format()</span></code> (still useful!)<a class="headerlink" href="#the-not-too-old-way-format-still-useful" title="Permalink to this heading">#</a></h4>
 <p>This string formatting method was introduced with python 3 (so that’s already a bit older). It works with appending a call to the <code class="docutils literal notranslate"><span class="pre">.format()</span></code> method to a string:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -629,7 +636,7 @@ Assane has 03 cats, right?
 <p>The nice thing in the example above is that you can create a template string early in your script, that you can “fill” with values later in your program.</p>
 </section>
 <section id="the-very-old-way-the-operator">
-<h4>The very old way: the <code class="docutils literal notranslate"><span class="pre">%</span></code> operator<a class="headerlink" href="#the-very-old-way-the-operator" title="Permalink to this headline">#</a></h4>
+<h4>The very old way: the <code class="docutils literal notranslate"><span class="pre">%</span></code> operator<a class="headerlink" href="#the-very-old-way-the-operator" title="Permalink to this heading">#</a></h4>
 <p>This was the standard in python 2 but is still working today (and will continue to work in the future):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -647,7 +654,7 @@ Assane has 03 cats, right?
 </section>
 </section>
 <section id="take-home-string-formatting">
-<h3>Take home: string formatting<a class="headerlink" href="#take-home-string-formatting" title="Permalink to this headline">#</a></h3>
+<h3>Take home: string formatting<a class="headerlink" href="#take-home-string-formatting" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>there is probably <em>no string format</em> you can think of that doesn’t have a formatting solution (people are manipulating strings all the time)</p></li>
 <li><p>use f-strings! They are great.</p></li>
@@ -657,11 +664,11 @@ Assane has 03 cats, right?
 </section>
 </section>
 <section id="path-handling-in-python">
-<h2>Path handling in python<a class="headerlink" href="#path-handling-in-python" title="Permalink to this headline">#</a></h2>
+<h2>Path handling in python<a class="headerlink" href="#path-handling-in-python" title="Permalink to this heading">#</a></h2>
 <p>Handling file paths is one of the not-so-fun parts of a scientist’s job, I agree. But we just have to do it, there is no way around it.</p>
 <p>Please read this <a class="reference external" href="https://medium.com/&#64;ageitgey/python-3-quick-tip-the-easy-way-to-deal-with-file-paths-on-windows-mac-and-linux-11a072b58d5f">short blog post</a> which is a good entry-level tutorial to path handling.</p>
 <section id="take-home-path-handling">
-<h3>Take home: path handling<a class="headerlink" href="#take-home-path-handling" title="Permalink to this headline">#</a></h3>
+<h3>Take home: path handling<a class="headerlink" href="#take-home-path-handling" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>never use <code class="docutils literal notranslate"><span class="pre">+</span></code> and other string shenanigans to handle your file paths</p></li>
 <li><p><a class="reference external" href="https://docs.python.org/3/library/os.path.html">os.path</a> and, in particular, <code class="docutils literal notranslate"><span class="pre">os.path.join</span></code> is a simple way to deal with paths as strings</p></li>
