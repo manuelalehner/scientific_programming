@@ -39,3 +39,8 @@ parts:
     - file: unit_04/02-Tips-and-Tricks
     - file: unit_04/03-Python-and-ChatGPT
     - file: unit_04/Assignment-04
+  - caption: Week 05 - Floating point arithmetics, Numpy basics
+    chapters:
+    - file: unit_05/01-Why-Numpy
+    - file: unit_05/02-Numbers
+    - file: unit_05/Assignment-05

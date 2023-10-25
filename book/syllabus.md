@@ -59,8 +59,8 @@ At the end of each lesson, there is a "learning checklist": go over it at the en
 
 Your final grade will result from a combination of the mid-term exam (20%), the final exam (50%), assignments (0%), and a programming project (30%). Participation in both exams, handing in and presenting the programming project, and at least one assignment presentation are necessary to pass the class.
 
-1. The mid-term exam (open-book exam, combination of muliple choice, essay, and programming type of questions) will take place on **Tuesday 21.11.2022** from 10:15 to 12:00.
-2. The final exam (open-book exam, combination of muliple choice, essay, and programming type of questions) will take place on **Tuesday 06.02.2023** from 10:15 to 12:00.
+1. The mid-term exam (open-book exam, combination of muliple choice, essay, and programming type of questions) will take place on **Tuesday 21.11.2023** from 10:15 to 12:00.
+2. The final exam (open-book exam, combination of muliple choice, essay, and programming type of questions) will take place on **Tuesday 06.02.2024** from 10:15 to 12:00.
 3. Each week there will be an **assignment** (unless specified otherwise, e.g. during the group projects). These assignments can be worked through alone or in groups. The assignments will be discussed on Mondays and, each week, **one group** will be asked to present their results to the rest of the class. The presentation is not graded, but participation and at least one group presentation are required to pass the class.
 4. Around the beginning of December, you will be given a programming project to realize over several weeks, which will have to be handed in after the Christmas break. Grading of the project will be explained at a later point, but will include an individual contribution (50%) and a group contribution (50%).
 
