@@ -1,0 +1,823 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Assignment #06 &#8212; Scientific Programming</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/exercise.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'unit_06/Assignment-06';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="The scientific python stack" href="02-Scientific-Python.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../welcome.html">
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Logo image"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Logo image"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../welcome.html">
+                    Welcome
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Introduction</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../syllabus.html">Syllabus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../faq.html">Frequently Asked  Questions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../references.html">External resources</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../help.html">Getting help</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 01 - Terminal &amp; Python primer</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../unit_01/01-Terminal.html">Basic terminal commands and navigation</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../unit_01/01a-Windows.html">A Windows command prompt primer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unit_01/01b-Linux.html">An introduction to the Linux terminal</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../unit_01/02-Installation.html">Installing Python on your computer</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../unit_01/02a-Details-Windows.html">For windows users: the difference between the command prompt, the miniforge prompt, and the python interpreter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unit_01/02b-Details-Linux.html">For linux/mac users: what did <code class="docutils literal notranslate"><span class="pre">mambaforge</span></code> do to your terminal?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_01/03-Getting-Started.html">Getting started with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_01/Assignment-01.html">Assignment #01</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 02 - Python language fundamentals</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_02/01-install-packages.html">Installing python packages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_02/02-ipython-spyder.html">Scientific development environment: ipython and spyder</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_02/03-Language-Fundamentals.html">Language fundamentals</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_02/Assignment-02.html">Assignment #02</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 03 - Variables scopes, modules, and strings</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_03/01-Import-Scopes.html">Modules, import mechanism, namespaces, scope(s)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_03/02-Strings-Paths.html">String formatting and file paths</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_03/Assignment-03.html">Assignment #03</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 04 - Good practice, getting help, and ChatGPT</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_04/01-Good-practices.html">Good practices, programming style and conventions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_04/02-Tips-and-Tricks.html">Tips and tricks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_04/03-Python-and-ChatGPT.html">Coding and ChatGPT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_04/Assignment-04.html">Assignment #04</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 05 - Floating point arithmetics, Numpy basics</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_05/01-Why-Numpy.html">Introduction to numpy: why does numpy exist?</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_05/02-Numbers.html">Number representation in computers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_05/Assignment-05.html">Assignment #05</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 06 - Scientific Python</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01-Numpy-ndarrays.html">Arrays in numpy: indexing, ufuncs, broadcasting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-Scientific-Python.html">The scientific python stack</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Assignment #06</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/manuelalehner/scientific_programming/master?urlpath=lab/tree/book/unit_06/Assignment-06.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/manuelalehner/scientific_programming" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/manuelalehner/scientific_programming/edit/master/book/unit_06/Assignment-06.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/manuelalehner/scientific_programming/issues/new?title=Issue%20on%20page%20%2Funit_06/Assignment-06.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/unit_06/Assignment-06.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
+    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
+    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Assignment #06</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-06-01-indexing">Exercise #06-01: Indexing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-06-02-average-temperature">Exercise #06-02: Average temperature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-06-03-plotting-gridded-temperature">Exercise #06-03: Plotting gridded temperature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-exercise-06-04-acinn-meteorological-data">Optional - Exercise #06-04: ACINN meteorological data</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="assignment-06">
+<h1>Assignment #06<a class="headerlink" href="#assignment-06" title="Permalink to this heading">#</a></h1>
+<p><a class="reference external" href="http://www.numpy.org/">numpy</a> and <a class="reference external" href="https://matplotlib.org/">matplotlib</a> are two fundamental pillars of the scientific python stack. You will find <em>numerous</em> tutorials for both libraries online. I am asking you to learn the basics of both tools by yourself, at the pace that suits you. I can recommend these two tutorials:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="http://scipy-lectures.org/intro/numpy/index.html">numpy tutorial</a></p></li>
+<li><p><a class="reference external" href="http://scipy-lectures.org/intro/matplotlib/index.html">matplotlib tutorial</a></p></li>
+</ul>
+<p>They can be quite long if you are new to numpy - I’m not asking to do them all today! Sections 1.4.1.1 to 1.4.1.5 in the <a class="reference external" href="http://scipy-lectures.org/intro/numpy/index.html">numpy tutorial</a> should get you enough information for today’s assignments, or you can try without it and learn on the fly - your choice!</p>
+<section id="exercise-06-01-indexing">
+<h2>Exercise #06-01: Indexing<a class="headerlink" href="#exercise-06-01-indexing" title="Permalink to this heading">#</a></h2>
+<p>Given a 2D numpy array defined as:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
+              <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The following indexing operations all select the same values out of the array:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">x[:,</span> <span class="pre">1]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x[slice(0,</span> <span class="pre">2,</span> <span class="pre">1),</span> <span class="pre">1]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x[(slice(0,</span> <span class="pre">2,</span> <span class="pre">1),</span> <span class="pre">1)]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x[slice(0,</span> <span class="pre">2,</span> <span class="pre">1),</span> <span class="pre">slice(1,</span> <span class="pre">2,</span> <span class="pre">1)]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x[...,</span> <span class="pre">1]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x[::1,</span> <span class="pre">1]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x[[0,</span> <span class="pre">1],</span> <span class="pre">1]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x[:,</span> <span class="pre">-2]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x[:,</span> <span class="pre">1:2]</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">x[:,</span> <span class="pre">[1]]</span></code></p></li>
+</ul>
+<p>This can be checked with the following test:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">numpy.testing</span> <span class="kn">import</span> <span class="n">assert_equal</span>
+
+<span class="n">ref</span> <span class="o">=</span> <span class="mi">7</span>
+
+<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[::</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[(</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">1</span><span class="p">)]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="nb">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Questions:</strong></p>
+<ul class="simple">
+<li><p>What is the <code class="docutils literal notranslate"><span class="pre">...</span></code> syntax doing? Again, it is the literal equivalent of an actual python object: which one?</p></li>
+<li><p>some of these indexing operations are truly equivalent to the “obvious” one, <code class="docutils literal notranslate"><span class="pre">x[:,</span> <span class="pre">1]</span></code>. List them.</p></li>
+<li><p>Classify these operations (i) into basic and advanced operations, and (ii) by the shape of their output. Explain.</p></li>
+<li><p>If you would like the array <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">x[:,</span> <span class="pre">1:2]</span></code> to have a shape of (2, ) like most of the other operations listed above, how can you reshape it?</p></li>
+</ul>
+</section>
+<section id="exercise-06-02-average-temperature">
+<h2>Exercise #06-02: Average temperature<a class="headerlink" href="#exercise-06-02-average-temperature" title="Permalink to this heading">#</a></h2>
+<p>Monthly averages of temperature data at Innsbruck can be downloaded from this lecture’s github via:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">Request</span><span class="p">,</span> <span class="n">urlopen</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1"># Parse the given url</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/manuelalehner/scientific_programming/master/data/innsbruck_temp.json&#39;</span>
+<span class="n">req</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="c1"># Read the data</span>
+<span class="n">inn_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>(original data obtained from NOAA’s <a class="reference external" href="https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc:C00516">Global Surface Summary of the Day</a>)</em></p>
+<ul class="simple">
+<li><p>Explore the inn_data variable. What is the type of “inn_data”, and of the data it contains?</p></li>
+<li><p>Convert the data series to numpy arrays.</p></li>
+<li><p>Using numpy/scipy, matplotlib, and the standard library only, compute and plot the mean monthly annual cycle of temperature for 1981-2010 and the mean annual temperature timeseries for 1977-2017.</p></li>
+<li><p>Compute the linear trend (using scipy.stats.linregress) of the average annual temperature over the period 1977-2017.</p></li>
+<li><p>Repeat for the winter (DJF) and summer (JJA) trends.</p></li>
+</ul>
+<p><em>Tip 1: to select part of an array (indexing) based on a condition, you can use the following syntax:</em></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
+<span class="n">y</span><span class="p">[</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">]</span>  <span class="c1"># select y based on the values in x</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([25, 36, 49, 64, 81])
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>Tip 2: there is more than one way to compute the annual and monthly means. Some use loops, some use reshaping of the original 1D array.</em></p>
+</section>
+<section id="exercise-06-03-plotting-gridded-temperature">
+<h2>Exercise #06-03: Plotting gridded temperature<a class="headerlink" href="#exercise-06-03-plotting-gridded-temperature" title="Permalink to this heading">#</a></h2>
+<p><a class="reference external" href="https://www.ecmwf.int/en/forecasts/datasets/archive-datasets/reanalysis-datasets/era-interim">ERA-Interim reanalysis</a> provides global atmospheric fields from 1979 to today. You can access a prepared dataset of gridded average temperature here:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">Request</span><span class="p">,</span> <span class="n">urlopen</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">import</span> <span class="nn">json</span>
+
+<span class="c1"># Parse the given url</span>
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/manuelalehner/scientific_programming/master/data/monthly_temp.npz&#39;</span>
+<span class="n">req</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">np</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">req</span><span class="p">))</span> <span class="k">as</span> <span class="n">data</span><span class="p">:</span>
+    <span class="n">temp</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;temp&#39;</span><span class="p">]</span>
+    <span class="n">lon</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;lon&#39;</span><span class="p">]</span>
+    <span class="n">lat</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;lat&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>However, the dataset is not well processed! The longitudes are ranging from 0 to 360°, thus cutting UK and Africa in half! Reorganize the data and the corresponding coordinates to obtain a plot similar to this one:</p>
+<img alt="../_images/18_temp_pic.png" src="../_images/18_temp_pic.png" />
+</section>
+<section id="optional-exercise-06-04-acinn-meteorological-data">
+<h2>Optional - Exercise #06-04: ACINN meteorological data<a class="headerlink" href="#optional-exercise-06-04-acinn-meteorological-data" title="Permalink to this heading">#</a></h2>
+<p>This exercise will give you a glimpse of working with <a class="reference external" href="https://pandas.pydata.org/">pandas</a>. We are going to analyze a dataset downloaded from the <a class="reference external" href="https://acinn-data.uibk.ac.at/">ACINN department database</a>. The one-month long dataset is from the automatic weather station <a class="reference external" href="https://acinn-data.uibk.ac.at/pages/tawes-uibk.html">TAWES UIBK</a>. <a class="reference external" href="https://acinn-data.uibk.ac.at/station/1/RAWDATA/">Here</a> you can find a description of the variable names.</p>
+<p>The data is shared by ACINN under a <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
+<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
+  <img src="https://i.creativecommons.org/l/by-sa/4.0/88x31.png"/>
+</a>
+<p>You can access the dataset at the URL shown below. Data downloaded from the department database are formatted as <a class="reference external" href="https://en.wikipedia.org/wiki/Comma-separated_values">csv</a> files, which we can read in easily using pandas. You may want to read the documentation of <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.read_csv.html">read_csv</a> to see what all the arguments do.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">urllib.request</span> <span class="kn">import</span> <span class="n">Request</span><span class="p">,</span> <span class="n">urlopen</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/manuelalehner/scientific_programming/master/data/data_Ibk_Sep2023.csv&#39;</span>
+<span class="c1"># Parse the given url</span>
+<span class="n">req</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+<span class="c1"># Read the data</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">req</span><span class="p">),</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">header</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>The data are read into a so-called <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.html">DataFrame</a>, which can be very useful for time series analysis, e.g., from weather stations. Let’s explore this DataFrame somewhat to get you started.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">columns</span> <span class="c1"># list all the column headers</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Index([&#39;tl&#39;, &#39;tl2&#39;, &#39;ts&#39;, &#39;tb1&#39;, &#39;tb2&#39;, &#39;tb3&#39;, &#39;tp&#39;, &#39;rf&#39;, &#39;rf2&#39;, &#39;rr&#39;, &#39;rrm&#39;,
+       &#39;p&#39;, &#39;som&#39;, &#39;glom&#39;, &#39;ffamm&#39;, &#39;ffm&#39;, &#39;ddm&#39;, &#39;ffxm&#39;, &#39;ddxm&#39;],
+      dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;som&#39;</span><span class="p">]</span> <span class="c1"># access the data column &#39;som&#39; (sunshine duration)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>rawdate
+2023-09-01 00:00:00    0.0
+2023-09-01 00:01:00    0.0
+2023-09-01 00:02:00    0.0
+2023-09-01 00:03:00    0.0
+2023-09-01 00:04:00    0.0
+                      ... 
+2023-09-30 23:55:00    0.0
+2023-09-30 23:56:00    0.0
+2023-09-30 23:57:00    0.0
+2023-09-30 23:58:00    0.0
+2023-09-30 23:59:00    0.0
+Name: som, Length: 37434, dtype: float64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">index</span> <span class="c1"># access the datetime index</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DatetimeIndex([&#39;2023-09-01 00:00:00&#39;, &#39;2023-09-01 00:01:00&#39;,
+               &#39;2023-09-01 00:02:00&#39;, &#39;2023-09-01 00:03:00&#39;,
+               &#39;2023-09-01 00:04:00&#39;, &#39;2023-09-01 00:05:00&#39;,
+               &#39;2023-09-01 00:06:00&#39;, &#39;2023-09-01 00:07:00&#39;,
+               &#39;2023-09-01 00:08:00&#39;, &#39;2023-09-01 00:09:00&#39;,
+               ...
+               &#39;2023-09-30 23:50:00&#39;, &#39;2023-09-30 23:51:00&#39;,
+               &#39;2023-09-30 23:52:00&#39;, &#39;2023-09-30 23:53:00&#39;,
+               &#39;2023-09-30 23:54:00&#39;, &#39;2023-09-30 23:55:00&#39;,
+               &#39;2023-09-30 23:56:00&#39;, &#39;2023-09-30 23:57:00&#39;,
+               &#39;2023-09-30 23:58:00&#39;, &#39;2023-09-30 23:59:00&#39;],
+              dtype=&#39;datetime64[ns]&#39;, name=&#39;rawdate&#39;, length=37434, freq=None)
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Write a script that allows the user to input the variable (e.g., air temperature, wind speed, …) either as a command line argument or using <code class="docutils literal notranslate"><span class="pre">input()</span></code> and prints the following information in the terminal.</strong></p>
+<p>If the variable is wind direction:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The dominant wind direction was {XX} ({XX}% of the time). The least dominant wind direction was {XX} ({XX}% of the time).
+</pre></div>
+</div>
+<p>If it is any other variable:</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>The maximum {VARIABLE} was {XX} {UNITS} ({DATE/TIME}), while the strongest {VARIABLE} averaged over an hour was {XX} {UNITS} ({DATE/TIME}).&quot;)
+</pre></div>
+</div>
+<p><em>Hint 1:</em> You can use either numpy to determine, for example, the maximum values or you can work directly with the DataFrame. (<a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.max.html">e.g., calculating the maximum</a>). To convert a column of the DataFrame to a numpy array, you can use</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">temp</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;som&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><em>Hint 2:</em> Calculating time averages is easy using the pandas <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.resample.html">resample</a> method.</p>
+<p><em>Hint 3:</em> For wind direction, use the following eight wind direction classes: N, NW, W, SW, S, SE, E, NE.</p>
+<p><em>Hint 4:</em> To output the datetime index in a specific format, you can use the <a class="reference external" href="https://pandas.pydata.org/docs/reference/api/pandas.DatetimeIndex.strftime.html">strftime</a> method.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./unit_06"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+                <footer class="bd-footer-article">
+                  
+<div class="footer-article-items footer-article__inner">
+  
+    <div class="footer-article-item"><!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="02-Scientific-Python.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">The scientific python stack</p>
+      </div>
+    </a>
+</div></div>
+  
+</div>
+
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-06-01-indexing">Exercise #06-01: Indexing</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-06-02-average-temperature">Exercise #06-02: Average temperature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-06-03-plotting-gridded-temperature">Exercise #06-03: Plotting gridded temperature</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#optional-exercise-06-04-acinn-meteorological-data">Optional - Exercise #06-04: ACINN meteorological data</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Fabien Maussion, Manuela Lehner
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+<div class="extra_footer">
+  <p>
+<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">
+  <img align="right" class="margin" src="https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/by.svg" width="88px">
+</a>
+These lecture notes and exercises are licensed under a <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">Creative Commons Attribution 4.0 International (CC BY 4.0) license</a>.
+<br>
+&copy; Copyright 2018-2023.
+</p>
+
+</div>
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
