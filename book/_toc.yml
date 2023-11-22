@@ -49,3 +49,8 @@ parts:
     - file: unit_06/01-Numpy-ndarrays
     - file: unit_06/02-Scientific-Python
     - file: unit_06/Assignment-06
+  - caption: Unit 07 - Testing
+    chapters:
+    - file: unit_07/01-Exceptions
+    - file: unit_07/02-Testing
+    - file: unit_07/Assignment-07
