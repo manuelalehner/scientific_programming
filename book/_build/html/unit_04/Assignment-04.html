@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Assignment #04 &#8212; Scientific Programming</title>
   
@@ -45,7 +45,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Introduction to numpy: why does numpy exist?" href="../unit_05/01-Why-Numpy.html" />
     <link rel="prev" title="Coding and ChatGPT" href="03-Python-and-ChatGPT.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -471,9 +470,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="assignment-04">
-<h1>Assignment #04<a class="headerlink" href="#assignment-04" title="Permalink to this heading">#</a></h1>
+<h1>Assignment #04<a class="headerlink" href="#assignment-04" title="Permalink to this headline">#</a></h1>
 <section id="exercise-04-01-using-chatgpt-for-programming">
-<h2>Exercise #04-01: Using ChatGPT for programming<a class="headerlink" href="#exercise-04-01-using-chatgpt-for-programming" title="Permalink to this heading">#</a></h2>
+<h2>Exercise #04-01: Using ChatGPT for programming<a class="headerlink" href="#exercise-04-01-using-chatgpt-for-programming" title="Permalink to this headline">#</a></h2>
 <p>A <a class="reference external" href="https://en.wikipedia.org/wiki/Galton_board">Galton Board</a> is a vertical board with staggered rows of pins or other obstacles. As beads are dropped from the top, they bounce off these pins, either to the left or right, finding a path between the pins until they drop into one of the collecting bins at the bottom. The resulting distribution of beads in the bins will follow a binomial distribution.</p>
 <p>In this exercise, we are going to explore how we can use <a class="reference external" href="https://chat.openai.com">ChatGPT</a> to potentially improve our program and our programming style and what some of the drawbacks may be. To interact with ChatGPT, you will need to create an account if you don’t have one yet.</p>
 <p><strong>A.</strong> Write a program that simulates a Galton Board using only the standard library. The user should be able to specify the number of rows of pins on the Galton Board and the number of beads to simulate as commond-line arguments. For this assignment you are asked to use the <a class="reference external" href="https://docs.python.org/3/library/argparse.html">argparse</a> module to parse the command-line arguments. The end result of your program should be a list containing the number of beads in each bin. <em>It is important that you write this code yourself without the help of ChatGPT.</em></p>
@@ -485,7 +484,7 @@ document.write(`
 <p><strong>F.</strong> Which of the above interactions with ChatGPT provided useful input to you, which did not?</p>
 </section>
 <section id="exercise-04-02-reading-and-writing-netcdf">
-<h2>Exercise #04-02: Reading and writing netCDF<a class="headerlink" href="#exercise-04-02-reading-and-writing-netcdf" title="Permalink to this heading">#</a></h2>
+<h2>Exercise #04-02: Reading and writing netCDF<a class="headerlink" href="#exercise-04-02-reading-and-writing-netcdf" title="Permalink to this headline">#</a></h2>
 <p><a class="reference external" href="https://www.unidata.ucar.edu/software/netcdf/">netCDF</a> is a very commonly used data format in the Atmospheric Sciences and it is becoming more and more of a standard for data exchange because netCDF data files are self-describing. That means that the format allows you to store metadata (e.g., information about the measurement location and instrumentation and information about each of the variables) together with the actual data.</p>
 <p>It is thus not unlikely that you will encounter netCDF data during your studies, e.g., output from the WRF model, such as this <a class="reference external" href="https://fileshare.uibk.ac.at/f/82dfc813aa0b4bc8bf33/?dl=1">file</a>. In this exercise, we are going get some experience with the netCDF file structure. Unlike our WRF output file, which contains only a small subset of variables, full model output files can be very large. To share data with other people, you may thus want to split the file into multiple smaller files or extract only part of the data.</p>
 <p>You will need to install the <a class="reference external" href="https://unidata.github.io/netcdf4-python/">netCDF4 package</a> for this exercise and you should read the sections on creating/opening/closing, dimensions, variables, and attributes of the documentation to get familiar with the structure of netcdf files.</p>

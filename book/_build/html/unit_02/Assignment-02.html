@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Assignment #02 &#8212; Scientific Programming</title>
   
@@ -45,7 +45,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Modules, import mechanism, namespaces, scope(s)" href="../unit_03/01-Import-Scopes.html" />
     <link rel="prev" title="Language fundamentals" href="03-Language-Fundamentals.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -471,14 +470,14 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="assignment-02">
-<h1>Assignment #02<a class="headerlink" href="#assignment-02" title="Permalink to this heading">#</a></h1>
+<h1>Assignment #02<a class="headerlink" href="#assignment-02" title="Permalink to this headline">#</a></h1>
 <p>Today’s exercises have to be done with the help of the python <strong>standard library</strong> alone! <strong>No external module can be used</strong>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Can you remember what the “standard library” is? <a class="reference external" href="https://docs.python.org/3/library/">Here</a> is a list of all the modules and built-ins it provides: so quite a lot!</p>
 </div>
 <section id="cryptography-for-roman-emperors">
-<h2>#02-01: cryptography for Roman Emperors<a class="headerlink" href="#cryptography-for-roman-emperors" title="Permalink to this heading">#</a></h2>
+<h2>#02-01: cryptography for Roman Emperors<a class="headerlink" href="#cryptography-for-roman-emperors" title="Permalink to this headline">#</a></h2>
 <p>A very simple encryption technique is called the <a class="reference external" href="http://en.wikipedia.org/wiki/Caesar_cipher">Caesar cipher</a>. The basic idea is that each letter is replaced by a letter that is a certain number of letters away, so for example if the shift was 2, then A would become C, B would become D, and Z will become B.</p>
 <p><strong>A. Write a function that given a string and a shift, will produce the encrypted string for that shift</strong>. The rules are:</p>
 <ul class="simple">
@@ -501,7 +500,7 @@ document.write(`
 <p>One way to solve this problem involves human decision, but another way can be fully automated (and implies more work). Pick the one you want! You can also add the decryption option to your script if you want.</p>
 </section>
 <section id="the-substitution-cipher">
-<h2>#02-02: the substitution cipher<a class="headerlink" href="#the-substitution-cipher" title="Permalink to this heading">#</a></h2>
+<h2>#02-02: the substitution cipher<a class="headerlink" href="#the-substitution-cipher" title="Permalink to this headline">#</a></h2>
 <p>Since we managed to crack the code above so easily, maybe we should use a better cryptographic algorithm from now on.</p>
 <p>The Caesar cipher is a special case of the more general <a class="reference external" href="https://en.wikipedia.org/wiki/Substitution_cipher">substitution cipher</a>. In this cipher, any new alphabet (or sequence of bits, characters, numbers…) can be used in place of the regular alphabet.</p>
 <p>To simplify things a bit, we will use python’s <code class="docutils literal notranslate"><span class="pre">random</span></code> module and in particular it’s <a class="reference external" href="https://docs.python.org/3/library/random.html#random.shuffle">shuffle</a> function to do the job. To generate a random (but predictable) substitution table we can use the mechanism of “seeds”, which can be seen as a secret key that you’ll have to (privately) give to your forbidden lover for him/her to decipher your message. This works as following:</p>

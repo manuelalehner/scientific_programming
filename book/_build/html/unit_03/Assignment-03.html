@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Assignment #03 &#8212; Scientific Programming</title>
   
@@ -45,7 +45,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -70,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Good practices, programming style and conventions" href="../unit_04/01-Good-practices.html" />
     <link rel="prev" title="String formatting and file paths" href="02-Strings-Paths.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -472,10 +471,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="assignment-03">
-<h1>Assignment #03<a class="headerlink" href="#assignment-03" title="Permalink to this heading">#</a></h1>
+<h1>Assignment #03<a class="headerlink" href="#assignment-03" title="Permalink to this headline">#</a></h1>
 <p>Today’s exercises have to be done with help of the python standard library alone! No external module can be used (except for the <code class="docutils literal notranslate"><span class="pre">--plot</span></code> option where you can use the helper packages).</p>
 <section id="exercise-03-01-automated-data-download">
-<h2>Exercise #03-01: automated data download<a class="headerlink" href="#exercise-03-01-automated-data-download" title="Permalink to this heading">#</a></h2>
+<h2>Exercise #03-01: automated data download<a class="headerlink" href="#exercise-03-01-automated-data-download" title="Permalink to this headline">#</a></h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Shuttle_Radar_Topography_Mission">SRTM</a> is a digital elevation model (DEM) at ~90 m resolution covering almost the entire globe (up to <span class="math notranslate nohighlight">\(\pm\)</span> 60° latitude). The data is organized in 5°x5° tiles. To see a map of the tiles have a look at <a class="reference external" href="http://srtm.csi.cgiar.org/srtmdata/">this download page</a>. This tool is nice to use if you know which tile you want, but not very useful if you want more than one tile at different places of the globe.</p>
 <p>Fortunately, the entire dataset is available on this server: <code class="docutils literal notranslate"><span class="pre">srtm.csi.cgiar.org/wp-content/uploads/files/srtm_5x5/TIFF/</span></code></p>
 <p>In order to protect from disruptive “download all” behavior, the files stored here cannot be listed (i.e. automated data scraping won’t work). Fortunately for us, the file naming convention is very simple:</p>
