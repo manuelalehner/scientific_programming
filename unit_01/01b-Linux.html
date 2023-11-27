@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>An introduction to the Linux terminal &#8212; Scientific Programming</title>
   
@@ -45,7 +45,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Installing Python on your computer" href="02-Installation.html" />
     <link rel="prev" title="A Windows command prompt primer" href="01a-Windows.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -500,7 +499,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="an-introduction-to-the-linux-terminal">
-<h1>An introduction to the Linux terminal<a class="headerlink" href="#an-introduction-to-the-linux-terminal" title="Permalink to this heading">#</a></h1>
+<h1>An introduction to the Linux terminal<a class="headerlink" href="#an-introduction-to-the-linux-terminal" title="Permalink to this headline">#</a></h1>
 <p>This lecture is about programming with Python, and we can do that on all major operating systems (Windows, Mac OS, Linux). Linux (and Mac) operating systems are sometimes preferred over Windows by scientists and programmers for a number of reasons. Therefore <strong>every student in (geo-)sciences should know about the existence of Linux and be familiar with the basics of it</strong>. Atmospheric Sciences students in particular will have to use it sooner or later, since most of the tools and data they are using are running or have been created on Linux systems.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -508,11 +507,11 @@ document.write(`
 <p>It is quite useful though if you want to use python in the computer room. Furthermore, if I’m being honest with you, I think that linux is better than windows in many ways: so I really think you should do this tutorial ;-)</p>
 </div>
 <section id="what-is-linux">
-<h2>What is Linux?<a class="headerlink" href="#what-is-linux" title="Permalink to this heading">#</a></h2>
+<h2>What is Linux?<a class="headerlink" href="#what-is-linux" title="Permalink to this headline">#</a></h2>
 <p>The <a class="reference external" href="https://www.google.co.uk/search?q=What+is+Linux">web</a> is going to give a better answer than me to this question.</p>
 </section>
 <section id="should-i-use-it">
-<h2>Should I use it?<a class="headerlink" href="#should-i-use-it" title="Permalink to this heading">#</a></h2>
+<h2>Should I use it?<a class="headerlink" href="#should-i-use-it" title="Permalink to this headline">#</a></h2>
 <p>My very personal answer is a clear: <strong>yes</strong>! I can’t force you to it though, and all of the exercises of this lecture can be done on a Windows computer. If you are running Mac OS X then you have access to a linux terminal anyway and you can ignore my recommendation.</p>
 <p>Linux has always been an environment for programmers and has the reputation of being “geeky” and “overly complicated”. This is less true today, with many Linux distributions becoming mainstream and easy to use (my personal favorite is <a class="reference external" href="http://linuxmint.com">Linux Mint</a>, but you probably heard of <a class="reference external" href="http://ubuntugnome.org/">Ubuntu</a>, which I also recommend).</p>
 <p>I believe that Linux is more user-friendly than Windows: once some of the particularities of Linux are understood (which can be frustrating in the beginning since it works <em>very</em> differently than windows), it appears that there is much less “hidden” in Linux than in Windows (especially when it comes to installing/deinstalling software, using the command line, or protecting yourself from viruses and intruders).</p>
@@ -526,7 +525,7 @@ document.write(`
 <p>There are also some reasons <strong>not</strong> to use Linux of course. For one, Linux can be confusing at first and you’ll need some time to get used to it. Also, it doesn’t come pre-installed on most computers and you’ll have to do it yourself (however, several retailers are already selling cheaper Ubuntu laptops to students). It is possible (but unlikely) that some of your hardware will not be compatible with Linux. Finally, some programs simply aren’t available on Linux: Microsoft Office, the Adobe Suite, and computer games are the most prominent examples. The free and open-source alternatives (LibreOffice and GIMP) are good, but not <em>as</em> good as their commercial counterpart. I used Linux exclusively for more than 10 years now, and I never regretted it. Recently I had to install Windows in a virtual machine in order to use the MS Office software provided by the University, and it works perfectly. Another option is to use <a class="reference external" href="https://www.winehq.org/">wine</a>.</p>
 </section>
 <section id="trying-linux">
-<h2>Trying Linux<a class="headerlink" href="#trying-linux" title="Permalink to this heading">#</a></h2>
+<h2>Trying Linux<a class="headerlink" href="#trying-linux" title="Permalink to this headline">#</a></h2>
 <p>There are many ways to try Linux and form an opionion yourself.</p>
 <ul class="simple">
 <li><p><strong>At the University of Innsbruck</strong>: In order to use Linux in the computer room you have to register for an account <a class="reference external" href="http://orawww.uibk.ac.at/public_prod/owa/uvw$web$10.p001">here</a>. After an hour or so you will be able to connect to any computer using your username and password. The Linux distribution used at the university is <a class="reference external" href="https://www.rockylinux.org/">Rocky Linux</a>. If you are a student of another university, it is likely that you have access to Linux environments, too.</p></li>
@@ -543,7 +542,7 @@ document.write(`
 </div>
 </section>
 <section id="today-s-learning-task-try-the-linux-command-line">
-<h2>Today’s learning task: try the linux command line<a class="headerlink" href="#today-s-learning-task-try-the-linux-command-line" title="Permalink to this heading">#</a></h2>
+<h2>Today’s learning task: try the linux command line<a class="headerlink" href="#today-s-learning-task-try-the-linux-command-line" title="Permalink to this headline">#</a></h2>
 <p>The linux command line is a powerful tool to access and explore the file system on your computer. On super computers, it is the only tool available to move files around and execute scripts. The command line is also the first terminal to use before opening a more scientific environment, say for example the python or ipython interpreters. “Thinking command line” is thinking in terms of programming, and learning some command line tools is unavoidable for programmers.</p>
 <div class="dropdown note admonition">
 <p class="admonition-title">Note for Windows users</p>
@@ -552,7 +551,7 @@ document.write(`
 <p>To install <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">bash</span></code>, download it <a class="reference external" href="https://gitforwindows.org/">from their website</a>  and follow the instructions (keep all options to their default).</p>
 </div>
 <section id="open-a-linux-terminal">
-<h3>Open a linux terminal<a class="headerlink" href="#open-a-linux-terminal" title="Permalink to this heading">#</a></h3>
+<h3>Open a linux terminal<a class="headerlink" href="#open-a-linux-terminal" title="Permalink to this headline">#</a></h3>
 <p>For today’s practicals, you need access to a linux terminal. There are several ways to do this:</p>
 <ul class="simple">
 <li><p><strong>from your web browser, on MyBinder</strong>, by clicking on the “Launch Binder” button on the top-right of this page (the little rocket).</p></li>
@@ -574,7 +573,7 @@ document.write(`
 <p><em>Copyright notice: the rest of this section was largely inspired from the first parts of Michael Stonebank’s <a class="reference external" href="http://www.ee.surrey.ac.uk/Teaching/Unix/index.html">UNIX tutorial</a></em></p>
 </section>
 <section id="listing-files-and-directories">
-<h3>Listing files and directories<a class="headerlink" href="#listing-files-and-directories" title="Permalink to this heading">#</a></h3>
+<h3>Listing files and directories<a class="headerlink" href="#listing-files-and-directories" title="Permalink to this headline">#</a></h3>
 <p><strong>ls (list)</strong></p>
 <p>When you first login, your current working directory is your home directory. Your home directory has the same name as your username, for example, c7071047, and it is where your personal files and subdirectories are saved.</p>
 <p>To find out what is in your home directory, type:</p>
@@ -592,7 +591,7 @@ document.write(`
 <p><strong>Note:</strong> linux file names and commands are <em>case sensitive</em>, i.e. <code class="docutils literal notranslate"><span class="pre">Test.txt</span></code> is different from <code class="docutils literal notranslate"><span class="pre">test.txt</span></code>, and both names could coexist in the same directory.</p>
 </section>
 <section id="the-directory-structure">
-<h3>The directory structure<a class="headerlink" href="#the-directory-structure" title="Permalink to this heading">#</a></h3>
+<h3>The directory structure<a class="headerlink" href="#the-directory-structure" title="Permalink to this headline">#</a></h3>
 <p>All the files are grouped together in the directory structure. The file-system is arranged in a hierarchical structure, like an inverted tree. The top of the hierarchy is traditionally called root (written as a slash <code class="docutils literal notranslate"><span class="pre">/</span></code> )</p>
 <img alt="unix-tree" src="../_images/unix-tree.png" />
 <p>When loging in we are automatically located in our personal <code class="docutils literal notranslate"><span class="pre">home</span></code> directory, which is aptly named because:</p>
@@ -611,7 +610,7 @@ document.write(`
 </div>
 </section>
 <section id="making-directories">
-<h3>Making Directories<a class="headerlink" href="#making-directories" title="Permalink to this heading">#</a></h3>
+<h3>Making Directories<a class="headerlink" href="#making-directories" title="Permalink to this headline">#</a></h3>
 <p><strong>mkdir (make directory)</strong></p>
 <p>We will now make a subdirectory in your home directory to hold the files you will be creating and using in the course of this tutorial. To make a subdirectory called <code class="docutils literal notranslate"><span class="pre">unixstuff</span></code> in your current working directory type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ mkdir unixstuff 
@@ -623,7 +622,7 @@ document.write(`
 </div>
 </section>
 <section id="changing-to-a-different-directory">
-<h3>Changing to a different directory<a class="headerlink" href="#changing-to-a-different-directory" title="Permalink to this heading">#</a></h3>
+<h3>Changing to a different directory<a class="headerlink" href="#changing-to-a-different-directory" title="Permalink to this headline">#</a></h3>
 <p><strong>cd (change directory)</strong></p>
 <p>The command <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">directory</span></code> means change the current working directory to “directory”. The current working directory may be thought of as the directory you are in, i.e. your current position in the file-system tree.</p>
 <p>To change to the directory you have just made, type:</p>
@@ -640,7 +639,7 @@ document.write(`
 </div>
 </section>
 <section id="the-directories-and">
-<h3>The directories . and ..<a class="headerlink" href="#the-directories-and" title="Permalink to this heading">#</a></h3>
+<h3>The directories . and ..<a class="headerlink" href="#the-directories-and" title="Permalink to this headline">#</a></h3>
 <p>Still in the <code class="docutils literal notranslate"><span class="pre">unixstuff</span></code> directory, type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls -a
 </pre></div>
@@ -671,7 +670,7 @@ document.write(`
 <p>will list the contents of your unixstuff directory, no matter where you currently are in the file system.</p>
 </section>
 <section id="copying-files">
-<h3>Copying files<a class="headerlink" href="#copying-files" title="Permalink to this heading">#</a></h3>
+<h3>Copying files<a class="headerlink" href="#copying-files" title="Permalink to this headline">#</a></h3>
 <p><strong>cp (copy)</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">cp</span> <span class="pre">file1</span> <span class="pre">file2</span></code> is the command which makes a copy of <code class="docutils literal notranslate"><span class="pre">file1</span></code> in the current working directory and calls it <code class="docutils literal notranslate"><span class="pre">file2</span></code></p>
 <div class="admonition note">
@@ -704,11 +703,11 @@ document.write(`
 </div>
 </section>
 <section id="using-tab">
-<h3>Using [TAB]<a class="headerlink" href="#using-tab" title="Permalink to this heading">#</a></h3>
+<h3>Using [TAB]<a class="headerlink" href="#using-tab" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">[TAB]</span></code> is very useful in the Linux (and other) command line: it uses an automated completion algorithm to complete the commands you are typing. For example, try to type <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">cd</span> <span class="pre">~/uni</span></code> and then <code class="docutils literal notranslate"><span class="pre">TAB</span></code>. This is also going to make suggestions in case of multiple choices, or for commands.</p>
 </section>
 <section id="moving-files">
-<h3>Moving files<a class="headerlink" href="#moving-files" title="Permalink to this heading">#</a></h3>
+<h3>Moving files<a class="headerlink" href="#moving-files" title="Permalink to this headline">#</a></h3>
 <p><strong>mv (move)</strong></p>
 <p><code class="docutils literal notranslate"><span class="pre">mv</span> <span class="pre">file1</span> <span class="pre">file2</span></code> moves (or renames) <code class="docutils literal notranslate"><span class="pre">file1</span></code> to <code class="docutils literal notranslate"><span class="pre">file2</span></code></p>
 <p>To move a file from one place to another, use the <code class="docutils literal notranslate"><span class="pre">mv</span></code> command. This has the effect of moving rather than copying the file, so you end up with only one file rather than two.</p>
@@ -721,7 +720,7 @@ document.write(`
 <p>Type <code class="docutils literal notranslate"><span class="pre">ls</span></code> and <code class="docutils literal notranslate"><span class="pre">ls</span> <span class="pre">backup</span></code> to see if it has worked.</p>
 </section>
 <section id="removing-files-and-directories">
-<h3>Removing files and directories<a class="headerlink" href="#removing-files-and-directories" title="Permalink to this heading">#</a></h3>
+<h3>Removing files and directories<a class="headerlink" href="#removing-files-and-directories" title="Permalink to this headline">#</a></h3>
 <p><strong>rm (remove), rmdir (remove directory)</strong></p>
 <p>To delete (remove) a file, use the <code class="docutils literal notranslate"><span class="pre">rm</span></code> command. As an example, we are going to create a copy of the <code class="docutils literal notranslate"><span class="pre">science.txt</span></code> file and then delete it.</p>
 <p>Inside your <code class="docutils literal notranslate"><span class="pre">unixstuff</span></code> directory, type:</p>
@@ -745,7 +744,7 @@ $ ls
 </div>
 </section>
 <section id="displaying-the-contents-of-a-file-on-the-screen">
-<h3>Displaying the contents of a file on the screen<a class="headerlink" href="#displaying-the-contents-of-a-file-on-the-screen" title="Permalink to this heading">#</a></h3>
+<h3>Displaying the contents of a file on the screen<a class="headerlink" href="#displaying-the-contents-of-a-file-on-the-screen" title="Permalink to this headline">#</a></h3>
 <p><strong>clear (clear screen)</strong></p>
 <p>Before you start the next section, you may like to clear the terminal window of the previous commands so the output of the following commands can be clearly understood.</p>
 <p>At the prompt, type:</p>
@@ -785,7 +784,7 @@ $ ls
 </div>
 </section>
 <section id="searching-the-contents-of-a-file">
-<h3>Searching the contents of a file<a class="headerlink" href="#searching-the-contents-of-a-file" title="Permalink to this heading">#</a></h3>
+<h3>Searching the contents of a file<a class="headerlink" href="#searching-the-contents-of-a-file" title="Permalink to this headline">#</a></h3>
 <p><strong>Simple searching using <code class="docutils literal notranslate"><span class="pre">less</span></code></strong></p>
 <p>Using <code class="docutils literal notranslate"><span class="pre">less</span></code>, you can search through a text file for a keyword (pattern). For example, to search through <code class="docutils literal notranslate"><span class="pre">science.txt</span></code> for the word “science”, type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ less science.txt
@@ -828,7 +827,7 @@ $ ls
 </div>
 </section>
 <section id="take-home-points-the-command-line">
-<h3>Take home points: the command line<a class="headerlink" href="#take-home-points-the-command-line" title="Permalink to this heading">#</a></h3>
+<h3>Take home points: the command line<a class="headerlink" href="#take-home-points-the-command-line" title="Permalink to this headline">#</a></h3>
 <p>The linux command line is very powerful. So powerful that linux systems (without graphical interface, i.e. only using the command line) are running the vast majority of the world’s servers and super computers.</p>
 <p>We have shown some examples of how to navigate in the linux directory structure and use some simple commands. This is by far not sufficient to demonstrate its usefulness: the <code class="docutils literal notranslate"><span class="pre">grep</span></code> command for example is extremely powerful to help you find files that you thought you had lost, and <code class="docutils literal notranslate"><span class="pre">wget</span></code> a file to a current directory is often much faster than downloading it in firefox and copy it afterwards. For the time being, this short tutorial should help get you started.</p>
 <div class="tip admonition">
@@ -838,11 +837,11 @@ $ ls
 </section>
 </section>
 <section id="executable-scripts">
-<h2>Executable scripts<a class="headerlink" href="#executable-scripts" title="Permalink to this heading">#</a></h2>
+<h2>Executable scripts<a class="headerlink" href="#executable-scripts" title="Permalink to this headline">#</a></h2>
 <p>Now that you are familiar with the command line, you must have noticed that linux commands have some similarities with the <strong>statements</strong> you used in your bachelor programming course: by typing them in, the computer does things for you and gives you information back (often printed on screen, but not always). When you want to <strong>automate</strong> a series of commands you just typed in (for example renaming and moving files), a natural thing would be to write a <strong>script</strong> to do so.</p>
 <p>Scripts are the simplest type of program one can write, and this can be seen as your first programming experience in this course. We are going to write a <strong>bash script</strong> and execute it: why we want to do this in a python scientific programming course may be not clear right now, but it will make more sense later I promise.</p>
 <section id="a-simple-script">
-<h3>A simple script<a class="headerlink" href="#a-simple-script" title="Permalink to this heading">#</a></h3>
+<h3>A simple script<a class="headerlink" href="#a-simple-script" title="Permalink to this headline">#</a></h3>
 <p>In your <code class="docutils literal notranslate"><span class="pre">unixstuff</span></code> directory, create a new file name <code class="docutils literal notranslate"><span class="pre">myscript.sh</span></code>. You can do this using the default (graphical) text editor in MyBinder.</p>
 <div class="dropdown tip admonition">
 <p class="admonition-title">Open a new text file on MyBinder</p>
@@ -860,7 +859,7 @@ $ ls
 <p><strong>Bash</strong> is a so-called “interpreter”. It reads your file and understands how to execute the commands in it.</p>
 </section>
 <section id="make-a-file-executable">
-<h3>Make a file executable<a class="headerlink" href="#make-a-file-executable" title="Permalink to this heading">#</a></h3>
+<h3>Make a file executable<a class="headerlink" href="#make-a-file-executable" title="Permalink to this headline">#</a></h3>
 <p>List the files in your directory, but whith the option <code class="docutils literal notranslate"><span class="pre">-l</span></code> for more information. Here is how it looks like on MyBinder:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ ls -l
 total 12
@@ -889,7 +888,7 @@ echo Hello World!
 </div>
 </section>
 <section id="take-home-points-bash-scripts">
-<h3>Take home points: bash scripts<a class="headerlink" href="#take-home-points-bash-scripts" title="Permalink to this heading">#</a></h3>
+<h3>Take home points: bash scripts<a class="headerlink" href="#take-home-points-bash-scripts" title="Permalink to this headline">#</a></h3>
 <p>It is possible to write simple programs in linux called <strong>scripts</strong>. These scripts can be executed by the default interpreter, and be made <strong>executable</strong> by changing their <strong>file permissions</strong>.</p>
 <div class="tip admonition">
 <p class="admonition-title">To go further</p>
@@ -898,9 +897,9 @@ echo Hello World!
 </section>
 </section>
 <section id="the-linux-path">
-<h2>The linux PATH<a class="headerlink" href="#the-linux-path" title="Permalink to this heading">#</a></h2>
+<h2>The linux PATH<a class="headerlink" href="#the-linux-path" title="Permalink to this headline">#</a></h2>
 <section id="locate-linux-programs">
-<h3>Locate linux programs<a class="headerlink" href="#locate-linux-programs" title="Permalink to this heading">#</a></h3>
+<h3>Locate linux programs<a class="headerlink" href="#locate-linux-programs" title="Permalink to this headline">#</a></h3>
 <p>You may have asked yourself: how does the linux command line know about the commands we are using? Where do I find them? A nice program helping us to find out is <strong>which</strong>. Let’s use it:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ which less
 /usr/bin/less
@@ -930,7 +929,7 @@ lrwxrwxrwx 1 root root 10 Nov 19 14:42 /usr/bin/which -&gt; /bin/which
 </div>
 </section>
 <section id="the-path-variable">
-<h3>The PATH variable<a class="headerlink" href="#the-path-variable" title="Permalink to this heading">#</a></h3>
+<h3>The PATH variable<a class="headerlink" href="#the-path-variable" title="Permalink to this headline">#</a></h3>
 <p>The linux command line knows so-called <strong>environmental variables</strong>. The <code class="docutils literal notranslate"><span class="pre">echo</span></code> command can display their value:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ echo $PATH
 </pre></div>
@@ -959,7 +958,7 @@ $ export PATH=$PATH:~/myprograms
 </div>
 </section>
 <section id="take-home-points-the-linux-path">
-<h3>Take home points: the linux PATH<a class="headerlink" href="#take-home-points-the-linux-path" title="Permalink to this heading">#</a></h3>
+<h3>Take home points: the linux PATH<a class="headerlink" href="#take-home-points-the-linux-path" title="Permalink to this headline">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">PATH</span></code> variable tells linux where to look for programs and scripts. This is a very simple and powerful way to customize linux with your own scripts and programs.</p>
 </section>
 </section>

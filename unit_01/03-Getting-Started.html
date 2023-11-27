@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Getting started with Python &#8212; Scientific Programming</title>
   
@@ -45,7 +45,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Assignment #01" href="Assignment-01.html" />
     <link rel="prev" title="For linux/mac users: what did mambaforge do to your terminal?" href="02b-Details-Linux.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -475,11 +474,11 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="getting-started-with-python">
-<h1>Getting started with Python<a class="headerlink" href="#getting-started-with-python" title="Permalink to this heading">#</a></h1>
+<h1>Getting started with Python<a class="headerlink" href="#getting-started-with-python" title="Permalink to this headline">#</a></h1>
 <p>In this chapter we are getting used to the python command line, and we are going to write our first small program.</p>
 <p><strong>Prerequisites</strong>: you have python and ipython installed, as described in <a class="reference internal" href="02-Installation.html"><span class="doc">Installing Python on your computer</span></a>. Alternatively, you can also use MyBinder for this unit.</p>
 <section id="the-standard-command-line-interpreter">
-<h2>The standard command-line interpreter<a class="headerlink" href="#the-standard-command-line-interpreter" title="Permalink to this heading">#</a></h2>
+<h2>The standard command-line interpreter<a class="headerlink" href="#the-standard-command-line-interpreter" title="Permalink to this headline">#</a></h2>
 <p>Let’s open a python interpreter and type in some commands:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
@@ -493,10 +492,10 @@ document.write(`
 <p>This should look quite familiar to you, whatever language you learned before. We defined variables, and did some arithmetics with them. On line 3 we used the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function to display the output of our computations, but as it turns out it is not necessary: the command line shell will print the output anyway. This functionality is called <a class="reference external" href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a>, and it is a feature of modern interpreted languages. We’ll come back to this later.</p>
 </section>
 <section id="running-scripts">
-<h2>Running scripts<a class="headerlink" href="#running-scripts" title="Permalink to this heading">#</a></h2>
+<h2>Running scripts<a class="headerlink" href="#running-scripts" title="Permalink to this headline">#</a></h2>
 <p>Of course, the command-line interpreter is only useful for small tasks or for data exploration. Most of the time, you will want to write <strong>scripts</strong> (a collection of commands executed in order to reach a certain goal) or more complex <strong>programs</strong> (the difference between “scripts” and “programs” is fuzzy, but for now let’s call a “program” a tool which involves writing several functions and/or files).</p>
 <section id="running-a-python-script-from-the-terminal">
-<h3>Running a python script from the terminal<a class="headerlink" href="#running-a-python-script-from-the-terminal" title="Permalink to this heading">#</a></h3>
+<h3>Running a python script from the terminal<a class="headerlink" href="#running-a-python-script-from-the-terminal" title="Permalink to this headline">#</a></h3>
 <p>Python scripts are simple text files. Per convention we like to give them a suffix: <code class="docutils literal notranslate"><span class="pre">.py</span></code>. This suffix is required for python modules but not mandatory for scripts with a shebang. In general it’s a good idea to use the <code class="docutils literal notranslate"><span class="pre">.py</span></code> suffix though.</p>
 <p>Let’s create a new file, <code class="docutils literal notranslate"><span class="pre">my_python_script.py</span></code> (using a text editor of your choice, for example <code class="docutils literal notranslate"><span class="pre">gedit</span></code> in ubuntu or <code class="docutils literal notranslate"><span class="pre">wordpad</span></code> in Windows), and add these few lines of code to it:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
@@ -512,7 +511,7 @@ document.write(`
 </section>
 </section>
 <section id="take-home-points">
-<h2>Take home points<a class="headerlink" href="#take-home-points" title="Permalink to this heading">#</a></h2>
+<h2>Take home points<a class="headerlink" href="#take-home-points" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>python scripts are text files ending with <code class="docutils literal notranslate"><span class="pre">.py</span></code>. They can be run from the terminal (<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">my_file.py</span></code>) or from the <code class="docutils literal notranslate"><span class="pre">ipython</span></code> interpreter (<code class="docutils literal notranslate"><span class="pre">%run</span> <span class="pre">my_file.py</span></code>).</p></li>
 </ul>

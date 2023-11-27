@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Scientific development environment: ipython and spyder &#8212; Scientific Programming</title>
   
@@ -45,7 +45,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Language fundamentals" href="03-Language-Fundamentals.html" />
     <link rel="prev" title="Installing python packages" href="01-install-packages.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -484,9 +483,9 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="scientific-development-environment-ipython-and-spyder">
-<h1>Scientific development environment: ipython and spyder<a class="headerlink" href="#scientific-development-environment-ipython-and-spyder" title="Permalink to this heading">#</a></h1>
+<h1>Scientific development environment: ipython and spyder<a class="headerlink" href="#scientific-development-environment-ipython-and-spyder" title="Permalink to this headline">#</a></h1>
 <section id="reminder-the-standard-python-interpreter">
-<h2>Reminder: the “standard” python interpreter<a class="headerlink" href="#reminder-the-standard-python-interpreter" title="Permalink to this heading">#</a></h2>
+<h2>Reminder: the “standard” python interpreter<a class="headerlink" href="#reminder-the-standard-python-interpreter" title="Permalink to this headline">#</a></h2>
 <p>Let’s open a python interpreter and type in some commands:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
@@ -500,7 +499,7 @@ document.write(`
 <p>As it turns out, you will rarely use the python interpreter, but actually use a “more advanced” one: <code class="docutils literal notranslate"><span class="pre">ipython</span></code></p>
 </section>
 <section id="ipython-interactive-python">
-<h2>ipython: interactive python<a class="headerlink" href="#ipython-interactive-python" title="Permalink to this heading">#</a></h2>
+<h2>ipython: interactive python<a class="headerlink" href="#ipython-interactive-python" title="Permalink to this headline">#</a></h2>
 <p>The default command-line interpreter comes with some functionality (for example, if you use the up and down arrows you can navigate to your previous commands) but this functionality is very sparse. Some important functionalities are missing: some are cosmetic (like colors), some are very useful (like <strong>automatic code completion</strong> with <code class="docutils literal notranslate"><span class="pre">[TAB]</span></code> or the possibility to paste several lines of code at once). For all these reasons, the default python command-line interpreter is only used for very small tasks like testing a command or two. Scientists need more interactivity when analyzing their data: this is why <code class="docutils literal notranslate"><span class="pre">ipython</span></code> was created.</p>
 <p><a class="reference external" href="http://ipython.readthedocs.io/en/stable/index.html">ipython</a> is a standard command-line interpreter, but enhanced with many interactive features. Let’s open it (<code class="docutils literal notranslate"><span class="pre">ipython</span></code> command) and type in some commands:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
@@ -517,15 +516,15 @@ document.write(`
 <p>What are the differences? The <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code> prompt has been replaced by <code class="docutils literal notranslate"><span class="pre">In</span> <span class="pre">[1]:</span></code>. Now there <em>is</em> a slight difference between a line with or without <code class="docutils literal notranslate"><span class="pre">print()</span></code> (can you find it?). At first sight the differences are small, but it’s in the everyday interactive coding that <code class="docutils literal notranslate"><span class="pre">ipython</span></code> becomes useful.</p>
 <p><strong>From now on, we will always use the ipython command-line interpreter.</strong> I will now describe a small sample of its most useful capabilities.</p>
 <section id="automatic-code-completion">
-<h3>Automatic code completion<a class="headerlink" href="#automatic-code-completion" title="Permalink to this heading">#</a></h3>
+<h3>Automatic code completion<a class="headerlink" href="#automatic-code-completion" title="Permalink to this headline">#</a></h3>
 <p>In ipython, type <code class="docutils literal notranslate"><span class="pre">s</span></code> and then <code class="docutils literal notranslate"><span class="pre">[TAB]</span></code>. The tool will give you a list of suggestions to choose from (useful when you forgot how a function was called exactly!). Now type <code class="docutils literal notranslate"><span class="pre">so</span></code> and <code class="docutils literal notranslate"><span class="pre">[TAB]</span></code>. Here the only solution will be selected automatically.</p>
 </section>
 <section id="getting-help">
-<h3>Getting help<a class="headerlink" href="#getting-help" title="Permalink to this heading">#</a></h3>
+<h3>Getting help<a class="headerlink" href="#getting-help" title="Permalink to this headline">#</a></h3>
 <p>Type <code class="docutils literal notranslate"><span class="pre">sorted?</span></code>. A text help should be printed, telling you what this function is about.</p>
 </section>
 <section id="copy-paste">
-<h3>Copy paste<a class="headerlink" href="#copy-paste" title="Permalink to this heading">#</a></h3>
+<h3>Copy paste<a class="headerlink" href="#copy-paste" title="Permalink to this headline">#</a></h3>
 <p>Copy the following lines and paste them into your ipython interpreter:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">s</span> <span class="o">=</span> <span class="s1">&#39;the jungle book&#39;</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
@@ -539,16 +538,16 @@ document.write(`
 </section>
 </section>
 <section id="running-scripts">
-<h2>Running scripts<a class="headerlink" href="#running-scripts" title="Permalink to this heading">#</a></h2>
+<h2>Running scripts<a class="headerlink" href="#running-scripts" title="Permalink to this headline">#</a></h2>
 <section id="reminder-running-a-python-script-from-the-terminal">
-<h3>Reminder: running a python script from the terminal<a class="headerlink" href="#reminder-running-a-python-script-from-the-terminal" title="Permalink to this heading">#</a></h3>
+<h3>Reminder: running a python script from the terminal<a class="headerlink" href="#reminder-running-a-python-script-from-the-terminal" title="Permalink to this headline">#</a></h3>
 <p>Python scripts are simple text files. Per convention we like to give them a suffix: <code class="docutils literal notranslate"><span class="pre">.py</span></code>. You can run python scripts by calling python in a terminal:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python my_python_script.py
 </pre></div>
 </div>
 </section>
 <section id="running-a-python-script-from-the-ipython-interpreter">
-<h3>Running a python script from the ipython interpreter<a class="headerlink" href="#running-a-python-script-from-the-ipython-interpreter" title="Permalink to this heading">#</a></h3>
+<h3>Running a python script from the ipython interpreter<a class="headerlink" href="#running-a-python-script-from-the-ipython-interpreter" title="Permalink to this headline">#</a></h3>
 <p>Running a script from the ipython interpreter is as easy as:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -577,7 +576,7 @@ document.write(`
 </div>
 </section>
 <section id="importing-a-python-file">
-<h3>Importing a python file<a class="headerlink" href="#importing-a-python-file" title="Permalink to this heading">#</a></h3>
+<h3>Importing a python file<a class="headerlink" href="#importing-a-python-file" title="Permalink to this headline">#</a></h3>
 <p>Another way to “run” a script in a python interpreter is via the <code class="docutils literal notranslate"><span class="pre">import</span></code> mechanism:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -608,7 +607,7 @@ document.write(`
 </section>
 </section>
 <section id="spyder">
-<h2>Spyder<a class="headerlink" href="#spyder" title="Permalink to this heading">#</a></h2>
+<h2>Spyder<a class="headerlink" href="#spyder" title="Permalink to this headline">#</a></h2>
 <img alt="https://www.spyder-ide.org/spyder_website_banner.png" src="https://www.spyder-ide.org/spyder_website_banner.png" />
 <p><a class="reference external" href="https://www.spyder-ide.org">Spyder</a> is an open-source integrated development environment (<a class="reference external" href="https://en.wikipedia.org/wiki/Integrated_development_environment">IDE</a>) for scientific python, and it is the best for beginners. To open spyder, simply open your conda environment and type:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">spyder</span>
@@ -618,7 +617,7 @@ document.write(`
 <p>I think that you will learn spyder fast enough while coding, but if you want some tips to get started, the <a class="reference external" href="https://docs.spyder-ide.org/current/videos/first-steps-with-spyder.html">official documentation</a> is a good place to go first!</p>
 </section>
 <section id="learning-checklist">
-<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Permalink to this heading">#</a></h2>
+<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Permalink to this headline">#</a></h2>
 <p><label><input type="checkbox" id="week03_01" class="box"> I understand that <code class="docutils literal notranslate"><span class="pre">ipython</span></code> is short for “interactive python”. It’s basically the same thing as the default <strong>interpreter</strong>, but with more features.</input></label>
 <label><input type="checkbox" id="week03_02" class="box"> I understand that the <strong>import mechanism</strong> also “runs” a file, but the way it does so is fundamentally different. We are going to explain the <code class="docutils literal notranslate"><span class="pre">import</span></code> mechanism in more detail soon.</input></label><br />
 <label><input type="checkbox" id="week03_03" class="box"> I am able to start spyder from the command line.</input></label></p>
