@@ -54,3 +54,7 @@ parts:
     - file: unit_07/01-Exceptions
     - file: unit_07/02-Testing
     - file: unit_07/Assignment-07
+  - caption: Unit 08 - Python Packages and Semester project
+    chapters:
+    - file: unit_08/01-Package-structure
+    - file: unit_08/02-Programming-project

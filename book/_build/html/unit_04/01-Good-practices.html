@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Good practices, programming style and conventions &#8212; Scientific Programming</title>
   
@@ -45,6 +45,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -67,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Tips and tricks" href="02-Tips-and-Tricks.html" />
     <link rel="prev" title="Assignment #03" href="../unit_03/Assignment-03.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -215,6 +216,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/01-Exceptions.html">Errors, Exceptions and Warnings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/02-Testing.html">Testing your code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/Assignment-07.html">Assignment #06: exceptions and testing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 08 - Python Packages and Semester project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_08/01-Package-structure.html">Structure of a python package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_08/02-Programming-project.html">Term project: the WRFvis package</a></li>
 </ul>
 
     </div>
@@ -473,10 +479,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="good-practices-programming-style-and-conventions">
-<h1>Good practices, programming style and conventions<a class="headerlink" href="#good-practices-programming-style-and-conventions" title="Permalink to this headline">#</a></h1>
+<h1>Good practices, programming style and conventions<a class="headerlink" href="#good-practices-programming-style-and-conventions" title="Permalink to this heading">#</a></h1>
 <p>Python is a very versatile programming language, and it has a very flexible syntax. Therefore, it is also very easy to write <em>ugly code</em> in python. This chapter reviews a number of guidelines and conventions widely accepted by the community. At this stage of the lecture we won’t go into each of these points in depth, but try to keep them in mind while writing your assignments.</p>
 <section id="use-pep-8">
-<h2>Use PEP 8<a class="headerlink" href="#use-pep-8" title="Permalink to this headline">#</a></h2>
+<h2>Use PEP 8<a class="headerlink" href="#use-pep-8" title="Permalink to this heading">#</a></h2>
 <p><a class="reference external" href="https://www.python.org/dev/peps/pep-0008/">PEP 8</a> is a style guide for python code. It introduces new rules where the syntax leaves them open. As an example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -493,7 +499,7 @@ document.write(`
 <p>PEP8 gives <em>guidelines</em>, not strict rules. It is your choice to comply with them or not. As a matter of fact, however, many open source projects have adopted PEP8 and require to use it if you want to contribute. If you want to use it too, a good choice is to turn on PEP8 checking in your favorite IDE (in Spyder: <code class="docutils literal notranslate"><span class="pre">Tools</span> <span class="pre">-&gt;</span> <span class="pre">Preferences</span> <span class="pre">-&gt;</span> <span class="pre">Completion</span> <span class="pre">and</span> <span class="pre">linting</span> <span class="pre">-&gt;</span> <span class="pre">Code</span> <span class="pre">style</span> <span class="pre">-&gt;</span> </code> Tick <code class="docutils literal notranslate"><span class="pre">Enable</span> <span class="pre">code</span> <span class="pre">style</span> <span class="pre">linting</span></code> for PEP8 style analysis).</p>
 </section>
 <section id="give-meaningful-names-to-variables-and-functions">
-<h2>Give meaningful names to variables and functions<a class="headerlink" href="#give-meaningful-names-to-variables-and-functions" title="Permalink to this headline">#</a></h2>
+<h2>Give meaningful names to variables and functions<a class="headerlink" href="#give-meaningful-names-to-variables-and-functions" title="Permalink to this heading">#</a></h2>
 <p>The text space that code is taking up is less important than your time. Give meaningful names to your variables and functions, even if it makes them quite long! For example, prefer:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fahrenheit_to_celsius</span><span class="p">(</span><span class="n">temp_fahrenheit</span><span class="p">):</span>
 </pre></div>
@@ -505,7 +511,7 @@ document.write(`
 <p>The same rule applies for variables. Prefer <code class="docutils literal notranslate"><span class="pre">language</span></code> over <code class="docutils literal notranslate"><span class="pre">l</span></code> and <code class="docutils literal notranslate"><span class="pre">area</span></code> over <code class="docutils literal notranslate"><span class="pre">a</span></code>.</p>
 </section>
 <section id="prefer-writing-many-small-functions-instead-of-monolithic-code-blocks">
-<h2>Prefer writing many small functions instead of monolithic code blocks<a class="headerlink" href="#prefer-writing-many-small-functions-instead-of-monolithic-code-blocks" title="Permalink to this headline">#</a></h2>
+<h2>Prefer writing many small functions instead of monolithic code blocks<a class="headerlink" href="#prefer-writing-many-small-functions-instead-of-monolithic-code-blocks" title="Permalink to this heading">#</a></h2>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/Separation_of_concerns">Separation of concerns</a> is an important design principle for separating a computer program into distinct sections, such that each section addresses a separate concern. This increases the code readability and facilitates unit testing (as we will see).</p>
 <p>For example, a scientific script can often be organized in well defined steps:</p>
 <ul class="simple">
@@ -518,12 +524,12 @@ document.write(`
 <p>Each of these steps and sub-steps should be separated into different functions, maybe even into different scripts.</p>
 </section>
 <section id="document-your-code">
-<h2>Document your code<a class="headerlink" href="#document-your-code" title="Permalink to this headline">#</a></h2>
+<h2>Document your code<a class="headerlink" href="#document-your-code" title="Permalink to this heading">#</a></h2>
 <p>Write comments in your code, and document the functions with docstrings. We will have a full lecture about it, but it’s good to start early. Here again, there are <a class="reference external" href="https://numpydoc.readthedocs.io/en/latest/format.html#docstring-standard">some conventions</a> that I recommend to follow.</p>
 <p>Note that this is useful even if you don’t plan to share your code. At the very least there is one person reading your code: yourself! And it’s always a good idea to be nice to yourself! (see the related <a class="reference external" href="http://abstrusegoose.com/432">Abstruse Goose comic</a>)</p>
 </section>
 <section id="the-zen-of-python">
-<h2>The Zen of Python<a class="headerlink" href="#the-zen-of-python" title="Permalink to this headline">#</a></h2>
+<h2>The Zen of Python<a class="headerlink" href="#the-zen-of-python" title="Permalink to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">this</span>
