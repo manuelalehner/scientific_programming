@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html >
+<html lang="en" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
     <title>Introduction to numpy: why does numpy exist? &#8212; Scientific Programming</title>
   
@@ -45,6 +45,7 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -69,7 +70,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Number representation in computers" href="02-Numbers.html" />
     <link rel="prev" title="Assignment #04" href="../unit_04/Assignment-04.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="None"/>
+  <meta name="docsearch:language" content="en"/>
   </head>
   
   
@@ -217,6 +218,11 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/01-Exceptions.html">Errors, Exceptions and Warnings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/02-Testing.html">Testing your code</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/Assignment-07.html">Assignment #06: exceptions and testing</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 08 - Python Packages and Semester project</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_08/01-Package-structure.html">Structure of a python package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_08/02-Programming-project.html">Term project: the WRFvis package</a></li>
 </ul>
 
     </div>
@@ -478,12 +484,12 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="introduction-to-numpy-why-does-numpy-exist">
-<h1>Introduction to numpy: why does numpy exist?<a class="headerlink" href="#introduction-to-numpy-why-does-numpy-exist" title="Permalink to this headline">#</a></h1>
+<h1>Introduction to numpy: why does numpy exist?<a class="headerlink" href="#introduction-to-numpy-why-does-numpy-exist" title="Permalink to this heading">#</a></h1>
 <p>You might have read somewhere that Python is “slow” in comparison to some other languages. While generally true, this statement has only little meaning without context. As a scripting language (e.g. simplify tasks such as file renaming, data download, etc.), python is fast enough. For <em>numerical computations</em> (like the computations done by an atmospheric model or by a machine learning algorithm), “pure” Python is very slow indeed. Fortunately, there is a way to overcome this problem!</p>
 <p>In this chapter we are going to explain why the <a class="reference external" href="http://numpy.org">numpy</a> library was created. Numpy is the fundamental library which transformed the general purpose python language into a scientific language like Matlab, R or IDL.</p>
 <p>Before introducing numpy, we will discuss some of the differences between python and compiled languages widely used in scientific software development (like C and FORTRAN).</p>
 <section id="why-is-python-slow">
-<h2>Why is python “slow”?<a class="headerlink" href="#why-is-python-slow" title="Permalink to this headline">#</a></h2>
+<h2>Why is python “slow”?<a class="headerlink" href="#why-is-python-slow" title="Permalink to this heading">#</a></h2>
 <p>In the next unit about numbers, we’ll learn that the memory consumption of a python <code class="docutils literal notranslate"><span class="pre">int</span></code> is larger than the memory needed to store the binary number alone. This overhead in memory consumption is due to the nature of python data types, which are all <strong>objects</strong>. We’ve already learned that these objects come with certain “services”.</p>
 <p>Everything is an object in Python. Yes, even functions are objects! Let me prove it to you:</p>
 <div class="cell docutils container">
@@ -544,7 +550,7 @@ document.write(`
 <p><strong>Python’s high-level of abstraction (i.e. python’s flexibility) makes it slower than its lower-level counterparts like C or FORTRAN</strong>. But, why is that so?</p>
 </section>
 <section id="dynamically-versus-statically-typed-languages">
-<h2>Dynamically versus statically typed languages<a class="headerlink" href="#dynamically-versus-statically-typed-languages" title="Permalink to this headline">#</a></h2>
+<h2>Dynamically versus statically typed languages<a class="headerlink" href="#dynamically-versus-statically-typed-languages" title="Permalink to this heading">#</a></h2>
 <p>Python is a so-called <strong>dynamically typed</strong> language, which means that the <strong>type</strong> of a variable is determined by the interpreter <em>at run time</em>. To understand what that  means in practice, let’s have a look at the following code snippet:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -592,7 +598,7 @@ document.write(`
 <p>The major difference with the Python code above is that the programmer indicated the type of the variables when they are assigned. Variable type definition in the code script is an integral part of the C syntax. This applies to the variables themselves, but also to the output of computations. This is a fundamental difference to python, and comes with several advantages. Static typing usually results in code that executes faster: since the program knows the exact data types that are in use, it can predict the memory consumption of operations beforehand and produce optimized machine code. Another advantage is code documentation: the statement <code class="docutils literal notranslate"><span class="pre">int</span> <span class="pre">c</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code> makes it clear that we are adding two numbers while the python equivalent <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code> could produce a number, a string, a list, etc.</p>
 </section>
 <section id="compiled-versus-interpreted-languages">
-<h2>Compiled versus interpreted languages<a class="headerlink" href="#compiled-versus-interpreted-languages" title="Permalink to this headline">#</a></h2>
+<h2>Compiled versus interpreted languages<a class="headerlink" href="#compiled-versus-interpreted-languages" title="Permalink to this heading">#</a></h2>
 <p>Statically typed languages often require <strong>compilation</strong>. To run the C code snippet I had to create a new text file (<code class="docutils literal notranslate"><span class="pre">example.c</span></code>), write the code, compile it (<code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">gcc</span> <span class="pre">-o</span> <span class="pre">myprogram</span> <span class="pre">example.c</span></code>), before finally being able to execute it (<code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">./myprogram</span></code>).</p>
 <p><a class="reference external" href="https://en.wikipedia.org/wiki/GNU_Compiler_Collection">gcc</a> is the compiler I used to translate the C source code (a text file) to a low level language (machine code) in order to create an <strong>executable</strong> (<code class="docutils literal notranslate"><span class="pre">myprogram</span></code>). Later changes to the source code require a new compilation step for the changes to take effect.</p>
 <p>Because of this “edit-compile-run” cycle, compiled languages are not interactive: in the C language, there is no equivalent to python’s command line interpreter. Compiling complex programs can take up to several hours in some extreme cases. This compilation time, however, is usually associated with faster execution times: as mentioned earlier, the compiler’s task is to optimize the program for memory consumption by source code analysis. Often, a compiled program is optimized for the machine architecture it is compiled onto. Like interpreters, there can be different compilers for the same language. They differ in the optimization steps they undertake to make the program faster, and in their support of various hardware architectures.</p>
@@ -634,7 +640,7 @@ document.write(`
 <p>Statically typed languages are often compiled, and dynamically typed languages are often interpreted. While this is a good rule of thumb, this is not always true and the vast landscape of programming languages contains many exceptions. This lecture is only a very short introduction to these concepts: you’ll have to refer to more advanced computer science lectures if you want to learn about these topics in more detail.</p>
 </section>
 <section id="here-comes-numpy">
-<h2>Here comes numpy<a class="headerlink" href="#here-comes-numpy" title="Permalink to this headline">#</a></h2>
+<h2>Here comes numpy<a class="headerlink" href="#here-comes-numpy" title="Permalink to this heading">#</a></h2>
 <p>Let’s summarize the two previous sections:</p>
 <ul class="simple">
 <li><p>Python is flexible, interactive and slow</p></li>
@@ -703,7 +709,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.92 µs ± 6.71 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 µs ± 6.82 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -715,7 +721,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>450 ns ± 2.77 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>464 ns ± 3.15 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -780,7 +786,7 @@ document.write(`
 <p>As a result, numpy has to be <em>compiled</em> at installation. Most users do not notice this compilation step anymore (recent pip and conda installations are shipped with pre-compiled binaries), but installing numpy used to require several minutes on my laptop when I started to learn python myself.</p>
 </section>
 <section id="take-home-points">
-<h2>Take home points<a class="headerlink" href="#take-home-points" title="Permalink to this headline">#</a></h2>
+<h2>Take home points<a class="headerlink" href="#take-home-points" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>The process of “type checking” may occur either at compile-time (statically typed language) or at runtime (dynamically typed language). These terms are not usually used in a strict sense.</p></li>
 <li><p>Statically typed languages are often compiled, while dynamically typed languages are interpreted.</p></li>
@@ -790,11 +796,11 @@ document.write(`
 </ul>
 </section>
 <section id="further-reading">
-<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">#</a></h2>
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
 <p>I highly recommend to have a look at the first part of Jake Vanderplas’ blog post, <a class="reference external" href="https://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/">Why python is slow</a> (up to the “hacking” part). It provides more details and a good visual illustration of the <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">=</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code> example. The second part is a more involved read, but very interesting too!</p>
 </section>
 <section id="addendum-1-is-python-really-that-slow">
-<h2>Addendum 1: is python really <em>that</em> slow?<a class="headerlink" href="#addendum-1-is-python-really-that-slow" title="Permalink to this headline">#</a></h2>
+<h2>Addendum 1: is python really <em>that</em> slow?<a class="headerlink" href="#addendum-1-is-python-really-that-slow" title="Permalink to this heading">#</a></h2>
 <p>The short answer is: yes, python is slower than a number of other languages. You’ll find many benchmarks online illustrating it.</p>
 <p>Is it bad?</p>
 <p>No. Jake Vanderplas (a well known contributor of the scientific python community) <a class="reference external" href="https://jakevdp.github.io/blog/2014/05/09/why-python-is-slow/#So-Why-Use-Python?">writes</a>:</p>
@@ -803,7 +809,7 @@ document.write(`
 <p>For a scientist, writing code efficiently is <em>much</em> more important than writing efficient code. Or <a class="reference external" href="https://xkcd.com/1205/">is it</a>?</p>
 </section>
 <section id="addendum-2-support-for-type-hints-in-python">
-<h2>Addendum 2: support for type hints in python<a class="headerlink" href="#addendum-2-support-for-type-hints-in-python" title="Permalink to this headline">#</a></h2>
+<h2>Addendum 2: support for type hints in python<a class="headerlink" href="#addendum-2-support-for-type-hints-in-python" title="Permalink to this heading">#</a></h2>
 <p>Since python version 3.5, the python interpreter accepts what is called “type annotations”. Type annotations are fully optional and (currently) have no influence on performance. It looks like this:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
