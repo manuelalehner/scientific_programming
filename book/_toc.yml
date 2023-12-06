@@ -58,3 +58,6 @@ parts:
     chapters:
     - file: unit_08/01-Package-structure
     - file: unit_08/02-Programming-project
+  - caption: Unit 09 - Code documentation
+    chapters:
+    - file: unit_09/01-Documentation
