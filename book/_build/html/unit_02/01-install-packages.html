@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Installing python packages &#8212; Scientific Programming</title>
   
@@ -45,7 +45,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Scientific development environment: ipython and spyder" href="02-ipython-spyder.html" />
     <link rel="prev" title="Assignment #01" href="../unit_01/Assignment-01.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -215,7 +214,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/01-Exceptions.html">Errors, Exceptions and Warnings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/02-Testing.html">Testing your code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_07/Assignment-07.html">Assignment #06: exceptions and testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_07/Assignment-07.html">Assignment #07: exceptions and testing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 08 - Python Packages and Semester project</span></p>
 <ul class="nav bd-sidenav">
@@ -225,6 +224,11 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 09 - Code documentation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../unit_09/01-Documentation.html">Documenting your code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 10 - Object Oriented Programming I</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_10/01-OOP-Part-1.html">Object Oriented Programming: introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_10/Assignment-08.html">Assignment #08: Pydemic</a></li>
 </ul>
 
     </div>
@@ -456,7 +460,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="installing-python-packages">
-<h1>Installing python packages<a class="headerlink" href="#installing-python-packages" title="Permalink to this heading">#</a></h1>
+<h1>Installing python packages<a class="headerlink" href="#installing-python-packages" title="Permalink to this headline">#</a></h1>
 <p>This chapter contains instructions about how to install
 additional packages useful for scientific programming, such as:</p>
 <ul class="simple">
@@ -465,7 +469,7 @@ additional packages useful for scientific programming, such as:</p>
 <li><p>other packages of the scientific ecosystem, such as numpy, xarray, matplotlib…</p></li>
 </ul>
 <section id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h2>
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>you have a working python installation based on mambaforge (<span class="xref myst">Unit 01</span>) or conda</p></li>
 <li><p>you understood the differences between the <strong>windows prompt</strong>, the <strong>miniforge prompt</strong> and the <strong>python
@@ -478,7 +482,7 @@ week <span class="xref myst">01</span>.</p>
 </div>
 </section>
 <section id="context-the-conda-base-environment">
-<h2>Context: the conda (base) environment<a class="headerlink" href="#context-the-conda-base-environment" title="Permalink to this heading">#</a></h2>
+<h2>Context: the conda (base) environment<a class="headerlink" href="#context-the-conda-base-environment" title="Permalink to this headline">#</a></h2>
 <p>When you open the <strong>miniforge prompt</strong> (a <strong>terminal</strong> in linux/mac), you are opening a windows prompt with new tools available:
 for one, <code class="docutils literal notranslate"><span class="pre">python</span></code> is installed and can be run. Similarly, <code class="docutils literal notranslate"><span class="pre">conda</span></code> and <code class="docutils literal notranslate"><span class="pre">mamba</span></code> commands are only available from the miniforge
 prompt, and not from the standard prompt.
@@ -513,7 +517,7 @@ This is precisely why conda is useful: <strong>it clearly separates your python 
 on your computer</strong>.</p>
 </section>
 <section id="install-ipython-jupyterlab-and-spyder-in-the-base-environment">
-<h2>Install ipython, jupyterlab and spyder in the (base) environment<a class="headerlink" href="#install-ipython-jupyterlab-and-spyder-in-the-base-environment" title="Permalink to this heading">#</a></h2>
+<h2>Install ipython, jupyterlab and spyder in the (base) environment<a class="headerlink" href="#install-ipython-jupyterlab-and-spyder-in-the-base-environment" title="Permalink to this headline">#</a></h2>
 <p><a class="reference external" href="https://ipython.org">ipython</a>, <a class="reference external" href="https://jupyter.org">jupyter</a>, and <a class="reference external" href="https://www.spyder-ide.org">spyder</a> are fundamental tools of a scientific python installation. We will use them a LOT during the semester and your studies. We will make a demonstration in class, but first you have to install it! <strong>From the miniforge prompt</strong>, type:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>mamba install ipython jupyterlab spyder 
 </pre></div>
@@ -546,10 +550,10 @@ What about the location of <code class="docutils literal notranslate"><span clas
 </div>
 </section>
 <section id="install-other-packages-and-managing-environments">
-<h2>Install other packages and managing environments<a class="headerlink" href="#install-other-packages-and-managing-environments" title="Permalink to this heading">#</a></h2>
+<h2>Install other packages and managing environments<a class="headerlink" href="#install-other-packages-and-managing-environments" title="Permalink to this headline">#</a></h2>
 <p>These instructions are useful for later in the class (when I’ll ask you to install more packages) or maybe for other classes for which you may have to install packages.</p>
 <section id="create-an-environment-called-scipro">
-<h3>Create an environment called “scipro”<a class="headerlink" href="#create-an-environment-called-scipro" title="Permalink to this heading">#</a></h3>
+<h3>Create an environment called “scipro”<a class="headerlink" href="#create-an-environment-called-scipro" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">(base)</span></code> is the name of the base (default) environment for conda. Installing further packages in <code class="docutils literal notranslate"><span class="pre">(base)</span></code> is fine,
 but I recommend against it. I recommend to keep <code class="docutils literal notranslate"><span class="pre">(base)</span></code> as simple as possible, with few or no packages installed,
 and use named environments for further usages. I’ll explain you why a bit later.</p>
@@ -606,7 +610,7 @@ easy, and this is why I recommend their use.</p>
 <p>Visit the <a class="reference external" href="https://conda.io/projects/conda/en/latest/user-guide/getting-started.html#managing-environments">conda documentation</a> for more commands (just replace all “<code class="docutils literal notranslate"><span class="pre">conda</span></code>” commands with “<code class="docutils literal notranslate"><span class="pre">mamba</span></code>”).</p>
 </section>
 <section id="installing-additional-python-packages-in-the-active-environment">
-<h3>Installing additional python packages in the active environment<a class="headerlink" href="#installing-additional-python-packages-in-the-active-environment" title="Permalink to this heading">#</a></h3>
+<h3>Installing additional python packages in the active environment<a class="headerlink" href="#installing-additional-python-packages-in-the-active-environment" title="Permalink to this headline">#</a></h3>
 <p>In the course of your studies, you will need to install many (many) python packages, for example <a class="reference external" href="https://docs.xarray.dev">xarray</a> for gridded data analysis or <a class="reference external" href="https://unidata.github.io/MetPy">MetPy</a> for meteorology.</p>
 <p>Almost always, the install procedure will be:</p>
 <ol class="arabic simple">
@@ -640,7 +644,7 @@ to function properly.</p>
 </section>
 </section>
 <section id="learning-checklist">
-<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Permalink to this heading">#</a></h2>
+<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Permalink to this headline">#</a></h2>
 <p><label><input type="checkbox" id="week05_01" class="box"> I understand that a <strong>miniforge prompt</strong> is a windows prompt with conda and python commands available</input></label>
 <label><input type="checkbox" id="week05_02" class="box"> I understand that miniforge creates a folder (and sub-folders) at the location I indicated at the installation, and this is where all my python packages are installed.</input></label><br />
 <label><input type="checkbox" id="week05_03" class="box"> I am able to create new conda environments, activate them, and switch between them.</input></label>

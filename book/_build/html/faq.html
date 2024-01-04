@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Frequently Asked Questions &#8212; Scientific Programming</title>
   
@@ -45,7 +45,6 @@
     <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
-    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="_static/doctools.js"></script>
     <script src="_static/clipboard.min.js"></script>
     <script src="_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="External resources" href="references.html" />
     <link rel="prev" title="Syllabus" href="syllabus.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -215,7 +214,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="unit_07/01-Exceptions.html">Errors, Exceptions and Warnings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="unit_07/02-Testing.html">Testing your code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="unit_07/Assignment-07.html">Assignment #06: exceptions and testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit_07/Assignment-07.html">Assignment #07: exceptions and testing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 08 - Python Packages and Semester project</span></p>
 <ul class="nav bd-sidenav">
@@ -225,6 +224,11 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 09 - Code documentation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="unit_09/01-Documentation.html">Documenting your code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 10 - Object Oriented Programming I</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="unit_10/01-OOP-Part-1.html">Object Oriented Programming: introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="unit_10/Assignment-08.html">Assignment #08: Pydemic</a></li>
 </ul>
 
     </div>
@@ -482,15 +486,15 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="frequently-asked-questions">
-<h1>Frequently Asked  Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this heading">#</a></h1>
+<h1>Frequently Asked  Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline">#</a></h1>
 <section id="what-is-scientific-programming">
-<h2>What is “Scientific Programming”?<a class="headerlink" href="#what-is-scientific-programming" title="Permalink to this heading">#</a></h2>
+<h2>What is “Scientific Programming”?<a class="headerlink" href="#what-is-scientific-programming" title="Permalink to this headline">#</a></h2>
 <p><strong>Scientific programming targets to solve scientific problems with the help of computers</strong>.</p>
 <p>It is sometimes used as synonym for <a class="reference external" href="https://en.wikipedia.org/wiki/Computational_science">computational science</a>, but in my opinion these are not entirely the same. “Scientific programming” is not really a discipline, and therefore cannot be taught.</p>
 <p>What are we doing here then? Well, we are going to learn <strong>programming</strong> first, and then <strong>programming as a tool to do science</strong>. We are going to apply our new skills to scientific problems, but not only. Within the time given to us, we won’t be able to learn <em>everything</em> about programming of course. My hope is that at the end of the lecture you’ll have sufficient background and tools at your disposition to solve your own problems, and (this is the most important bit) that you’ll know <em>where</em> to find solutions to the problems you encounter.</p>
 </section>
 <section id="why-should-i-learn-programming">
-<h2>Why should I learn programming?<a class="headerlink" href="#why-should-i-learn-programming" title="Permalink to this heading">#</a></h2>
+<h2>Why should I learn programming?<a class="headerlink" href="#why-should-i-learn-programming" title="Permalink to this headline">#</a></h2>
 <p>As a scientist you are going to either <em>produce</em> or <em>analyze</em> data, most of the time you’ll do both. For a long time, scientists have seen programming as a “tool”, a menial task to accomplish in order to answer the questions they were asking. Nowadays programming has taken a prominent place in a scientist’s work, for several reasons:</p>
 <ul class="simple">
 <li><p><strong>the amount of data we have to handle increases together with computational power and our capacity to store it</strong>. I would even argue that the bottleneck in model based scientific discovery isn’t the computational effort anymore, but our capacity to comprehend and analyze these huge amounts of data.</p></li>
@@ -501,7 +505,7 @@ document.write(`
 <p>In simple words, we have to become better programmers to be faster and better at what we do: science.</p>
 </section>
 <section id="why-python">
-<h2>Why Python?<a class="headerlink" href="#why-python" title="Permalink to this heading">#</a></h2>
+<h2>Why Python?<a class="headerlink" href="#why-python" title="Permalink to this headline">#</a></h2>
 <p>We will use the <a class="reference external" href="https://www.python.org/">Python programming language</a> in this course. In case you are wondering why this language and not any other like <code class="docutils literal notranslate"><span class="pre">&lt;name</span> <span class="pre">your</span> <span class="pre">favorite</span> <span class="pre">language</span> <span class="pre">here&gt;</span></code>, let me stop you right away: this course is not about “learning Python”, it is about learning the general concepts of programming: algorithmic, numerics, program structure, object oriented programming, testing, etc. Python is just the tool I chose to use for this purpose.</p>
 <p>We could indeed have taken any other language, but there are several advantages in using Python. A quick web search will give you <a class="reference external" href="https://www.google.co.uk/search?dcr=0&amp;ei=Wo2OWtKHNY7fwAKv1KbIDQ&amp;q=Why+should+I+learn+python">millions of reasons</a>, but let me pick some of my favorites here:</p>
 <ul class="simple">
@@ -513,7 +517,7 @@ document.write(`
 <p>There are many other reasons to use Python (and some arguments <em>against</em> Python as well of course), but I don’t think it’s relevant to list them here. My argument is following: for a good programmer, switching language is not a very big deal. It’s not easy of course, but it’s possible - becoming a good programmer is the hard bit, and is a never ending process.</p>
 </section>
 <section id="why-did-you-write-these-lecture-notes-there-are-plenty-of-other-resources-online">
-<h2>Why did you write these lecture notes? There are plenty of other resources online.<a class="headerlink" href="#why-did-you-write-these-lecture-notes-there-are-plenty-of-other-resources-online" title="Permalink to this heading">#</a></h2>
+<h2>Why did you write these lecture notes? There are plenty of other resources online.<a class="headerlink" href="#why-did-you-write-these-lecture-notes-there-are-plenty-of-other-resources-online" title="Permalink to this headline">#</a></h2>
 <p>That’s true, and I used many of these resources myself (see <a class="reference internal" href="references.html"><span class="doc">External resources</span></a>). However, none of the tutorials is organized to fit <em>exactly</em> the 15 week semester of Austrian universities. Therefore, I had to make some choices regarding (i) what to teach and (ii) how to teach it. But you are right: there is no need to reinvent the wheel. As you will see, I will rely heavily on external resources, all openly available and written by better teachers than me.</p>
 <p>Following the open source philosophy, my lecture notes are also freely available.</p>
 </section>

@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Structure of a python package &#8212; Scientific Programming</title>
   
@@ -45,7 +45,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -66,9 +65,9 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Term project: the WRFvis package" href="02-Programming-project.html" />
-    <link rel="prev" title="Assignment #06: exceptions and testing" href="../unit_07/Assignment-07.html" />
+    <link rel="prev" title="Assignment #07: exceptions and testing" href="../unit_07/Assignment-07.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -215,7 +214,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/01-Exceptions.html">Errors, Exceptions and Warnings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/02-Testing.html">Testing your code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_07/Assignment-07.html">Assignment #06: exceptions and testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_07/Assignment-07.html">Assignment #07: exceptions and testing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 08 - Python Packages and Semester project</span></p>
 <ul class="current nav bd-sidenav">
@@ -225,6 +224,11 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 09 - Code documentation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../unit_09/01-Documentation.html">Documenting your code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 10 - Object Oriented Programming I</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_10/01-OOP-Part-1.html">Object Oriented Programming: introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_10/Assignment-08.html">Assignment #08: Pydemic</a></li>
 </ul>
 
     </div>
@@ -491,11 +495,11 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="structure-of-a-python-package">
-<h1>Structure of a python package<a class="headerlink" href="#structure-of-a-python-package" title="Permalink to this heading">#</a></h1>
+<h1>Structure of a python package<a class="headerlink" href="#structure-of-a-python-package" title="Permalink to this headline">#</a></h1>
 <p><em>Python Zen: “Namespaces are one honking great idea - let’s do more of those!”</em></p>
 <p>We introduced the concept of python modules in a <a class="reference internal" href="../unit_03/01-Import-Scopes.html"><span class="doc std std-doc">previous unit</span></a>. Today we are going into more details and will introduce Python “<strong>packages</strong>”, which contain more than one module and are the structure used by all larger Python libraries.</p>
 <section id="revision-modules-namespaces-and-scopes">
-<h2>Revision: modules, namespaces and scopes<a class="headerlink" href="#revision-modules-namespaces-and-scopes" title="Permalink to this heading">#</a></h2>
+<h2>Revision: modules, namespaces and scopes<a class="headerlink" href="#revision-modules-namespaces-and-scopes" title="Permalink to this headline">#</a></h2>
 <p>Python <a class="reference external" href="https://docs.python.org/3/tutorial/modules.html">modules</a> simply are <code class="docutils literal notranslate"><span class="pre">*.py</span></code> files. They can contain executable statements as well as function definitions, in any order.</p>
 <p>For example, a module called <code class="docutils literal notranslate"><span class="pre">mymodule.py</span></code> could look like:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
@@ -528,7 +532,7 @@ document.write(`
 <p>…</p>
 <p>OK? Let’s go on then.</p>
 <section id="more-on-scopes">
-<h3>More on scopes<a class="headerlink" href="#more-on-scopes" title="Permalink to this heading">#</a></h3>
+<h3>More on scopes<a class="headerlink" href="#more-on-scopes" title="Permalink to this headline">#</a></h3>
 <p>Here is a more intricate example for <code class="docutils literal notranslate"><span class="pre">mymodule.py</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">print_n</span><span class="p">():</span>
     <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The number N in the function is: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">N</span><span class="p">))</span>
@@ -620,7 +624,7 @@ document.write(`
 <p>What can we learn from this example? That the local (function) scope variable <code class="docutils literal notranslate"><span class="pre">x</span></code> has nothing to do with the global scope variable <code class="docutils literal notranslate"><span class="pre">x</span></code>. For the python interpreter, both are unrelated and their name is irrelevant. What is relevant though is which scope they are attached to (if you are interested to know which variables are currently available in your scope, check the built-in functions <a class="reference external" href="https://docs.python.org/3/library/functions.html#dir">dir()</a>, <a class="reference external" href="https://docs.python.org/3/library/functions.html#globals">globals()</a> and <a class="reference external" href="https://docs.python.org/3/library/functions.html#locals">locals()</a>).</p>
 </section>
 <section id="the-global-statement">
-<h3>The <code class="docutils literal notranslate"><span class="pre">global</span></code> statement<a class="headerlink" href="#the-global-statement" title="Permalink to this heading">#</a></h3>
+<h3>The <code class="docutils literal notranslate"><span class="pre">global</span></code> statement<a class="headerlink" href="#the-global-statement" title="Permalink to this headline">#</a></h3>
 <p>In <strong>very</strong> special cases, it might be useful for a function to change the value of a global variable. Examples include package level parameter sets such as options and model parameters which will change the behavior of the package after being set. For example, see numpy’s <a class="reference external" href="https://docs.scipy.org/doc/numpy-1.14.0/reference/generated/numpy.set_printoptions.html">set_printoptions</a> function:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -664,7 +668,7 @@ document.write(`
 <p>Note that in practice, global variables that need updating are rarely single integers or floats like in this example. The reasons for this will be explained later on, once you have learned more about python packages and the import system.</p>
 </section>
 <section id="are-global-variables-truly-global-in-python">
-<h3>Are global variables truly “global” in python?<a class="headerlink" href="#are-global-variables-truly-global-in-python" title="Permalink to this heading">#</a></h3>
+<h3>Are global variables truly “global” in python?<a class="headerlink" href="#are-global-variables-truly-global-in-python" title="Permalink to this headline">#</a></h3>
 <p>If by this question we mean “global” as available everywhere in any python script or interpreter, the short answer is <strong>no, there is no such thing as a “global” variable in python</strong>. The term “global variable” in python always refers to the module level, while “local variables” refer to the embedded scope (often, a function).</p>
 <p>If you want to have access to a module’s top-level variable (or function), you <em>have</em> to import it. This system ensures very clear and unpolluted <strong>namespaces</strong>, where everything can be traced to its source:</p>
 <div class="cell docutils container">
@@ -691,14 +695,14 @@ document.write(`
 </section>
 </section>
 <section id="packages">
-<h2>Packages<a class="headerlink" href="#packages" title="Permalink to this heading">#</a></h2>
+<h2>Packages<a class="headerlink" href="#packages" title="Permalink to this headline">#</a></h2>
 <p><em>From the <a class="reference external" href="https://docs.python.org/3/tutorial/modules.html#packages">documentation</a>:</em></p>
 <p>Packages are a way of structuring Python’s module namespace by using “dotted module names”. For example, the module name <code class="docutils literal notranslate"><span class="pre">A.B</span></code> designates a submodule named <code class="docutils literal notranslate"><span class="pre">B</span></code> in a package named <code class="docutils literal notranslate"><span class="pre">A</span></code>. Just like the use of modules saves the authors of different modules from having to worry about each other’s global variable names, the use of dotted module names saves the authors of multi-module packages like NumPy or Xarray from having to worry about each other’s module names.</p>
 <p>Packages can also be used to organize bigger projects into thematic groups. SciPy for example has more than 12 subpackages, some of them being organized in sub-subpackages.</p>
 <p>Now read the few paragraphs from the python documentation on <a class="reference external" href="https://docs.python.org/3/tutorial/modules.html#packages">packages</a> <em>(estimated reading time: 5 min)</em>.</p>
 <p>You are maybe asking yourself: <strong>what can I use packages for?</strong> Well, for one, it is necessary to understand their basic structure in order to be able to read someone else’s code, for example in the <code class="docutils literal notranslate"><span class="pre">xarray</span></code> library. Second, because I think that you have everything to win by organizing your personal code (analysis routines, plot functions…) into a single package that you can import from anywhere (e.g. in a Jupyter Notebook or from a different working directory).</p>
 <section id="the-structure-of-a-package">
-<h3>The structure of a package<a class="headerlink" href="#the-structure-of-a-package" title="Permalink to this heading">#</a></h3>
+<h3>The structure of a package<a class="headerlink" href="#the-structure-of-a-package" title="Permalink to this headline">#</a></h3>
 <p>I have written a simple package template called “scispack” to help you get started with your future packages. You will find the code <a class="reference external" href="https://github.com/fmaussion/scispack">on github</a> and a link to download it (green button in the top right). It is released in the public domain, feel free to use it for your projects. Here, I simply repeat its basic structure:</p>
 <p><strong>Directory root (<code class="docutils literal notranslate"><span class="pre">./</span></code>)</strong></p>
 <ul class="simple">
@@ -724,7 +728,7 @@ we added some entry points to the package’s API and the version string.</p></l
 detected by pytest.</p>
 </section>
 <section id="installing-a-local-package">
-<h3>Installing a local package<a class="headerlink" href="#installing-a-local-package" title="Permalink to this heading">#</a></h3>
+<h3>Installing a local package<a class="headerlink" href="#installing-a-local-package" title="Permalink to this headline">#</a></h3>
 <p>By starting your python interpreter from the root directory of a package (for example the template package) you will have access to the familiar syntax (e.g. <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">scispack.utils</span> <span class="pre">import</span> <span class="pre">area_of_circle</span></code>). But if you start an interpreter from anywhere else the package won’t be available.</p>
 <p>Remember what we wrote about the <a class="reference internal" href="../unit_03/01-Import-Scopes.html#content-syspath"><span class="std std-ref">python sys.path</span></a> a couple of weeks ago? In order to “install” the package we have two options:</p>
 <ol class="arabic simple">
@@ -756,7 +760,7 @@ detected by pytest.</p>
 </div>
 </section>
 <section id="advanced-applications-packaging-and-sharing-code">
-<h3>Advanced applications: packaging and sharing code<a class="headerlink" href="#advanced-applications-packaging-and-sharing-code" title="Permalink to this heading">#</a></h3>
+<h3>Advanced applications: packaging and sharing code<a class="headerlink" href="#advanced-applications-packaging-and-sharing-code" title="Permalink to this headline">#</a></h3>
 <p>The simple template you are going to start with in for the Semester Project is not fundamentally different from larger packages like xarray or numpy. There are a couple of big differences though, and I list some of them here:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/corteva/rioxarray">rioxarray</a> (as a pure python package) has a <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> much like yours. It will have some more options related to the version control of the package and will have a separate folder for HTML documentation. The rest of the root directory files are related to testing and continuous integration.</p></li>
@@ -767,7 +771,7 @@ detected by pytest.</p>
 </section>
 </section>
 <section id="take-home-points">
-<h2>Take home points<a class="headerlink" href="#take-home-points" title="Permalink to this heading">#</a></h2>
+<h2>Take home points<a class="headerlink" href="#take-home-points" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>python has very clear rules regarding the scope of variables, leading to clearly defined namespaces</p></li>
 <li><p>there are no “truly global” variables in python, only namespaces</p></li>
@@ -815,7 +819,7 @@ detected by pytest.</p>
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Assignment #06: exceptions and testing</p>
+        <p class="prev-next-title">Assignment #07: exceptions and testing</p>
       </div>
     </a>
     <a class="right-next"

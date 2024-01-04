@@ -61,3 +61,7 @@ parts:
   - caption: Unit 09 - Code documentation
     chapters:
     - file: unit_09/01-Documentation
+  - caption: Unit 10 - Object Oriented Programming I
+    chapters:
+    - file: unit_10/01-OOP-Part-1
+    - file: unit_10/Assignment-08

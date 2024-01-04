@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Errors, Exceptions and Warnings &#8212; Scientific Programming</title>
   
@@ -45,7 +45,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Testing your code" href="02-Testing.html" />
     <link rel="prev" title="Assignment #06" href="../unit_06/Assignment-06.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -215,7 +214,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Errors, Exceptions and Warnings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02-Testing.html">Testing your code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Assignment-07.html">Assignment #06: exceptions and testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Assignment-07.html">Assignment #07: exceptions and testing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 08 - Python Packages and Semester project</span></p>
 <ul class="nav bd-sidenav">
@@ -225,6 +224,11 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 09 - Code documentation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../unit_09/01-Documentation.html">Documenting your code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 10 - Object Oriented Programming I</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_10/01-OOP-Part-1.html">Object Oriented Programming: introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_10/Assignment-08.html">Assignment #08: Pydemic</a></li>
 </ul>
 
     </div>
@@ -494,11 +498,11 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="errors-exceptions-and-warnings">
-<h1>Errors, Exceptions and Warnings<a class="headerlink" href="#errors-exceptions-and-warnings" title="Permalink to this heading">#</a></h1>
+<h1>Errors, Exceptions and Warnings<a class="headerlink" href="#errors-exceptions-and-warnings" title="Permalink to this headline">#</a></h1>
 <p>At this stage of the lecture, you probably have encountered several (many?) error messages when executing your code. Error messages are not nice, but they are frequent (no matter your programming skills) and simply belong to the programming workflow. In this chapter you will learn to recognize the different types of errors, and you will learn how to deal with them.</p>
 <p><em>Copyright notice: parts of this chapter are taken from the <a class="reference external" href="https://docs.python.org/3/tutorial/errors.html">official python tutorial</a></em></p>
 <section id="syntax-errors">
-<h2>Syntax errors<a class="headerlink" href="#syntax-errors" title="Permalink to this heading">#</a></h2>
+<h2>Syntax errors<a class="headerlink" href="#syntax-errors" title="Permalink to this headline">#</a></h2>
 <p><strong>Syntax errors</strong> are perhaps the most common kind of complaint you get while you are still learning the language:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -547,7 +551,7 @@ document.write(`
 </div>
 </section>
 <section id="exceptions">
-<h2>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this heading">#</a></h2>
+<h2>Exceptions<a class="headerlink" href="#exceptions" title="Permalink to this headline">#</a></h2>
 <p>Even if a statement or expression is syntactically correct, it may cause an error when an attempt is made to execute it. Errors detected during execution are called <strong>exceptions</strong> and are not unconditionally fatal: you will soon learn how to handle them. Most exceptions are not handled by programs, however, and result in error messages as shown here:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -605,9 +609,9 @@ document.write(`
 <p>The preceding part of the error message shows the context where the exception happened, in the form of a stack traceback. In general it contains a stack traceback listing source lines; however, it will not display lines read from the interactive interpreter.</p>
 </section>
 <section id="raising-exceptions">
-<h2>Raising Exceptions<a class="headerlink" href="#raising-exceptions" title="Permalink to this heading">#</a></h2>
+<h2>Raising Exceptions<a class="headerlink" href="#raising-exceptions" title="Permalink to this headline">#</a></h2>
 <section id="the-raise-statement">
-<h3>The raise statement<a class="headerlink" href="#the-raise-statement" title="Permalink to this heading">#</a></h3>
+<h3>The raise statement<a class="headerlink" href="#the-raise-statement" title="Permalink to this headline">#</a></h3>
 <p>When writing programs you will sometimes need to <strong>raise exceptions</strong> yourself. This can be done with the <a class="reference external" href="https://docs.python.org/3/reference/simple_stmts.html#raise">raise</a> statement:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -645,7 +649,7 @@ document.write(`
 </div>
 </section>
 <section id="raise-the-correct-exception">
-<h3>Raise the correct exception<a class="headerlink" href="#raise-the-correct-exception" title="Permalink to this heading">#</a></h3>
+<h3>Raise the correct exception<a class="headerlink" href="#raise-the-correct-exception" title="Permalink to this headline">#</a></h3>
 <p>Here, I had to take two decisions: which exception should I raise, and which message should I send to the function’s caller. I could have taken another, much less informative path:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -661,7 +665,7 @@ document.write(`
 <p>It is your job to raise more helpful exceptions than that. The <a class="reference external" href="https://docs.python.org/3/library/exceptions.html#bltin-exceptions">built-in exceptions</a> page lists the built-in exceptions and their meanings. Scroll through the list of possible standard errors: you will see that many of them have meaningful, informative names stating what the error is about. You should learn to use some of them for your own purposes.</p>
 </section>
 <section id="when-to-raise-an-exception">
-<h3>When to raise an exception?<a class="headerlink" href="#when-to-raise-an-exception" title="Permalink to this heading">#</a></h3>
+<h3>When to raise an exception?<a class="headerlink" href="#when-to-raise-an-exception" title="Permalink to this headline">#</a></h3>
 <p>The type of exception you might be tempted to use most often is <code class="docutils literal notranslate"><span class="pre">ValueError</span></code> or <code class="docutils literal notranslate"><span class="pre">TypeError</span></code>. For example, a well intentioned programmer might want to be nice to the user and write the following:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -740,7 +744,7 @@ document.write(`
 </section>
 </section>
 <section id="handling-exceptions">
-<h2>Handling exceptions<a class="headerlink" href="#handling-exceptions" title="Permalink to this heading">#</a></h2>
+<h2>Handling exceptions<a class="headerlink" href="#handling-exceptions" title="Permalink to this headline">#</a></h2>
 <p>If you expect parts of a program to raise exceptions in some cases, it might be useful to handle them and avoid the program to stop or to send a cryptic error message. Look at the following example, which asks the user for input until a valid integer has been entered, but allows the user to interrupt the program (using Control-C or whatever the operating system supports):</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
     <span class="k">try</span><span class="p">:</span>
@@ -808,7 +812,7 @@ document.write(`
 <p><em>Note: connection errors are tricky to handle and this will not work in all the cases. This function will need some tuning for more robust solutions, but we leave it like this for now.</em></p>
 </section>
 <section id="warnings">
-<h2>Warnings<a class="headerlink" href="#warnings" title="Permalink to this heading">#</a></h2>
+<h2>Warnings<a class="headerlink" href="#warnings" title="Permalink to this headline">#</a></h2>
 <p><a class="reference external" href="https://docs.python.org/3/library/warnings.html">Warning</a> messages are typically issued in situations where it is useful to alert the user of some condition in a program, where that condition (normally) doesn’t warrant raising an exception and terminating the program. For example, a library will issue a warning when a program uses an obsolete module. Numpy issues warnings when mathematical computations lead to non-finite results.</p>
 <p>Warnings are useful because they do not terminate the program:</p>
 <div class="cell docutils container">
@@ -821,7 +825,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_177916/2968769965.py:4: RuntimeWarning: invalid value encountered in divide
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_14374/2968769965.py:4: RuntimeWarning: invalid value encountered in divide
   a / a  # issues a warning
 </pre></div>
 </div>
@@ -833,7 +837,7 @@ document.write(`
 <p>This is a nice feature because this invalid division at one location does not imply that the rest of the computations are useless. <code class="docutils literal notranslate"><span class="pre">NaN</span></code>s (Not A Number, to be explained in the next lesson) are an indicator for missing data, and most scientific libraries can deal with them.</p>
 <p>Depending on your use case, you might want to disable warnings or turn them into errors:</p>
 <section id="silencing-warnings">
-<h3>Silencing warnings<a class="headerlink" href="#silencing-warnings" title="Permalink to this heading">#</a></h3>
+<h3>Silencing warnings<a class="headerlink" href="#silencing-warnings" title="Permalink to this headline">#</a></h3>
 <p>It is possible to temporarily disable warnings with the following syntax:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -854,7 +858,7 @@ document.write(`
 </div>
 </section>
 <section id="warnings-as-exceptions">
-<h3>Warnings as exceptions<a class="headerlink" href="#warnings-as-exceptions" title="Permalink to this heading">#</a></h3>
+<h3>Warnings as exceptions<a class="headerlink" href="#warnings-as-exceptions" title="Permalink to this headline">#</a></h3>
 <p>In a similar way, you can turn warnings into exceptions:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -887,7 +891,7 @@ document.write(`
 <p>This is not recommended, as it might hide important and unexpected warnings.</p>
 </section>
 <section id="filter-warnings-by-type-or-message">
-<h3>Filter warnings by type or message<a class="headerlink" href="#filter-warnings-by-type-or-message" title="Permalink to this heading">#</a></h3>
+<h3>Filter warnings by type or message<a class="headerlink" href="#filter-warnings-by-type-or-message" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://docs.python.org/2/library/warnings.html#warnings.filterwarnings">warnings.filterwarnings</a> gives more control to the filter in order to suppress predefined warnings only:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -896,7 +900,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_177916/3776166511.py:1: RuntimeWarning: overflow encountered in power
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_14374/3776166511.py:1: RuntimeWarning: overflow encountered in power
   np.array([2.**100])**100
 </pre></div>
 </div>
@@ -917,7 +921,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_177916/3074648172.py:6: RuntimeWarning: overflow encountered in power
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_14374/3074648172.py:6: RuntimeWarning: overflow encountered in power
   np.array([2.**100])**100
 </pre></div>
 </div>
@@ -926,7 +930,7 @@ document.write(`
 </section>
 </section>
 <section id="take-home-points">
-<h2>Take home points<a class="headerlink" href="#take-home-points" title="Permalink to this heading">#</a></h2>
+<h2>Take home points<a class="headerlink" href="#take-home-points" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>exceptions are not something to be afraid of: they are helping us to find problems in our code</p></li>
 <li><p>there are different types of exceptions, which is useful to help us understand what is causing the problem. Often, an additional error message is printed too, further explaining the problem</p></li>

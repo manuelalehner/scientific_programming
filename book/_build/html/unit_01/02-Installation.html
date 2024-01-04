@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Installing Python on your computer &#8212; Scientific Programming</title>
   
@@ -45,7 +45,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="For windows users: the difference between the command prompt, the miniforge prompt, and the python interpreter" href="02a-Details-Windows.html" />
     <link rel="prev" title="An introduction to the Linux terminal" href="01b-Linux.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -215,7 +214,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/01-Exceptions.html">Errors, Exceptions and Warnings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/02-Testing.html">Testing your code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_07/Assignment-07.html">Assignment #06: exceptions and testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_07/Assignment-07.html">Assignment #07: exceptions and testing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 08 - Python Packages and Semester project</span></p>
 <ul class="nav bd-sidenav">
@@ -225,6 +224,11 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 09 - Code documentation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../unit_09/01-Documentation.html">Documenting your code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 10 - Object Oriented Programming I</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_10/01-OOP-Part-1.html">Object Oriented Programming: introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_10/Assignment-08.html">Assignment #08: Pydemic</a></li>
 </ul>
 
     </div>
@@ -487,7 +491,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="installing-python-on-your-computer">
-<h1>Installing Python on your computer<a class="headerlink" href="#installing-python-on-your-computer" title="Permalink to this heading">#</a></h1>
+<h1>Installing Python on your computer<a class="headerlink" href="#installing-python-on-your-computer" title="Permalink to this headline">#</a></h1>
 <p><img alt="https://www.python.org/static/community_logos/python-logo.png" class="align-left" src="https://www.python.org/static/community_logos/python-logo.png" /> This chapter contains some instructions about how to install Python on your personal computer.</p>
 <p>There are many ways to install Python on your computer (and while most of them work, some of them are less practical than others for scientific applications). Unless you know what you are doing (i.e.: you have been doing this before), please follow these instructions exactly.</p>
 <div class="warning dropdown admonition">
@@ -504,9 +508,9 @@ document.write(`
 </div>
 <p>To install Python on the computers in the computer lab follow the instructions for a Linux installation. But first you need to <a href="https://orawww.uibk.ac.at/public_prod/owa/uvw$web$10.p001">apply for a Linux account</a> if you have not done so already. The account will be active the following work day.</p>
 <section id="install-miniconda">
-<h2>Install Miniconda<a class="headerlink" href="#install-miniconda" title="Permalink to this heading">#</a></h2>
+<h2>Install Miniconda<a class="headerlink" href="#install-miniconda" title="Permalink to this headline">#</a></h2>
 <section id="on-windows">
-<h3>On Windows<a class="headerlink" href="#on-windows" title="Permalink to this heading">#</a></h3>
+<h3>On Windows<a class="headerlink" href="#on-windows" title="Permalink to this headline">#</a></h3>
 <p>Go to the miniforge download website: <a class="github reference external" href="https://github.com/conda-forge/miniforge#mambaforge">conda-forge/miniforge</a></p>
 <p>Download the <strong>Miniforge</strong> installers for Windows.
 Unless you have an uncommon architecture (unlikely), you should choose the <code class="docutils literal notranslate"><span class="pre">x86_64</span></code> files.</p>
@@ -517,7 +521,7 @@ Unless you have an uncommon architecture (unlikely), you should choose the <code
 <a class="reference internal image-reference" href="../_images/install_options.png"><img alt="../_images/install_options.png" src="../_images/install_options.png" style="width: 400px;" /></a>
 </section>
 <section id="on-mac-os-and-linux">
-<h3>On Mac OS and Linux<a class="headerlink" href="#on-mac-os-and-linux" title="Permalink to this heading">#</a></h3>
+<h3>On Mac OS and Linux<a class="headerlink" href="#on-mac-os-and-linux" title="Permalink to this headline">#</a></h3>
 <p>For these platforms, no need to download the files yourself. Open a terminal and do:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>curl -L -O &quot;https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh&quot;
 bash Miniforge3-$(uname)-$(uname -m).sh
@@ -533,7 +537,7 @@ bash Miniforge3-$(uname)-$(uname -m).sh
 <p>To make the changes take effect, close and then re-open your terminal window.</p>
 </section>
 <section id="testing-your-installation">
-<h3>Testing your installation<a class="headerlink" href="#testing-your-installation" title="Permalink to this heading">#</a></h3>
+<h3>Testing your installation<a class="headerlink" href="#testing-your-installation" title="Permalink to this headline">#</a></h3>
 <p>To see if everything worked well, open a terminal (Mac and Linux). On Windows, open the <code class="docutils literal notranslate"><span class="pre">miniforge</span> <span class="pre">prompt</span></code> (from the Start menu, search for and open “miniforge prompt”):</p>
 <p><a class="reference internal" href="../_images/miniforge.png"><img alt="../_images/miniforge.png" src="../_images/miniforge.png" style="width: 400px;" /></a> <br></p>
 <p>and type in:</p>
@@ -566,19 +570,19 @@ I should explain what we have just done in case you are interested:</p>
 </section>
 </section>
 <section id="what-is-this-python-interpreter">
-<h2>What is this python “interpreter”?<a class="headerlink" href="#what-is-this-python-interpreter" title="Permalink to this heading">#</a></h2>
+<h2>What is this python “interpreter”?<a class="headerlink" href="#what-is-this-python-interpreter" title="Permalink to this headline">#</a></h2>
 <p>Start with reading the definition from <a href="https://techterms.com/definition/interpreter">the Tech Terms Dictionary</a>.</p>
 <p>Put simply, the python interpreter is a program executing python programs or commands. It reads the programs you write and executes the instructions they contain. We will look into interpreters in a little more detail later in the semester, when we will talk about compiled and interpreted languages.</p>
 </section>
 <section id="what-is-a-python-installation">
-<h2>What is a “python installation”?<a class="headerlink" href="#what-is-a-python-installation" title="Permalink to this heading">#</a></h2>
+<h2>What is a “python installation”?<a class="headerlink" href="#what-is-a-python-installation" title="Permalink to this headline">#</a></h2>
 <p><span class="xref myst">Explanation for windows users</span>
 : the difference between the command prompt, the miniforge prompt, and the python interpreter</p>
 <p><span class="xref myst">Explanation for linux/mac users</span>
 : what did <code class="docutils literal notranslate"><span class="pre">mambaforge</span></code> do to your terminal?</p>
 </section>
 <section id="learning-checklist">
-<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Permalink to this heading">#</a></h2>
+<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Permalink to this headline">#</a></h2>
 <p><label><input type="checkbox" id="week01_01" class="box"> I know how to install python + mamba on my computer. What this means (especially mamba) will be explained in more detail next week.</input></label>
 <label><input type="checkbox" id="week01_02" class="box"> I know how to open a <strong>python interpreter</strong> from the miniforge prompt (or the terminal in Linux / Mac OS) and close it with <code class="docutils literal notranslate"><span class="pre">exit()</span></code>.</input></label><br />
 <label><input type="checkbox" id="week01_03" class="box"> Linux/Mac only: I understand the differences between a terminal and a python interpreter. I have a basic understanding of what changed in my computer when I installed mambaforge.</input></label>

@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Documenting your code &#8212; Scientific Programming</title>
   
@@ -45,7 +45,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -65,9 +64,10 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'unit_09/01-Documentation';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Object Oriented Programming: introduction" href="../unit_10/01-OOP-Part-1.html" />
     <link rel="prev" title="Term project: the WRFvis package" href="../unit_08/02-Programming-project.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -214,7 +214,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/01-Exceptions.html">Errors, Exceptions and Warnings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/02-Testing.html">Testing your code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_07/Assignment-07.html">Assignment #06: exceptions and testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_07/Assignment-07.html">Assignment #07: exceptions and testing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 08 - Python Packages and Semester project</span></p>
 <ul class="nav bd-sidenav">
@@ -224,6 +224,11 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 09 - Code documentation</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Documenting your code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 10 - Object Oriented Programming I</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_10/01-OOP-Part-1.html">Object Oriented Programming: introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_10/Assignment-08.html">Assignment #08: Pydemic</a></li>
 </ul>
 
     </div>
@@ -492,10 +497,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="documenting-your-code">
-<h1>Documenting your code<a class="headerlink" href="#documenting-your-code" title="Permalink to this heading">#</a></h1>
+<h1>Documenting your code<a class="headerlink" href="#documenting-your-code" title="Permalink to this headline">#</a></h1>
 <p><strong>Code documentation is an integral part of the programming process</strong>. In this chapter I give some recommendations about how to write a useful documentation and how specific tools can be used to generate an html documentation for your project.</p>
 <section id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h2>
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h2>
 <p>There are three major components of code documentation:</p>
 <ul class="simple">
 <li><p><strong>inline comments</strong>: they explain the algorithm and single blocks of code as they are written. They are meant to be read by yourself and other programmers trying to debug and/or understand your code</p></li>
@@ -505,10 +510,10 @@ document.write(`
 <p>Writing documentation is like writing tests: it is hard, and represents a lot of work with little immediate reward. <strong>At the very least</strong>, your own code should have inline comments and docstrings.</p>
 </section>
 <section id="inline-comments">
-<h2>Inline comments<a class="headerlink" href="#inline-comments" title="Permalink to this heading">#</a></h2>
+<h2>Inline comments<a class="headerlink" href="#inline-comments" title="Permalink to this headline">#</a></h2>
 <p>Inline comments are plain text explanations of your code. As written in <a class="reference external" href="https://www.cs.utah.edu/~germain/PPS/Topics/commenting.html">cs.utah.edu</a>: All programs should be commented in such a manner as to easily describe the purpose of the code and any algorithms used to accomplish the purpose. A user should be able to utilize a previously written program (or function) without ever having to look at the code, simply by reading the comments.</p>
 <section id="how-to-write-inline-comments">
-<h3>How to write inline comments<a class="headerlink" href="#how-to-write-inline-comments" title="Permalink to this heading">#</a></h3>
+<h3>How to write inline comments<a class="headerlink" href="#how-to-write-inline-comments" title="Permalink to this headline">#</a></h3>
 <p>They are often placed at the top of a file (header comments) or before a thematic code block:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -539,7 +544,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/25babf8325d29df85c0c892010255a6245037c95c874014936724de2d9cb4707.png" src="../_images/25babf8325d29df85c0c892010255a6245037c95c874014936724de2d9cb4707.png" />
+<img alt="../_images/66a7a2850fb272c77473e2d717180097e0b1666d946d251afd04eff8db6dcf64.png" src="../_images/66a7a2850fb272c77473e2d717180097e0b1666d946d251afd04eff8db6dcf64.png" />
 </div>
 </div>
 <p>As you can see, the comments help to organize the code. The same example without comments is much less engaging:</p>
@@ -559,13 +564,13 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/25babf8325d29df85c0c892010255a6245037c95c874014936724de2d9cb4707.png" src="../_images/25babf8325d29df85c0c892010255a6245037c95c874014936724de2d9cb4707.png" />
+<img alt="../_images/66a7a2850fb272c77473e2d717180097e0b1666d946d251afd04eff8db6dcf64.png" src="../_images/66a7a2850fb272c77473e2d717180097e0b1666d946d251afd04eff8db6dcf64.png" />
 </div>
 </div>
 <p>Comments can include references to algorithms or indications about who wrote these lines. They should become an automatism when you write code: organize your code in blocks, and comment the purpose of each block. For places which require a bit more explanation, don’t hesitate to write several lines of comments.</p>
 </section>
 <section id="how-not-to-write-inline-comments">
-<h3>How NOT to write inline comments<a class="headerlink" href="#how-not-to-write-inline-comments" title="Permalink to this heading">#</a></h3>
+<h3>How NOT to write inline comments<a class="headerlink" href="#how-not-to-write-inline-comments" title="Permalink to this headline">#</a></h3>
 <p>Inline comments can be more harmfull than helping. See the following example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -594,7 +599,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/25babf8325d29df85c0c892010255a6245037c95c874014936724de2d9cb4707.png" src="../_images/25babf8325d29df85c0c892010255a6245037c95c874014936724de2d9cb4707.png" />
+<img alt="../_images/66a7a2850fb272c77473e2d717180097e0b1666d946d251afd04eff8db6dcf64.png" src="../_images/66a7a2850fb272c77473e2d717180097e0b1666d946d251afd04eff8db6dcf64.png" />
 </div>
 </div>
 <p>What are the problems here?</p>
@@ -608,7 +613,7 @@ document.write(`
 </section>
 </section>
 <section id="api-documentation">
-<h2>API documentation<a class="headerlink" href="#api-documentation" title="Permalink to this heading">#</a></h2>
+<h2>API documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">#</a></h2>
 <p>A <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Glossary/Signature/Function">function signature</a> (or type signature, or method signature) defines input and output of functions or methods. When writing a function, you expect users (including yourself) to use it more than once, possibly for a longer period of time. Ideally, you would like to understand what a function does <em>long</em> after writing it. This is what <a class="reference external" href="https://www.python.org/dev/peps/pep-0257/#what-is-a-docstring">docstrings</a> are for:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -703,7 +708,7 @@ document.write(`
 <p>I highly recommend to write numpydoc docstrings for your projects. There is one exception to this recommendation though: <strong>write docstrings only if they are accurate and if you plan to maintain them</strong>. Indeed, <strong>wrong/false documentation is worse than no documentation at all</strong>: it gives others confidence in what your function is supposed to do (a “contract”). If your code does not comply to the contract written in the docstring, this will lead to bugs, deception, and loss of time for users of your code (including yourself).</p>
 </section>
 <section id="testing-a-functions-output-with-doctest">
-<h2>Testing a function’s output with doctest<a class="headerlink" href="#testing-a-functions-output-with-doctest" title="Permalink to this heading">#</a></h2>
+<h2>Testing a function’s output with doctest<a class="headerlink" href="#testing-a-functions-output-with-doctest" title="Permalink to this headline">#</a></h2>
 <p>You may have noticed the <code class="docutils literal notranslate"><span class="pre">Examples</span></code> section in the docstring of our function above.</p>
 <p>This section uses a specific syntax (the <code class="docutils literal notranslate"><span class="pre">&gt;&gt;&gt;</span></code>) to signify that we are documenting python code. This section can actually be run and understood by a tool called doctest.</p>
 <p>Using it will actually discover a “bug” in our documentation:</p>
@@ -738,26 +743,26 @@ Got:
 <p>Doctests are used by software developers as well for this particular reason. In fact, pytest can also run doctests.</p>
 </section>
 <section id="documentation-generators">
-<h2>Documentation generators<a class="headerlink" href="#documentation-generators" title="Permalink to this heading">#</a></h2>
+<h2>Documentation generators<a class="headerlink" href="#documentation-generators" title="Permalink to this headline">#</a></h2>
 <p>Writing documentation is hard and tedious. It is a task that most people want to avoid, but it is extremely important. In particular in the python world where almost everything is open-source and based on the work of volunteers, documentation might sometimes be neglected.</p>
 <p>Fortunately, some tools make it easier for open-source programmers to write documentation.</p>
 <section id="sphinx">
-<h3>Sphinx<a class="headerlink" href="#sphinx" title="Permalink to this heading">#</a></h3>
+<h3>Sphinx<a class="headerlink" href="#sphinx" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="http://www.sphinx-doc.org/">Sphinx</a> is a tool that makes it easy to create intelligent and beautiful documentation. It can parse your documentation written as text files and convert them to nice, engaging html websites. Importantly, sphinx can parse python code and write an API documentation automatically.</p>
 <p>Many open-source projects use sphinx for their documentation, including numpy and xarray.</p>
 </section>
 <section id="readthedocs">
-<h3>ReadTheDocs<a class="headerlink" href="#readthedocs" title="Permalink to this heading">#</a></h3>
+<h3>ReadTheDocs<a class="headerlink" href="#readthedocs" title="Permalink to this headline">#</a></h3>
 <p><a class="reference external" href="https://readthedocs.org/">readthedocs.org</a> is a platform hosting the documentation of open-source projects <em>for free</em>. It builds the documentation website using sphinx and updates it at each code update. The documentation of the <a class="reference external" href="http://docs.oggm.org">Open Global Glacier Model</a> or <a class="reference external" href="http://xarray.pydata.org/">xarray</a> are hosted on ReadTheDocs.</p>
 </section>
 </section>
 <section id="interactive-tutorials">
-<h2>Interactive tutorials<a class="headerlink" href="#interactive-tutorials" title="Permalink to this heading">#</a></h2>
+<h2>Interactive tutorials<a class="headerlink" href="#interactive-tutorials" title="Permalink to this headline">#</a></h2>
 <p>Since the rise of jupyter notebooks in recent years, they have proven very useful tools to write engaging tutorials. You can find jupyter notebooks documenting libraries like xarray, or scientific findings like a recent <a class="reference external" href="https://www.numfocus.org/blog/numfocus-projects-featured-in-ligo-gravitational-waves-discovery/">nobel prize in physics</a>.</p>
 <p>Thanks to innovative online services, notebooks can now be run interactively <em>in your web browser</em>: the leading platform to run jupyter notebooks online is <a class="reference external" href="https://mybinder.org/">MyBinder</a>. We use MyBinder to offer online tutorials for our <a class="reference external" href="https://oggm.org/tutorials">glacier model</a>, for example.</p>
 </section>
 <section id="take-home-points">
-<h2>Take home points<a class="headerlink" href="#take-home-points" title="Permalink to this heading">#</a></h2>
+<h2>Take home points<a class="headerlink" href="#take-home-points" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>write inline comments (always), but write them in a useful way (you will be thanking yourself for this later): do not state the obvious, organize your code in blocks, provide keys to understanding complex code to your readers</p></li>
 <li><p>write function docstrings, but only if you plan to take care of them</p></li>
@@ -806,6 +811,15 @@ Got:
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Term project: the WRFvis package</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="../unit_10/01-OOP-Part-1.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Object Oriented Programming: introduction</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div></div>
   

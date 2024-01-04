@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Arrays in numpy: indexing, ufuncs, broadcasting &#8212; Scientific Programming</title>
   
@@ -45,7 +45,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -70,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="The scientific python stack" href="02-Scientific-Python.html" />
     <link rel="prev" title="Assignment #05" href="../unit_05/Assignment-05.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -217,7 +216,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/01-Exceptions.html">Errors, Exceptions and Warnings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/02-Testing.html">Testing your code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_07/Assignment-07.html">Assignment #06: exceptions and testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_07/Assignment-07.html">Assignment #07: exceptions and testing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 08 - Python Packages and Semester project</span></p>
 <ul class="nav bd-sidenav">
@@ -227,6 +226,11 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 09 - Code documentation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../unit_09/01-Documentation.html">Documenting your code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 10 - Object Oriented Programming I</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_10/01-OOP-Part-1.html">Object Oriented Programming: introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_10/Assignment-08.html">Assignment #08: Pydemic</a></li>
 </ul>
 
     </div>
@@ -501,11 +505,11 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="arrays-in-numpy-indexing-ufuncs-broadcasting">
-<h1>Arrays in numpy: indexing, ufuncs, broadcasting<a class="headerlink" href="#arrays-in-numpy-indexing-ufuncs-broadcasting" title="Permalink to this heading">#</a></h1>
+<h1>Arrays in numpy: indexing, ufuncs, broadcasting<a class="headerlink" href="#arrays-in-numpy-indexing-ufuncs-broadcasting" title="Permalink to this headline">#</a></h1>
 <p>Last week you learned why numpy was created. This week we are going to dig a little deeper into this fundamental piece of the scientific python ecosystem.</p>
 <p>This chapter contains a lot of new concepts and tools, and I’m aware that you won’t be able to remember all of them at once. My objective here is to help you better understand the numpy documentation when you’ll need it, by being prepared for new semantics like “advanced indexing” or “ufunc” (universal function).  There are many books about numpy (I’ve listed some in the <a class="reference internal" href="../references.html"><span class="doc std std-doc">External resources</span></a> section), and my personal recommendation is to learn it on the go (i.e. step by step, task after task). I still hope that this chapter (even if too short for such an important library) will help a little bit.</p>
 <section id="anatomy-of-a-ndarray">
-<h2>Anatomy of a ndarray<a class="headerlink" href="#anatomy-of-a-ndarray" title="Permalink to this heading">#</a></h2>
+<h2>Anatomy of a ndarray<a class="headerlink" href="#anatomy-of-a-ndarray" title="Permalink to this headline">#</a></h2>
 <p><em>From the <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/arrays.html">numpy reference</a>:</em></p>
 <p>N-dimensional <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/arrays.ndarray.html#arrays-ndarray">ndarray</a>’s are the core structure of the numpy library. It is a multidimensional container of items of the same type and size. The number of dimensions and items in an array is defined by its shape, which is a tuple of N positive integers that specify the number of items in each dimension. The type of items in the array is specified by a separate data-type object (dtype), one of which is associated with each ndarray.</p>
 <p>All ndarrays are homogenous: every item takes up the same size block of memory, and all blocks are interpreted in exactly the same way.</p>
@@ -691,10 +695,10 @@ document.write(`
 </div>
 </section>
 <section id="creating-ndarrays">
-<h2>Creating ndarrays<a class="headerlink" href="#creating-ndarrays" title="Permalink to this heading">#</a></h2>
+<h2>Creating ndarrays<a class="headerlink" href="#creating-ndarrays" title="Permalink to this headline">#</a></h2>
 <p>There are <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/routines.array-creation.html#array-creation-routines">many ways</a> to create numpy arrays. The functions you will use most often are:</p>
 <section id="np-empty-np-zeros-np-ones-np-full">
-<h3><code class="docutils literal notranslate"><span class="pre">np.empty</span></code>, <code class="docutils literal notranslate"><span class="pre">np.zeros</span></code>, <code class="docutils literal notranslate"><span class="pre">np.ones</span></code>, <code class="docutils literal notranslate"><span class="pre">np.full</span></code><a class="headerlink" href="#np-empty-np-zeros-np-ones-np-full" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.empty</span></code>, <code class="docutils literal notranslate"><span class="pre">np.zeros</span></code>, <code class="docutils literal notranslate"><span class="pre">np.ones</span></code>, <code class="docutils literal notranslate"><span class="pre">np.full</span></code><a class="headerlink" href="#np-empty-np-zeros-np-ones-np-full" title="Permalink to this headline">#</a></h3>
 <p>These four work the same way, The first argument defines the shape of the array:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -769,7 +773,7 @@ The same is true for the “delete” function in your operating system: even af
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>210 ns ± 2.85 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>197 ns ± 0.71 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -781,7 +785,7 @@ The same is true for the “delete” function in your operating system: even af
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.54 µs ± 7.42 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.5 µs ± 7.31 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -802,7 +806,7 @@ The same is true for the “delete” function in your operating system: even af
 </div>
 </section>
 <section id="np-array">
-<h3><code class="docutils literal notranslate"><span class="pre">np.array</span></code><a class="headerlink" href="#np-array" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.array</span></code><a class="headerlink" href="#np-array" title="Permalink to this headline">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">np.array</span></code> converts existing data to a ndarray:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -832,7 +836,7 @@ The same is true for the “delete” function in your operating system: even af
 </div>
 </section>
 <section id="np-copy">
-<h3><code class="docutils literal notranslate"><span class="pre">np.copy</span></code><a class="headerlink" href="#np-copy" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.copy</span></code><a class="headerlink" href="#np-copy" title="Permalink to this headline">#</a></h3>
 <p>When a variable is assigned to another variable in python, it creates <strong>a new reference to the object it contains, NOT a copy</strong>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -875,7 +879,7 @@ The same is true for the “delete” function in your operating system: even af
 </div>
 </section>
 <section id="np-arange">
-<h3><code class="docutils literal notranslate"><span class="pre">np.arange</span></code><a class="headerlink" href="#np-arange" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.arange</span></code><a class="headerlink" href="#np-arange" title="Permalink to this headline">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
@@ -915,7 +919,7 @@ The same is true for the “delete” function in your operating system: even af
 </div>
 </section>
 <section id="np-linspace">
-<h3><code class="docutils literal notranslate"><span class="pre">np.linspace</span></code><a class="headerlink" href="#np-linspace" title="Permalink to this heading">#</a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">np.linspace</span></code><a class="headerlink" href="#np-linspace" title="Permalink to this headline">#</a></h3>
 <p>Regularly spaced intervals between two values (both limits are included this time):</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -932,7 +936,7 @@ The same is true for the “delete” function in your operating system: even af
 </section>
 </section>
 <section id="the-shape-of-ndarrays">
-<h2>The shape of ndarrays<a class="headerlink" href="#the-shape-of-ndarrays" title="Permalink to this heading">#</a></h2>
+<h2>The shape of ndarrays<a class="headerlink" href="#the-shape-of-ndarrays" title="Permalink to this headline">#</a></h2>
 <p>Is numpy <a class="reference external" href="https://en.wikipedia.org/wiki/Row-_and_column-major_order">row-major or column-major order</a>?</p>
 <p>The default order in numpy is that of the C-language: <strong>row-major</strong>. This means that the array:</p>
 <div class="cell docutils container">
@@ -986,10 +990,10 @@ The same is true for the “delete” function in your operating system: even af
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.73 µs ± 4.17 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.7 µs ± 4.45 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.31 µs ± 8.14 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.29 µs ± 11.5 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1038,7 +1042,7 @@ The same is true for the “delete” function in your operating system: even af
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3e9cc8d4e37ed825bb10924de1a7ef42ec03404d12216887bdc33985b0669734.png" src="../_images/3e9cc8d4e37ed825bb10924de1a7ef42ec03404d12216887bdc33985b0669734.png" />
+<img alt="../_images/18f20472712afa2ecdf952e86df32fc318d1777685f24b92a4bb656273bb9f67.png" src="../_images/18f20472712afa2ecdf952e86df32fc318d1777685f24b92a4bb656273bb9f67.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -1064,7 +1068,7 @@ The same is true for the “delete” function in your operating system: even af
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/c5acd1a1bc1c9191d4b0d3b039451e9873dea196b6ffd6c3fcd902dcd6eddbd2.png" src="../_images/c5acd1a1bc1c9191d4b0d3b039451e9873dea196b6ffd6c3fcd902dcd6eddbd2.png" />
+<img alt="../_images/cc6917f9de484d15de2b9311b1d40810b029a37f02c93d118f8ba2457f3b0768.png" src="../_images/cc6917f9de484d15de2b9311b1d40810b029a37f02c93d118f8ba2457f3b0768.png" />
 </div>
 </div>
 <p>I guess there must be historical reasons for this choice.</p>
@@ -1099,11 +1103,11 @@ The same is true for the “delete” function in your operating system: even af
 </div>
 </section>
 <section id="indexing">
-<h2>Indexing<a class="headerlink" href="#indexing" title="Permalink to this heading">#</a></h2>
+<h2>Indexing<a class="headerlink" href="#indexing" title="Permalink to this headline">#</a></h2>
 <p><strong>Indexing</strong> refers to the act of accessing values in an array by their <strong>index</strong>, i.e. their position in the array.</p>
 <p>There are many ways to index arrays, and the <a class="reference external" href="https://docs.scipy.org/doc/numpy-1.14.0/reference/arrays.indexing.html">numpy documentation</a> about the subject is excellent. Here we will just revise some of the most important aspects of it.</p>
 <section id="slicing">
-<h3>Slicing<a class="headerlink" href="#slicing" title="Permalink to this heading">#</a></h3>
+<h3>Slicing<a class="headerlink" href="#slicing" title="Permalink to this headline">#</a></h3>
 <p>The common way to do <strong>slicing</strong> is by using the following syntax:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1152,7 +1156,7 @@ The same is true for the “delete” function in your operating system: even af
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>133 ns ± 0.561 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>107 ns ± 0.663 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1164,7 +1168,7 @@ The same is true for the “delete” function in your operating system: even af
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>126 ns ± 0.342 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>107 ns ± 0.0611 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1204,7 +1208,7 @@ The same is true for the “delete” function in your operating system: even af
 <p>It is <em>very</em> important to keep the view mechanism in mind when writing numpy code. It is a great advantage for performance considerations, but it might lead to unexpected results if you are not careful!</p>
 </section>
 <section id="basic-vs-advanced-indexing">
-<h3>Basic vs Advanced indexing<a class="headerlink" href="#basic-vs-advanced-indexing" title="Permalink to this heading">#</a></h3>
+<h3>Basic vs Advanced indexing<a class="headerlink" href="#basic-vs-advanced-indexing" title="Permalink to this headline">#</a></h3>
 <p>Throughout the numpy documentation there is a clear distinction between the terms <strong>basic slicing/indexing</strong> and <strong>advanced indexing</strong>. The numpy developers are insisting on this one because there is a crucial difference between the two:</p>
 <ul class="simple">
 <li><p><strong>basic slicing/indexing always returns a view</strong></p></li>
@@ -1267,7 +1271,7 @@ The same is true for the “delete” function in your operating system: even af
 <p><strong>Advanced indexing</strong> is triggered when the selection occurs over an <code class="docutils literal notranslate"><span class="pre">ndarray</span></code> (as opposed to basic indexing where selection happens with slices and/or integers). There are two types of advanced indexing: integer and boolean.</p>
 </section>
 <section id="integer-indexing">
-<h3>Integer indexing<a class="headerlink" href="#integer-indexing" title="Permalink to this heading">#</a></h3>
+<h3>Integer indexing<a class="headerlink" href="#integer-indexing" title="Permalink to this headline">#</a></h3>
 <p><strong>Integer indexing</strong> happens when selecting data points based on their coordinates:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1362,7 +1366,7 @@ The same is true for the “delete” function in your operating system: even af
 </div>
 </section>
 <section id="boolean-indexing-indexing-based-on-a-condition">
-<h3>Boolean indexing: indexing based on a condition<a class="headerlink" href="#boolean-indexing-indexing-based-on-a-condition" title="Permalink to this heading">#</a></h3>
+<h3>Boolean indexing: indexing based on a condition<a class="headerlink" href="#boolean-indexing-indexing-based-on-a-condition" title="Permalink to this headline">#</a></h3>
 <p>Instead of integers, booleans can be used for indexing:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1428,14 +1432,14 @@ The same is true for the “delete” function in your operating system: even af
 </section>
 </section>
 <section id="universal-functions">
-<h2>Universal functions<a class="headerlink" href="#universal-functions" title="Permalink to this heading">#</a></h2>
+<h2>Universal functions<a class="headerlink" href="#universal-functions" title="Permalink to this headline">#</a></h2>
 <p>A universal function (or <code class="docutils literal notranslate"><span class="pre">ufunc</span></code> for short) is a function that operates on <code class="docutils literal notranslate"><span class="pre">ndarrays</span></code> in an element-by-element fashion. <code class="docutils literal notranslate"><span class="pre">ufuncs</span></code> are a core element of the numpy library, and you already used them without noticing: arithmetic operations like multiplication or addition are <code class="docutils literal notranslate"><span class="pre">ufuncs</span></code>, and trigonometric operations like <code class="docutils literal notranslate"><span class="pre">np.sin</span></code> or <code class="docutils literal notranslate"><span class="pre">np.cos</span></code> are <code class="docutils literal notranslate"><span class="pre">ufuncs</span></code> as well.</p>
 <p>Numpy <code class="docutils literal notranslate"><span class="pre">ufuncs</span></code> are coded in C, which means that they can apply repeated operations on array elements much faster than their python equivalent. Numpy users use <code class="docutils literal notranslate"><span class="pre">ufuncs</span></code> to <strong>vectorize</strong> their code. The <span class="xref myst">Monte-Carlo estimation of <span class="math notranslate nohighlight">\(\pi\)</span></span> exercise was an example of such a vectorization process: there were two possible solutions to the problem of estimating <span class="math notranslate nohighlight">\(\pi\)</span>: one of them contains a for-loop, while the vectorized solution didn’t require any loop.</p>
 <p>Note that some <code class="docutils literal notranslate"><span class="pre">ufuncs</span></code> are hidden from you: calling <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code> on <code class="docutils literal notranslate"><span class="pre">ndarrays</span></code> is actually calling <code class="docutils literal notranslate"><span class="pre">np.add</span></code> internally. How it is possible for numpy to mess around with the Python syntax in such a way is going to be the topic of another lecture.</p>
 <p>The numpy documentation lists <a class="reference external" href="https://docs.scipy.org/doc/numpy-1.14.0/reference/ufuncs.html#available-ufuncs">all available ufuncs</a> to date. Have a quick look at them, just to see how many there are!</p>
 </section>
 <section id="broadcasting">
-<h2>Broadcasting<a class="headerlink" href="#broadcasting" title="Permalink to this heading">#</a></h2>
+<h2>Broadcasting<a class="headerlink" href="#broadcasting" title="Permalink to this headline">#</a></h2>
 <p><em>Copyright note: much of the content of this section (including images) is copied from the <a class="reference external" href="http://scipy.github.io/old-wiki/pages/EricsBroadcastingDoc">EricsBroadcastingDoc</a> page on SciPy.</em></p>
 <p>When two arrays have the same shape, multiplying them using the multiply ufunc is easy:</p>
 <div class="cell docutils container">
@@ -1569,7 +1573,7 @@ The same is true for the “delete” function in your operating system: even af
 <p>Broadcasting is quite useful when writing vectorized functions that apply on vectors and matrices. You will often use broadcasting when working with statistical or physical models dealing with high-dimensional arrays.</p>
 </section>
 <section id="take-home-points">
-<h2>Take home points<a class="headerlink" href="#take-home-points" title="Permalink to this heading">#</a></h2>
+<h2>Take home points<a class="headerlink" href="#take-home-points" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>numpy is the core library of the scientific python stack. It is used by many (many) companies and researchers worldwide, and its documentation is good. Use it! There is a <a class="reference external" href="https://docs.scipy.org/doc/numpy/user/">user guide</a> to get you started, but the <a class="reference external" href="https://docs.scipy.org/doc/numpy/reference/">reference</a> is more complete.</p></li>
 <li><p>“views” allow numpy to save memory by giving various variables access to the same data. This is good for memory optimization, but error prone: always keep track of the variables pointing to the same data!</p></li>
@@ -1579,7 +1583,7 @@ The same is true for the “delete” function in your operating system: even af
 </ul>
 </section>
 <section id="addendum-numpy-versus-other-scientific-languages">
-<h2>Addendum: numpy versus other scientific languages<a class="headerlink" href="#addendum-numpy-versus-other-scientific-languages" title="Permalink to this heading">#</a></h2>
+<h2>Addendum: numpy versus other scientific languages<a class="headerlink" href="#addendum-numpy-versus-other-scientific-languages" title="Permalink to this headline">#</a></h2>
 <p>If you come from a vectorized array language like Matlab or R, most of the information above sounds like “giving fancy names” to things you already used all the time. On top of that, numpy is quite verbose: a <code class="docutils literal notranslate"><span class="pre">1:10</span></code> in Matlab becomes a <code class="docutils literal notranslate"><span class="pre">np.arange(1.,</span> <span class="pre">11)</span></code> in numpy, and <code class="docutils literal notranslate"><span class="pre">[</span> <span class="pre">1</span> <span class="pre">2</span> <span class="pre">3;</span> <span class="pre">4</span> <span class="pre">5</span> <span class="pre">6</span> <span class="pre">]</span></code> becomes <code class="docutils literal notranslate"><span class="pre">np.array([[1.,2.,3.],</span> <span class="pre">[4.,5.,6.]])</span></code>.</p>
 <p>All of this is true and I won’t argue about it. It all boils down to the fact that python was not written as a scientific language, and that the scientific tools have been glued together around it. I didn’t like it at first either, and I’m still not a big fan of all this verbosity.</p>
 <p>What I like, however, is that this syntax is very explicit and clear. Numpy uses the strength and flexibility of python to offer a great number of simple and complex tools to the scientific community: the flourishing ecosystem of packages developing around numpy is a good sign that its upsides are more important than its downsides.</p>
