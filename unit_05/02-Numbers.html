@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Number representation in computers &#8212; Scientific Programming</title>
   
@@ -45,7 +45,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -70,7 +69,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Assignment #05" href="Assignment-05.html" />
     <link rel="prev" title="Introduction to numpy: why does numpy exist?" href="01-Why-Numpy.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -217,7 +216,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/01-Exceptions.html">Errors, Exceptions and Warnings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/02-Testing.html">Testing your code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_07/Assignment-07.html">Assignment #06: exceptions and testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_07/Assignment-07.html">Assignment #07: exceptions and testing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 08 - Python Packages and Semester project</span></p>
 <ul class="nav bd-sidenav">
@@ -227,6 +226,11 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 09 - Code documentation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../unit_09/01-Documentation.html">Documenting your code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 10 - Object Oriented Programming I</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_10/01-OOP-Part-1.html">Object Oriented Programming: introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_10/Assignment-08.html">Assignment #08: Pydemic</a></li>
 </ul>
 
     </div>
@@ -508,14 +512,14 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="number-representation-in-computers">
-<h1>Number representation in computers<a class="headerlink" href="#number-representation-in-computers" title="Permalink to this heading">#</a></h1>
+<h1>Number representation in computers<a class="headerlink" href="#number-representation-in-computers" title="Permalink to this headline">#</a></h1>
 <p>In this chapter we are going to gain a basic understanding of how numbers are represented in today’s computers. We won’t go too much into the details (which are perhaps not so relevant here), but it is extremely important for scientists to understand the pitfalls of the so-called “floating-point arithmetics”. At the end of this lecture, you should understand what these pitfalls are and when they occur, since <strong>sooner or later one of these pitfalls will hit you</strong> (believe me on that one).</p>
 <section id="binary-representation-of-integers">
-<h2>Binary representation of integers<a class="headerlink" href="#binary-representation-of-integers" title="Permalink to this heading">#</a></h2>
+<h2>Binary representation of integers<a class="headerlink" href="#binary-representation-of-integers" title="Permalink to this headline">#</a></h2>
 <p>Traditional arithmetics and mathematics rely on the <strong>decimal</strong> system. Every number can be decomposed into a sum of products such as: <span class="math notranslate nohighlight">\(908.2 = 9\times10^2 + 0\times10^1 + 8\times10^{0} + 2\times10^{-1}\)</span>. This system is called decimal because the factors can take the values <span class="math notranslate nohighlight">\([0 - 9]\)</span> while the <strong>fixed base</strong> (the number which is scaled by an exponent) is 10.</p>
 <p>Nearly all modern processors, however, represent numbers in binary form, with each digit being represented by a two-valued physical quantity such as a “low” or “high” voltage: 0s and 1s. These binary digits are called <strong>bits</strong>, and are the basis of the <strong>binary representation of numbers</strong>.</p>
 <section id="basics">
-<h3>Basics<a class="headerlink" href="#basics" title="Permalink to this heading">#</a></h3>
+<h3>Basics<a class="headerlink" href="#basics" title="Permalink to this headline">#</a></h3>
 <p>With only 0s and 1s available the most efficient way to represent numbers is as a sum of 2s to the power of i, with i going from 0 to N-1. It is best shown with an example, here with N=4 digits:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>0101
 </pre></div>
@@ -607,7 +611,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>24
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>28
 </pre></div>
 </div>
 </div>
@@ -628,7 +632,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>32
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0
 </pre></div>
 </div>
 </div>
@@ -653,7 +657,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(32, 96, 106688)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(0, 64, 106656)
 </pre></div>
 </div>
 </div>
@@ -666,7 +670,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13.0234375
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>13.01953125
 </pre></div>
 </div>
 </div>
@@ -681,7 +685,7 @@ document.write(`
 </div>
 </section>
 <section id="overflow">
-<h3>Overflow<a class="headerlink" href="#overflow" title="Permalink to this heading">#</a></h3>
+<h3>Overflow<a class="headerlink" href="#overflow" title="Permalink to this headline">#</a></h3>
 <p>This dynamic resizing of integers in python means that they cannot <strong>overflow</strong>. <strong>Overflow</strong> is a common pitfall of many numerical operations, and to illustrate what it is we can either use floats (unlike python integers, python floats can overflow), or numpy, which uses integer types of fixed length:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -716,7 +720,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_177765/3783741305.py:1: RuntimeWarning: overflow encountered in scalar add
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_14238/3783741305.py:1: RuntimeWarning: overflow encountered in scalar add
   a + np.int8(1)
 </pre></div>
 </div>
@@ -758,7 +762,7 @@ document.write(`
 </div>
 </section>
 <section id="extending-the-binary-representation-to-non-integers-fixed-point-notation">
-<h3>Extending the binary representation to non-integers: fixed-point notation<a class="headerlink" href="#extending-the-binary-representation-to-non-integers-fixed-point-notation" title="Permalink to this heading">#</a></h3>
+<h3>Extending the binary representation to non-integers: fixed-point notation<a class="headerlink" href="#extending-the-binary-representation-to-non-integers-fixed-point-notation" title="Permalink to this headline">#</a></h3>
 <p>A more general definition of the binary representation for integers is to use negative exponents as well. With negative exponents, any rational number <span class="math notranslate nohighlight">\(a\)</span> can be approximated by:</p>
 <div class="math notranslate nohighlight">
 \[a = \pm \sum_{i=-j}^{k} z_i b^i\]</div>
@@ -771,9 +775,9 @@ document.write(`
 </section>
 </section>
 <section id="floating-point-numbers">
-<h2>Floating point numbers<a class="headerlink" href="#floating-point-numbers" title="Permalink to this heading">#</a></h2>
+<h2>Floating point numbers<a class="headerlink" href="#floating-point-numbers" title="Permalink to this headline">#</a></h2>
 <section id="introduction">
-<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this heading">#</a></h3>
+<h3>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">#</a></h3>
 <p>Because computers have a <em>finite</em> number of storage units available, they can only represent a <em>finite</em> number of distinguishable values. In fact, a memory slot with <span class="math notranslate nohighlight">\(N\)</span> available bits cannot represent more than <span class="math notranslate nohighlight">\(2^N\)</span> distinguishable values. The range of real (or complex) numbers is of course infinite, and therefore it becomes clear that in the computer representation of numbers <strong>there will always be a trade-off between the range of numbers one would like to represent and their relative accuracy</strong> (i.e. the absolute difference between two consecutive representable numbers).</p>
 <p>Taking the <strong>decimal representation</strong> of the number 1/3 as an example: it can be written as <code class="docutils literal notranslate"><span class="pre">0.33</span></code>, <code class="docutils literal notranslate"><span class="pre">0.333</span></code>, <code class="docutils literal notranslate"><span class="pre">0.3333</span></code>, etc. Depending on the numbers of digits available, the precision of the number will increase but never reach the exact value, at least in the decimal representation.</p>
 <p>This fundamental limitation is the explanation for unexpected results of certain arithmetic operations. For example:</p>
@@ -804,7 +808,7 @@ document.write(`
 <p>This is a typical <strong>rounding error</strong>, happening because most computers do not represent numbers as decimal fractions, but as binary. Without going too much into details (which can be tricky), this chapter will give you some elements of understanding in order to prepare you for the most common pitfalls of floating point arithmetics.</p>
 </section>
 <section id="scientific-exponential-notation-in-base-b">
-<h3>Scientific (exponential) notation in base b<a class="headerlink" href="#scientific-exponential-notation-in-base-b" title="Permalink to this heading">#</a></h3>
+<h3>Scientific (exponential) notation in base b<a class="headerlink" href="#scientific-exponential-notation-in-base-b" title="Permalink to this headline">#</a></h3>
 <p>In the exponential notation (used by <a class="reference external" href="https://en.wikipedia.org/wiki/Floating-point_arithmetic">floating point</a> numbers), a number is approximated with a fixed number of significant digits (the significand) and scaled using an exponent in some fixed base; the base for the scaling is normally two, ten, or sixteen. A number that can be represented exactly is of the following form:</p>
 <p><span class="math notranslate nohighlight">\(\mathrm{number} = \mathrm{significand} \times \mathrm{base} ^{\mathrm{exponent}}\)</span></p>
 <p>For example, in base 10:</p>
@@ -815,7 +819,7 @@ document.write(`
 <p>The exponential notation is the most common way to represent real numbers in computers and is the basis of the floating-point number representation.</p>
 </section>
 <section id="floating-point-representation-simplified">
-<h3>Floating point representation (simplified)<a class="headerlink" href="#floating-point-representation-simplified" title="Permalink to this heading">#</a></h3>
+<h3>Floating point representation (simplified)<a class="headerlink" href="#floating-point-representation-simplified" title="Permalink to this headline">#</a></h3>
 <p>A floating point number in any base will store three numbers:</p>
 <ul class="simple">
 <li><p>the sign (one bit)</p></li>
@@ -838,7 +842,7 @@ document.write(`
 <p>From these examples it becomes apparent that the precision (the distance between two consecutive numbers) is better for small numbers than for large numbers. Although our example is simplified, the principle is exactly the same for “real” floating point numbers in most computers, which follow the IEEE754 convention.</p>
 </section>
 <section id="ieee-754">
-<h3>IEEE 754<a class="headerlink" href="#ieee-754" title="Permalink to this heading">#</a></h3>
+<h3>IEEE 754<a class="headerlink" href="#ieee-754" title="Permalink to this headline">#</a></h3>
 <p>From the example above, we can see that with a fixed number of memory slots, we have a trade-off between the maximum precision of a number and its size.</p>
 <p>This precision/size trade-off raises many challenges: memory and electronics must be optimized so that computations are fast while still allowing programs to realize computations on a <em>wide</em> range of numbers in the same program. For example, atmospheric models realize computations on specific humidity values (<span class="math notranslate nohighlight">\(\mathrm{kg}\,\mathrm{kg}^{-1}\)</span>) with typical values of 10<span class="math notranslate nohighlight">\(^{-5}\)</span> and on the geopotential with values up to several orders of magnitude larger. Using different standards for each variable would be impracticable. This led to the development of the <a class="reference external" href="https://en.wikipedia.org/wiki/IEEE_754">IEEE Standard for Floating-Point Arithmetic (IEEE 754)</a>.</p>
 <p>The standard defines five basic formats that are named for their numeric base and the number of bits used in their encoding, as listed in <a class="reference external" href="https://en.wikipedia.org/wiki/IEEE_754#Basic_and_interchange_formats">this table</a>. For example, <code class="docutils literal notranslate"><span class="pre">binary64</span></code> is the famous “double precision” format, called <code class="docutils literal notranslate"><span class="pre">float64</span></code> in numpy and simply <code class="docutils literal notranslate"><span class="pre">float</span></code> in the python standard library. In this format, <span class="math notranslate nohighlight">\(N_s=53\)</span> bits are used for the significand, and the remaining <span class="math notranslate nohighlight">\(N_e=11\)</span> for the exponent.</p>
@@ -847,7 +851,7 @@ document.write(`
 Source: <a class="reference external" href="https://en.wikipedia.org/wiki/IEEE_754">wikipedia</a></p>
 </section>
 <section id="consequences">
-<h3>Consequences<a class="headerlink" href="#consequences" title="Permalink to this heading">#</a></h3>
+<h3>Consequences<a class="headerlink" href="#consequences" title="Permalink to this headline">#</a></h3>
 <p>With the floating point format, <strong>small numbers have a larger absolute precision than large numbers</strong>. See these examples:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -888,7 +892,7 @@ Source: <a class="reference external" href="https://en.wikipedia.org/wiki/IEEE_7
 <p>A further direct consequence is that <strong>when summing two numbers, precision is lost to match the size of the outcome</strong>.</p>
 </section>
 <section id="id1">
-<h3>Overflow<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<h3>Overflow<a class="headerlink" href="#id1" title="Permalink to this headline">#</a></h3>
 <p>Like numpy integers, floating point numbers can overflow:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -897,7 +901,7 @@ Source: <a class="reference external" href="https://en.wikipedia.org/wiki/IEEE_7
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_177765/3724677978.py:1: RuntimeWarning: overflow encountered in scalar add
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/tmp/ipykernel_14238/3724677978.py:1: RuntimeWarning: overflow encountered in scalar add
   np.float16(65510) + np.float16(20)
 </pre></div>
 </div>
@@ -922,10 +926,10 @@ Source: <a class="reference external" href="https://en.wikipedia.org/wiki/IEEE_7
 </section>
 </section>
 <section id="what-to-do-from-here">
-<h2>What to do from here?<a class="headerlink" href="#what-to-do-from-here" title="Permalink to this heading">#</a></h2>
+<h2>What to do from here?<a class="headerlink" href="#what-to-do-from-here" title="Permalink to this headline">#</a></h2>
 <p>As we’ve learned, errors in floating-point numbers are unavoidable. Even if these errors are very small, simple calculations on approximated numbers can contain pitfalls that increase the error in the result way beyond just having the individual errors “add up”. Here we discuss some possible ways to deal with the pitfalls of floating point arithmetics.</p>
 <section id="alternative-data-types">
-<h3>Alternative data types<a class="headerlink" href="#alternative-data-types" title="Permalink to this heading">#</a></h3>
+<h3>Alternative data types<a class="headerlink" href="#alternative-data-types" title="Permalink to this headline">#</a></h3>
 <p>In certain cases where perfect decimal accuracy is needed (for example when dealing with currencies and money), it is possible to use a decimal floating point representation instead of the default binary one:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -955,7 +959,7 @@ Source: <a class="reference external" href="https://en.wikipedia.org/wiki/IEEE_7
 <p>With limited-precision decimals there are no unexpected rounding errors. In practice, however, such alternative datatypes are used rarely because the precision gain comes with a performance overhead: computers work best with 0s and 1s, not with numbers humans can read.</p>
 </section>
 <section id="symbolic-computations">
-<h3>Symbolic computations<a class="headerlink" href="#symbolic-computations" title="Permalink to this heading">#</a></h3>
+<h3>Symbolic computations<a class="headerlink" href="#symbolic-computations" title="Permalink to this headline">#</a></h3>
 <p>Symbolic computations are realized <em>literally</em> (like in mathematics), not approximately. <a class="reference external" href="http://www.sympy.org">SymPy</a> is a popular python library for symbolic mathematics:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -973,10 +977,10 @@ Source: <a class="reference external" href="https://en.wikipedia.org/wiki/IEEE_7
 <p>Seams like the perfect solution, right? It probably is if you are a mathematician, but for actual numerical computations SymPy will be way too slow to use. Symbolic mathematics can only be used for problems where analytical solutions are known. Unfortunately, this is not always the case (take numerical models of the atmosphere for example).</p>
 </section>
 <section id="deal-with-it">
-<h3>Deal with it<a class="headerlink" href="#deal-with-it" title="Permalink to this heading">#</a></h3>
+<h3>Deal with it<a class="headerlink" href="#deal-with-it" title="Permalink to this headline">#</a></h3>
 <p>There are no simple answers to numerical rounding errors. Therfore: <strong>be aware that they occur and try to mitigate their effect</strong>.</p>
 <section id="awareness">
-<h4>Awareness<a class="headerlink" href="#awareness" title="Permalink to this heading">#</a></h4>
+<h4>Awareness<a class="headerlink" href="#awareness" title="Permalink to this headline">#</a></h4>
 <p><em>Awareness</em> is mostly hindered by the string representation of floating point numbers. In practice:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1030,7 +1034,7 @@ Source: <a class="reference external" href="https://en.wikipedia.org/wiki/IEEE_7
 </div>
 </section>
 <section id="error-propagation">
-<h4>Error propagation<a class="headerlink" href="#error-propagation" title="Permalink to this heading">#</a></h4>
+<h4>Error propagation<a class="headerlink" href="#error-propagation" title="Permalink to this headline">#</a></h4>
 <p>Preventing rounding errors to happen is not possible, but there are a few general rules:</p>
 <ul class="simple">
 <li><p>Multiplication and division are “safer” operations</p></li>
@@ -1100,7 +1104,7 @@ Source: <a class="reference external" href="https://en.wikipedia.org/wiki/IEEE_7
 <p><code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">*</span> <span class="pre">(a</span> <span class="pre">+</span> <span class="pre">b)</span></code> and <code class="docutils literal notranslate"><span class="pre">c</span> <span class="pre">*</span> <span class="pre">a</span> <span class="pre">+</span> <span class="pre">c</span> <span class="pre">*</span> <span class="pre">b</span></code> are mathematically equivalent, and the first is computationally less expensive (two operations instead of three). However, the second is less prone to rounding errors!</p>
 </section>
 <section id="safer-tests">
-<h4>Safer tests<a class="headerlink" href="#safer-tests" title="Permalink to this heading">#</a></h4>
+<h4>Safer tests<a class="headerlink" href="#safer-tests" title="Permalink to this headline">#</a></h4>
 <p>Fortunately, rounding errors often remain unnoticed, meaning that your computations are probably OK! In our field in particular, we often do not care if the post-processed temperature forecast is numerically precise at 0.001° since the forecast accuracy is much lower anyway. However, this can still lead to surprises when comparing arrays for equality (e.g. when testing that a temperature is equal to zero, or for matching coordinates like longitude or latitude). In these cases, prefer to use numpy’s specialized functions:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1118,7 +1122,7 @@ Source: <a class="reference external" href="https://en.wikipedia.org/wiki/IEEE_7
 </section>
 </section>
 <section id="take-home-points">
-<h2>Take home points<a class="headerlink" href="#take-home-points" title="Permalink to this heading">#</a></h2>
+<h2>Take home points<a class="headerlink" href="#take-home-points" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>computers can only represent a finite number of distinguishable values.</p></li>
 <li><p>the range of representable numbers depends on the size of memory allocated to store it. There is practically no limit to the size of integers in python, but there is a limit for floats. Numpy implements several types of variables named after their size in bits (e.g. <code class="docutils literal notranslate"><span class="pre">np.float32</span></code>, <code class="docutils literal notranslate"><span class="pre">np.float64</span></code>, <code class="docutils literal notranslate"><span class="pre">np.float128</span></code>).</p></li>
@@ -1130,7 +1134,7 @@ Source: <a class="reference external" href="https://en.wikipedia.org/wiki/IEEE_7
 </ul>
 </section>
 <section id="further-reading">
-<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this heading">#</a></h2>
+<h2>Further reading<a class="headerlink" href="#further-reading" title="Permalink to this headline">#</a></h2>
 <p>Because of the importance of floating point computations you will find many resources online. I <strong>highly recommend</strong> to go through the short <a class="reference external" href="http://floating-point-gui.de/">floating point guide</a> website, which explains the problem to non specialists. It will give you another point of view on the topic.</p>
 <p>Other resources:</p>
 <ul class="simple">

@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Modules, import mechanism, namespaces, scope(s) &#8212; Scientific Programming</title>
   
@@ -45,7 +45,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="String formatting and file paths" href="02-Strings-Paths.html" />
     <link rel="prev" title="Assignment #02" href="../unit_02/Assignment-02.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -215,7 +214,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/01-Exceptions.html">Errors, Exceptions and Warnings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/02-Testing.html">Testing your code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_07/Assignment-07.html">Assignment #06: exceptions and testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_07/Assignment-07.html">Assignment #07: exceptions and testing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 08 - Python Packages and Semester project</span></p>
 <ul class="nav bd-sidenav">
@@ -225,6 +224,11 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 09 - Code documentation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../unit_09/01-Documentation.html">Documenting your code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 10 - Object Oriented Programming I</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_10/01-OOP-Part-1.html">Object Oriented Programming: introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_10/Assignment-08.html">Assignment #08: Pydemic</a></li>
 </ul>
 
     </div>
@@ -485,10 +489,10 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="modules-import-mechanism-namespaces-scope-s">
-<h1>Modules, import mechanism, namespaces, scope(s)<a class="headerlink" href="#modules-import-mechanism-namespaces-scope-s" title="Permalink to this heading">#</a></h1>
+<h1>Modules, import mechanism, namespaces, scope(s)<a class="headerlink" href="#modules-import-mechanism-namespaces-scope-s" title="Permalink to this headline">#</a></h1>
 <p>In this chapter we will dive into one of the most important features of python: the <code class="docutils literal notranslate"><span class="pre">import</span></code> mechanism. We will explain why modules are useful, how to “import” them, and how you can write one yourself.</p>
 <section id="variable-scopes">
-<h2>Variable scopes<a class="headerlink" href="#variable-scopes" title="Permalink to this heading">#</a></h2>
+<h2>Variable scopes<a class="headerlink" href="#variable-scopes" title="Permalink to this headline">#</a></h2>
 <p>The <strong>scope</strong> of a variable is the region of the program where the variable is valid, i.e. the “location” where the variable name can be used to refer to the data it links to. Let’s consider this first example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -590,7 +594,7 @@ document.write(`
 <p>Yes, <code class="docutils literal notranslate"><span class="pre">k</span></code> is available in <code class="docutils literal notranslate"><span class="pre">foo()</span></code>: global variables are <em>also</em> available in the <em>nested</em> local scopes. They can be overridden locally (like in the example above), but this change won’t be visible at the global scope level.</p>
 </section>
 <section id="modules">
-<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this heading">#</a></h2>
+<h2>Modules<a class="headerlink" href="#modules" title="Permalink to this headline">#</a></h2>
 <p>Python <strong>modules</strong> are used to store a collection of functions and variables that can be imported into other modules or into the <a class="reference external" href="https://docs.python.org/3/library/__main__.html">main environment</a>.</p>
 <p>A module is a file containing Python definitions and statements. The file name is the module name with the suffix <code class="docutils literal notranslate"><span class="pre">.py</span></code> appended.</p>
 <p>For instance, I used my favorite text editor to create a file called <code class="docutils literal notranslate"><span class="pre">greetings.py</span></code> with the following content:</p>
@@ -664,7 +668,7 @@ document.write(`
 </div>
 </section>
 <section id="namespaces">
-<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this heading">#</a></h2>
+<h2>Namespaces<a class="headerlink" href="#namespaces" title="Permalink to this headline">#</a></h2>
 <p>Global variables in modules or scripts are useful, but <em>they should be used with care</em>. Indeed, since they are available from everywhere in the module, the <strong>namespace</strong> can quickly become “polluted”: for large modules, it becomes hard to keep track of all variables. This can become even more complicated when new modules with their own new variables and functions are used as well.</p>
 <p>Fortunately, the global scope is constrained to the current script or module, and using external modules is unlikely to cause confusion thanks to the <code class="docutils literal notranslate"><span class="pre">import</span></code> mechanism:</p>
 <div class="cell docutils container">
@@ -677,7 +681,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;module &#39;math&#39; from &#39;/home/c707201/mambaforge/envs/scipro_3.10/lib/python3.10/lib-dynload/math.cpython-310-x86_64-linux-gnu.so&#39;&gt;
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;module &#39;math&#39; from &#39;/home/c707201/mambaforge/envs/scipro/lib/python3.11/lib-dynload/math.cpython-311-x86_64-linux-gnu.so&#39;&gt;
 3.14 3.141592653589793
 </pre></div>
 </div>
@@ -691,7 +695,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;__doc__&#39;, &#39;__file__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__spec__&#39;, &#39;acos&#39;, &#39;acosh&#39;, &#39;asin&#39;, &#39;asinh&#39;, &#39;atan&#39;, &#39;atan2&#39;, &#39;atanh&#39;, &#39;ceil&#39;, &#39;comb&#39;, &#39;copysign&#39;, &#39;cos&#39;, &#39;cosh&#39;, &#39;degrees&#39;, &#39;dist&#39;, &#39;e&#39;, &#39;erf&#39;, &#39;erfc&#39;, &#39;exp&#39;, &#39;expm1&#39;, &#39;fabs&#39;, &#39;factorial&#39;, &#39;floor&#39;, &#39;fmod&#39;, &#39;frexp&#39;, &#39;fsum&#39;, &#39;gamma&#39;, &#39;gcd&#39;, &#39;hypot&#39;, &#39;inf&#39;, &#39;isclose&#39;, &#39;isfinite&#39;, &#39;isinf&#39;, &#39;isnan&#39;, &#39;isqrt&#39;, &#39;lcm&#39;, &#39;ldexp&#39;, &#39;lgamma&#39;, &#39;log&#39;, &#39;log10&#39;, &#39;log1p&#39;, &#39;log2&#39;, &#39;modf&#39;, &#39;nan&#39;, &#39;nextafter&#39;, &#39;perm&#39;, &#39;pi&#39;, &#39;pow&#39;, &#39;prod&#39;, &#39;radians&#39;, &#39;remainder&#39;, &#39;sin&#39;, &#39;sinh&#39;, &#39;sqrt&#39;, &#39;tan&#39;, &#39;tanh&#39;, &#39;tau&#39;, &#39;trunc&#39;, &#39;ulp&#39;]
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;__doc__&#39;, &#39;__file__&#39;, &#39;__loader__&#39;, &#39;__name__&#39;, &#39;__package__&#39;, &#39;__spec__&#39;, &#39;acos&#39;, &#39;acosh&#39;, &#39;asin&#39;, &#39;asinh&#39;, &#39;atan&#39;, &#39;atan2&#39;, &#39;atanh&#39;, &#39;cbrt&#39;, &#39;ceil&#39;, &#39;comb&#39;, &#39;copysign&#39;, &#39;cos&#39;, &#39;cosh&#39;, &#39;degrees&#39;, &#39;dist&#39;, &#39;e&#39;, &#39;erf&#39;, &#39;erfc&#39;, &#39;exp&#39;, &#39;exp2&#39;, &#39;expm1&#39;, &#39;fabs&#39;, &#39;factorial&#39;, &#39;floor&#39;, &#39;fmod&#39;, &#39;frexp&#39;, &#39;fsum&#39;, &#39;gamma&#39;, &#39;gcd&#39;, &#39;hypot&#39;, &#39;inf&#39;, &#39;isclose&#39;, &#39;isfinite&#39;, &#39;isinf&#39;, &#39;isnan&#39;, &#39;isqrt&#39;, &#39;lcm&#39;, &#39;ldexp&#39;, &#39;lgamma&#39;, &#39;log&#39;, &#39;log10&#39;, &#39;log1p&#39;, &#39;log2&#39;, &#39;modf&#39;, &#39;nan&#39;, &#39;nextafter&#39;, &#39;perm&#39;, &#39;pi&#39;, &#39;pow&#39;, &#39;prod&#39;, &#39;radians&#39;, &#39;remainder&#39;, &#39;sin&#39;, &#39;sinh&#39;, &#39;sqrt&#39;, &#39;tan&#39;, &#39;tanh&#39;, &#39;tau&#39;, &#39;trunc&#39;, &#39;ulp&#39;]
 </pre></div>
 </div>
 </div>
@@ -786,7 +790,7 @@ document.write(`
 </div>
 </section>
 <section id="sys-path">
-<span id="content-syspath"></span><h2>sys.path<a class="headerlink" href="#sys-path" title="Permalink to this heading">#</a></h2>
+<span id="content-syspath"></span><h2>sys.path<a class="headerlink" href="#sys-path" title="Permalink to this headline">#</a></h2>
 <p>But how does python know where to look for modules when you type <code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">mymodule</span></code> in the interpreter? Well, it relies on a mechanism very similar to linux’s <code class="docutils literal notranslate"><span class="pre">PATH</span></code> environment variable. Remember this one? Within python, the directories where the interpreter will look for modules to import are listed in <a class="reference external" href="https://docs.python.org/3/library/sys.html#sys.path">sys.path</a>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
 <span class="n">sys</span><span class="o">.</span><span class="n">path</span>
@@ -822,7 +826,7 @@ document.write(`
 <p><em>Note: the “matplotlib trick” above does not work with modules of the standard library, because built-in modules are imported as part of the interpreter’s startup process.</em></p>
 </section>
 <section id="reimporting-modules">
-<h2>Reimporting modules<a class="headerlink" href="#reimporting-modules" title="Permalink to this heading">#</a></h2>
+<h2>Reimporting modules<a class="headerlink" href="#reimporting-modules" title="Permalink to this headline">#</a></h2>
 <p>Of course, there is a lot more behind an <code class="docutils literal notranslate"><span class="pre">import</span></code> statement than this short summary (see the <a class="reference external" href="https://docs.python.org/3/reference/simple_stmts.html#import">documentation</a> for a more comprehensive overview). What you should remember however is that an import statement is not computationally cheap: it has to look for a file among many folders, compile the python code to bytecode, add the module to a registry… Actually, for all the things it does, it is quite fast already!</p>
 <p>Since <code class="docutils literal notranslate"><span class="pre">import</span></code> statements are used all the time in Python, it is a good idea to optimize them: therefore, Python will not re-import a module that is imported already.</p>
 <p>Most of the time this is not a problem, but sometimes (mostly in interactive development) it might be useful to make changes to a module and having them available at the command line without having to restart a fresh Python interpreter each time. To do this, there are two mechanisms available to you:</p>
@@ -857,7 +861,7 @@ document.write(`
 <p>From now on, <code class="docutils literal notranslate"><span class="pre">autoreload</span></code> will make sure that all modules are reloaded automatically before entering the execution of code typed at the ipython prompt.</p>
 </section>
 <section id="executing-modules-as-scripts">
-<h2>Executing modules as scripts<a class="headerlink" href="#executing-modules-as-scripts" title="Permalink to this heading">#</a></h2>
+<h2>Executing modules as scripts<a class="headerlink" href="#executing-modules-as-scripts" title="Permalink to this headline">#</a></h2>
 <p>You’ve already learned that importing modules actually <em>runs</em> them, the same way as <code class="docutils literal notranslate"><span class="pre">$</span> <span class="pre">python</span> <span class="pre">mymodule.py</span></code> (from the linux terminal) or <code class="docutils literal notranslate"><span class="pre">%run</span> <span class="pre">mymodule.py</span></code> (in ipython) would. This can have some undesired consequences: what if, for example, you would like certain things to happen when the module is run as script but <em>not</em> when being imported?</p>
 <p>There is a mechanism that allows to do exactly this. Add the following block of code at the end of the <code class="docutils literal notranslate"><span class="pre">greetings.py</span></code> module:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="vm">__name__</span> <span class="o">==</span> <span class="s1">&#39;__main__&#39;</span><span class="p">:</span>
@@ -921,7 +925,7 @@ document.write(`
 <p>Now, back to our script: the statement <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">__name__</span> <span class="pre">==</span> <span class="pre">'__main__'</span></code> is going to be false when the module is imported (since the name is <code class="docutils literal notranslate"><span class="pre">greetings</span></code>), but obviously true when the module is run as a script. Indeed, <code class="docutils literal notranslate"><span class="pre">__name__</span></code> is set to <code class="docutils literal notranslate"><span class="pre">__main__</span></code> when executed.</p>
 </section>
 <section id="take-home-points">
-<h2>Take home points<a class="headerlink" href="#take-home-points" title="Permalink to this heading">#</a></h2>
+<h2>Take home points<a class="headerlink" href="#take-home-points" title="Permalink to this headline">#</a></h2>
 <ul class="simple">
 <li><p>variables are defined in a <strong>scope</strong>, and we learned about two scopes: <strong>local</strong> and <strong>global</strong>. There are precise rules as to how each scope can interact with the other. As a general rule: global variables are available in nested scopes and cannot be overwritten, and local variables are not available in the global scope.</p></li>
 <li><p>the import mechanism is useful to avoid <strong>namespace pollution</strong>. Modules come with their own namespace, and it is recommended to keep each module’s namespace clean (i.e. no <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">XYZ</span> <span class="pre">import</span> <span class="pre">*</span></code>)</p></li>

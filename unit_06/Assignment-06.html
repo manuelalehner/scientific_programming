@@ -3,11 +3,11 @@
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
     <title>Assignment #06 &#8212; Scientific Programming</title>
   
@@ -45,7 +45,6 @@
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/clipboard.min.js"></script>
     <script src="../_static/copybutton.js"></script>
@@ -68,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="next" title="Errors, Exceptions and Warnings" href="../unit_07/01-Exceptions.html" />
     <link rel="prev" title="The scientific python stack" href="02-Scientific-Python.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
-  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:language" content="None"/>
   </head>
   
   
@@ -215,7 +214,7 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/01-Exceptions.html">Errors, Exceptions and Warnings</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/02-Testing.html">Testing your code</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_07/Assignment-07.html">Assignment #06: exceptions and testing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_07/Assignment-07.html">Assignment #07: exceptions and testing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 08 - Python Packages and Semester project</span></p>
 <ul class="nav bd-sidenav">
@@ -225,6 +224,11 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 09 - Code documentation</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../unit_09/01-Documentation.html">Documenting your code</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 10 - Object Oriented Programming I</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_10/01-OOP-Part-1.html">Object Oriented Programming: introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_10/Assignment-08.html">Assignment #08: Pydemic</a></li>
 </ul>
 
     </div>
@@ -482,7 +486,7 @@ document.write(`
                 <article class="bd-article" role="main">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="assignment-06">
-<h1>Assignment #06<a class="headerlink" href="#assignment-06" title="Permalink to this heading">#</a></h1>
+<h1>Assignment #06<a class="headerlink" href="#assignment-06" title="Permalink to this headline">#</a></h1>
 <p><a class="reference external" href="http://www.numpy.org/">numpy</a> and <a class="reference external" href="https://matplotlib.org/">matplotlib</a> are two fundamental pillars of the scientific python stack. You will find <em>numerous</em> tutorials for both libraries online. I am asking you to learn the basics of both tools by yourself, at the pace that suits you. I can recommend these two tutorials:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="http://scipy-lectures.org/intro/numpy/index.html">numpy tutorial</a></p></li>
@@ -490,7 +494,7 @@ document.write(`
 </ul>
 <p>They can be quite long if you are new to numpy - I’m not asking to do them all today! Sections 1.4.1.1 to 1.4.1.5 in the <a class="reference external" href="http://scipy-lectures.org/intro/numpy/index.html">numpy tutorial</a> should get you enough information for today’s assignments, or you can try without it and learn on the fly - your choice!</p>
 <section id="exercise-06-01-indexing">
-<h2>Exercise #06-01: Indexing<a class="headerlink" href="#exercise-06-01-indexing" title="Permalink to this heading">#</a></h2>
+<h2>Exercise #06-01: Indexing<a class="headerlink" href="#exercise-06-01-indexing" title="Permalink to this headline">#</a></h2>
 <p>Given a 2D numpy array defined as:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -545,7 +549,7 @@ document.write(`
 <p><em>Hint</em>: Take a look at the <a class="reference external" href="https://numpy.org/doc/stable/user/basics.indexing.html">numpy documentation about indexing</a>.</p>
 </section>
 <section id="exercise-06-02-average-temperature">
-<h2>Exercise #06-02: Average temperature<a class="headerlink" href="#exercise-06-02-average-temperature" title="Permalink to this heading">#</a></h2>
+<h2>Exercise #06-02: Average temperature<a class="headerlink" href="#exercise-06-02-average-temperature" title="Permalink to this headline">#</a></h2>
 <p>Monthly averages of temperature data at Innsbruck can be downloaded from this lecture’s github via:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -588,7 +592,7 @@ document.write(`
 <p><em>Tip 2: there is more than one way to compute the annual and monthly means. Some use loops, some use reshaping of the original 1D array.</em></p>
 </section>
 <section id="exercise-06-03-plotting-gridded-temperature">
-<h2>Exercise #06-03: Plotting gridded temperature<a class="headerlink" href="#exercise-06-03-plotting-gridded-temperature" title="Permalink to this heading">#</a></h2>
+<h2>Exercise #06-03: Plotting gridded temperature<a class="headerlink" href="#exercise-06-03-plotting-gridded-temperature" title="Permalink to this headline">#</a></h2>
 <p><a class="reference external" href="https://www.ecmwf.int/en/forecasts/datasets/archive-datasets/reanalysis-datasets/era-interim">ERA-Interim reanalysis</a> provides global atmospheric fields from 1979 to today. You can access a prepared dataset of gridded average temperature here:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -611,7 +615,7 @@ document.write(`
 <img alt="../_images/18_temp_pic.png" src="../_images/18_temp_pic.png" />
 </section>
 <section id="optional-exercise-06-04-acinn-meteorological-data">
-<h2>Optional - Exercise #06-04: ACINN meteorological data<a class="headerlink" href="#optional-exercise-06-04-acinn-meteorological-data" title="Permalink to this heading">#</a></h2>
+<h2>Optional - Exercise #06-04: ACINN meteorological data<a class="headerlink" href="#optional-exercise-06-04-acinn-meteorological-data" title="Permalink to this headline">#</a></h2>
 <p>This exercise will give you a glimpse of working with <a class="reference external" href="https://pandas.pydata.org/">pandas</a>. We are going to analyze a dataset downloaded from the <a class="reference external" href="https://acinn-data.uibk.ac.at/">ACINN department database</a>. The one-month long dataset is from the automatic weather station <a class="reference external" href="https://acinn-data.uibk.ac.at/pages/tawes-uibk.html">TAWES UIBK</a>. <a class="reference external" href="https://acinn-data.uibk.ac.at/station/1/RAWDATA/">Here</a> you can find a description of the variable names.</p>
 <p>The data is shared by ACINN under a <a class="reference external" href="https://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.</p>
 <a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">
