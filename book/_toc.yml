@@ -65,3 +65,7 @@ parts:
     chapters:
     - file: unit_10/01-OOP-Part-1
     - file: unit_10/Assignment-08
+  - caption: Unit 11 - Object Oriented Programming II
+    chapters:
+    - file: unit_11/01-OOP-Part-2
+    - file: unit_11/Assignment-09
