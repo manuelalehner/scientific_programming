@@ -22,53 +22,16 @@ parts:
       - file: unit_01/02b-Details-Linux
     - file: unit_01/03-Getting-Started
     - file: unit_01/Assignment-01
-  #- caption: Unit 02 - Python language fundamentals
-  #  chapters:
-  #  - file: unit_02/01-install-packages
-  #  - file: unit_02/02-ipython-spyder
-  #  - file: unit_02/03-Language-Fundamentals
-  #  - file: unit_02/Assignment-02
-  #- caption: Unit 03 - Variables scopes, modules, and strings
-  #  chapters:
-  #  - file: unit_03/01-Import-Scopes
-  #  - file: unit_03/02-Strings-Paths
-  #  - file: unit_03/Assignment-03
-  #- caption: Unit 04 - Good practice, getting help, and ChatGPT
-  #  chapters:
-  #  - file: unit_04/01-Good-practices
-  #  - file: unit_04/02-Tips-and-Tricks
-  #  - file: unit_04/03-Python-and-ChatGPT
-  #  - file: unit_04/Assignment-04
-  #- caption: Unit 05 - Floating point arithmetics, Numpy basics
-  #  chapters:
-  #  - file: unit_05/01-Why-Numpy
-  #  - file: unit_05/02-Numbers
-  #  - file: unit_05/Assignment-05
-  #- caption: Unit 06 - Scientific Python
-  #  chapters:
-  #  - file: unit_06/01-Numpy-ndarrays
-  #  - file: unit_06/02-Scientific-Python
-  #  - file: unit_06/Assignment-06
-  #- caption: Unit 07 - Testing
-  #  chapters:
-  #  - file: unit_07/01-Exceptions
-  #  - file: unit_07/02-Testing
-  #  - file: unit_07/Assignment-07
-  #- caption: Unit 08 - Python Packages and Semester project
-  #  chapters:
-  #  - file: unit_08/01-Package-structure
-  #  - file: unit_08/02-Programming-project
-  #- caption: Unit 09 - Code documentation
-  #  chapters:
-  #  - file: unit_09/01-Documentation
-  #- caption: Unit 10 - Object Oriented Programming I
-  #  chapters:
-  #  - file: unit_10/01-OOP-Part-1
-  #  - file: unit_10/Assignment-08
-  #- caption: Unit 11 - Object Oriented Programming II
-  #  chapters:
-  #  - file: unit_11/01-OOP-Part-2
-  #  - file: unit_11/Assignment-09
-  #- caption: Unit 12 - Object Oriented Programming III
-  #  chapters:
-  #  - file: unit_12/01-OOP-Part-3
+  - caption: Unit 02 - Python packages and environments
+    chapters:
+    - file: unit_02/01-install-packages
+    - file: unit_02/02-ipython-spyder
+  - caption: Unit 03 - Python basics
+    chapters:
+    - file: unit_03/01-Language-Fundamentals
+    - file: unit_03/Assignment-03
+  - caption: Unit 04 - Variables scopes, modules, and strings
+    chapters:
+    - file: unit_04/01-Import-Scopes
+    - file: unit_04/02-Strings-Paths
+    - file: unit_04/Assignment-04
