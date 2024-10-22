@@ -43,7 +43,7 @@ This semester the course will be taught in 11 weeks, so that it ends already in 
 - On Tuesdays (10:15-12:00) and Fridays (11:15-13:00), we meet to discuss the current material and work on the assignments together. We will often start with a short, individual online assessment, so that you can check if you have understood the new material correctly. Based on these short quizzes, we will together choose the topics and questions to discuss further.
 
 ```{important}
-Please note that on Friday 4 October and on Friday 25 October, we meet from 14:30 to 16:00 instead of the usual time.
+Please note that on Friday 4 October, we meet from 14:30 to 16:00, and on Friday 25 October from 13:30 to 15:00 instead of the usual time.
 ```
 
 ```{important}
