@@ -51,4 +51,7 @@ parts:
     - file: unit_07/02-Tips-and-Tricks
     - file: unit_07/03-Python-and-ChatGPT
     - file: unit_07/Assignment-07
-    - file: unit_07/intermezzo_wrf_xarray
+  - caption: Intermezzo
+    chapters:
+    - file: intermezzo/01-WRF_xarray
+    - file: intermezzo/02-Revision_Midterm
