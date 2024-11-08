@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Installing Python on your computer &#8212; Scientific Programming</title>
+    <title>Term project: the WRFvis package &#8212; Scientific Programming</title>
   
   
   
@@ -58,11 +58,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'unit_01/02-Installation';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'unit_09/02-Programming-project';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="For Windows users: the difference between the command prompt, the miniforge prompt, and the Python interpreter" href="02a-Details-Windows.html" />
-    <link rel="prev" title="An introduction to the Linux terminal" href="01b-Linux.html" />
+    <link rel="next" title="Documenting your code" href="../unit_10/01-Documentation.html" />
+    <link rel="prev" title="Structure of a python package" href="01-Package-structure.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -188,19 +188,19 @@
 <li class="toctree-l1"><a class="reference internal" href="../intro/help.html">Getting help</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 01 - Terminal &amp; Python primer</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="01-Terminal.html">Basic terminal commands and navigation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="01a-Windows.html">A Windows command prompt primer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01b-Linux.html">An introduction to the Linux terminal</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../unit_01/01-Terminal.html">Basic terminal commands and navigation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../unit_01/01a-Windows.html">A Windows command prompt primer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unit_01/01b-Linux.html">An introduction to the Linux terminal</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active has-children"><a class="current reference internal" href="#">Installing Python on your computer</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="02a-Details-Windows.html">For Windows users: the difference between the command prompt, the miniforge prompt, and the Python interpreter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02b-Details-Linux.html">For Linux/macOS users: what did <code class="docutils literal notranslate"><span class="pre">mambaforge</span></code> do to your terminal?</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../unit_01/02-Installation.html">Installing Python on your computer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../unit_01/02a-Details-Windows.html">For Windows users: the difference between the command prompt, the miniforge prompt, and the Python interpreter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unit_01/02b-Details-Linux.html">For Linux/macOS users: what did <code class="docutils literal notranslate"><span class="pre">mambaforge</span></code> do to your terminal?</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1"><a class="reference internal" href="03-Getting-Started.html">Getting started with Python</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Assignment-01.html">Assignment #01</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_01/03-Getting-Started.html">Getting started with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_01/Assignment-01.html">Assignment #01</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 02 - Python packages and environments</span></p>
 <ul class="nav bd-sidenav">
@@ -249,9 +249,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../unit_08/Assignment-08.html">Assignment #07: Exceptions and Testing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 09 - Python Packages and Semester project</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../unit_09/01-Package-structure.html">Structure of a python package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_09/02-Programming-project.html">Term project: the WRFvis package</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01-Package-structure.html">Structure of a python package</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Term project: the WRFvis package</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 10 - Code documentation</span></p>
 <ul class="nav bd-sidenav">
@@ -310,7 +310,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/manuelalehner/scientific_programming/master?urlpath=lab/tree/book/unit_01/02-Installation.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/manuelalehner/scientific_programming/master?urlpath=lab/tree/book/unit_09/02-Programming-project.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -358,7 +358,7 @@
       
       
       
-      <li><a href="https://github.com/manuelalehner/scientific_programming/edit/master/book/unit_01/02-Installation.ipynb" target="_blank"
+      <li><a href="https://github.com/manuelalehner/scientific_programming/edit/master/book/unit_09/02-Programming-project.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -375,7 +375,7 @@
       
       
       
-      <li><a href="https://github.com/manuelalehner/scientific_programming/issues/new?title=Issue%20on%20page%20%2Funit_01/02-Installation.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/manuelalehner/scientific_programming/issues/new?title=Issue%20on%20page%20%2Funit_09/02-Programming-project.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -405,7 +405,7 @@
       
       
       
-      <li><a href="../_sources/unit_01/02-Installation.ipynb" target="_blank"
+      <li><a href="../_sources/unit_09/02-Programming-project.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -489,7 +489,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Installing Python on your computer</h1>
+    <h1>Term project: the WRFvis package</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -499,15 +499,11 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-miniconda">Install Miniconda</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#on-windows">On Windows</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#on-mac-os-and-linux">On Mac OS and Linux</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-your-installation">Testing your installation</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-this-python-interpreter">What is this Python “interpreter”?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-python-installation">What is a “Python installation”?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-checklist">Learning checklist</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-wrfvis-package">The WRFvis package</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-information-about-wrf-model-output">Some information about WRF model output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guided-exercise-make-the-tool-more-robust">Guided exercise: make the tool more robust</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-make-the-package-better">Project: make the package better</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expectations">Expectations</a></li>
 </ul>
             </nav>
         </div>
@@ -519,106 +515,106 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="installing-python-on-your-computer">
-<h1>Installing Python on your computer<a class="headerlink" href="#installing-python-on-your-computer" title="Link to this heading">#</a></h1>
-<p><img alt="https://www.python.org/static/community_logos/python-logo.png" class="align-left" src="https://www.python.org/static/community_logos/python-logo.png" /> This chapter contains some instructions about how to install Python on your personal computer.</p>
-<p>There are many ways to install Python on your computer (and while most of them work, some of them are less practical than others for scientific applications). Unless you know what you are doing (i.e.: you have been doing this before), please follow these instructions exactly.</p>
-<div class="warning dropdown admonition">
-<p class="admonition-title">Important! What to do if you <strong>already</strong> have python installed on your laptop</p>
-<p><strong>If you already have anaconda / conda / miniconda installed</strong>:</p>
-<p>You can keep your installation if it works for you and if you know what you are doing. If you are not totally sure, it is recommended to start with a clean installation. To start from scratch, uninstall anaconda and follow the instructions below.</p>
-<hr class="docutils" />
-<p><strong>If you don’t know what I’m talking about:</strong></p>
-<p>Then you should definitely follow the instructions below.</p>
-</div>
-<div class="warning dropdown admonition">
-<p class="admonition-title">Important! For Windows 7 users</p>
-<p>Windows 7 is <a class="reference external" href="https://en.wikipedia.org/wiki/Windows_7">not supported since January 2020</a>. It seems that you cannot install <code class="docutils literal notranslate"><span class="pre">mambaforge</span></code> on Windows 7. Regardless of Python, I strongly recommend to update to a version with security updates.</p>
-</div>
-<p>To install Python on the computers in the computer lab follow the instructions for a Linux installation. But first you need to <a href="https://orawww.uibk.ac.at/public_prod/owa/uvw$web$10.p001">apply for a Linux account</a> if you have not done so already. The account will be active the following work day.</p>
-<section id="install-miniconda">
-<h2>Install Miniconda<a class="headerlink" href="#install-miniconda" title="Link to this heading">#</a></h2>
-<section id="on-windows">
-<h3>On Windows<a class="headerlink" href="#on-windows" title="Link to this heading">#</a></h3>
-<p>Go to the miniforge download website: <a class="github reference external" href="https://github.com/conda-forge/miniforge#mambaforge">conda-forge/miniforge</a></p>
-<p>Download the <strong>Miniforge</strong> installers for Windows.
-Unless you have an uncommon architecture (unlikely), you should choose the <code class="docutils literal notranslate"><span class="pre">x86_64</span></code> files.</p>
-<p><a class="reference internal" href="../_images/download_options.png"><img alt="../_images/download_options.png" src="../_images/download_options.png" style="width: 400px;" /></a> <br></p>
-<p>Double-click the <code class="docutils literal notranslate"><span class="pre">.exe</span></code> file.</p>
-<p>Follow the instructions on the screen.</p>
-<p>If you are unsure about any setting, accept the defaults. You can change them later. At this stage, I recommend:</p>
-<a class="reference internal image-reference" href="../_images/install_options.png"><img alt="../_images/install_options.png" src="../_images/install_options.png" style="width: 400px;" /></a>
-</section>
-<section id="on-mac-os-and-linux">
-<h3>On Mac OS and Linux<a class="headerlink" href="#on-mac-os-and-linux" title="Link to this heading">#</a></h3>
-<p>For these platforms, no need to download the files yourself. Open a terminal and do:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>curl -L -O &quot;https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh&quot;
-bash Miniforge3-$(uname)-$(uname -m).sh
-</pre></div>
-</div>
-<p>or, if this doesn’t work:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>wget &quot;https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh&quot;
-bash Miniforge3-$(uname)-$(uname -m).sh
-</pre></div>
-</div>
-<p>The first command downloads the tool, and the second installs it. Follow the prompts on the installer screens.</p>
-<p>If you are unsure about any setting, accept the defaults <strong>except for the last question asking you if you wish to run <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">init</span></code>: here, answer “yes”.</strong></p>
-<p>To make the changes take effect, close and then re-open your terminal window.</p>
-</section>
-<section id="testing-your-installation">
-<h3>Testing your installation<a class="headerlink" href="#testing-your-installation" title="Link to this heading">#</a></h3>
-<p>To see if everything worked well, open a terminal (Mac and Linux). On Windows, open the <code class="docutils literal notranslate"><span class="pre">miniforge</span> <span class="pre">prompt</span></code> (from the Start menu, search for and open “miniforge prompt”):</p>
-<p><a class="reference internal" href="../_images/miniforge.png"><img alt="../_images/miniforge.png" src="../_images/miniforge.png" style="width: 400px;" /></a> <br></p>
-<p>and type in:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>mamba list
-</pre></div>
-</div>
-<p>You should see a long list of package names.</p>
-<p>If you type:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>python
-</pre></div>
-</div>
-<p>A new Python prompt should appear, with something like:</p>
-<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Python 3.12.5 | packaged by conda-forge | (main, Aug  8 2024, 18:24:51) [MSC v.1940 64 bit (AMD64)] on win32
-Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
-&gt;&gt;&gt;
-</pre></div>
-</div>
-<p>You can type <code class="docutils literal notranslate"><span class="pre">exit()</span></code> to get out of the Python interpreter.</p>
-<div class="note dropdown admonition">
-<p class="admonition-title">Optional: conda, mamba, conda-forge?</p>
-<p>Although the instructions above should work in almost all situations and should get you ready for the class,
-I should explain what we have just done in case you are interested:</p>
-<p>We have just installed <a class="reference external" href="https://docs.conda.io/en/latest/miniconda.html">miniconda</a> which is a minimal installer for the larger project Anaconda. Anaconda is a scientific Python installation which, in my opinion, has too many options and tools that you won’t need.</p>
-<p><strong>But</strong> we have not only installed <code class="docutils literal notranslate"><span class="pre">miniconda</span></code>: we have also set some options per default automatically:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="term-project-the-wrfvis-package">
+<h1>Term project: the WRFvis package<a class="headerlink" href="#term-project-the-wrfvis-package" title="Link to this heading">#</a></h1>
+<p>updated by M. Lehner (new semester project WRFvis)</p>
+<p>This is the main project of the semester and will count for 30% of the final grade. The submission is going to happen in three stages:</p>
 <ul class="simple">
-<li><p>we now use <a class="reference external" href="https://conda-forge.org/">conda-forge</a> as default channels to download the Python packages we will use later in the lecture (instead of Anaconda channels).</p></li>
-<li><p>we now use <a class="reference external" href="https://mamba.readthedocs.io">mamba</a> as the default Python package install tool (instead of <code class="docutils literal notranslate"><span class="pre">conda</span></code>). <code class="docutils literal notranslate"><span class="pre">mamba</span> <span class="pre">install</span></code> behaves exactly like <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span></code>, but is significantly faster.</p></li>
+<li><p><strong>Feedback presentations: end of November/beginning of December</strong> Individual meetings with each group to receive some feedback. You will show me the structure of your package, the functionality of your code, which tests you are writing, who is writing what, a sample docstring, etc. You will also submit a first version of your WRFvis package (one <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file per group) at least 24 h before our meeting so that I can test it.</p></li>
+<li><p><strong>Class presentations: Friday, 13 December 2024</strong>: Every group will briefly present their project to show what it can be used for. This is not graded. The goal is to simply share your amazing project ideas with the whole class.</p></li>
+<li><p><strong>Final submission: Friday, 20 December 2024 at 24:00</strong>. One <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file per group containing your version of the WRFvis package .</p></li>
 </ul>
+<p>Here is a <em>tentative</em> grading rubric.</p>
+<p><strong>Group grade (10 points):</strong></p>
+<ul class="simple">
+<li><p>Originality: 1 <em>(did you do something more than following the list of suggestions)</em></p></li>
+<li><p>Functionality of the code: 1 <em>(can the package be installed and run on my computer)</em></p></li>
+<li><p>Documentation: 2 <em>(joint project documentation)</em></p></li>
+<li><p>Traceability: 1 <em>(who did what, are the author(s) name(s) provided in the function’s docstrings)</em></p></li>
+<li><p>Coherence: 2 <em>(how do the individual contributions fit together)</em></p></li>
+<li><p>Integration tests: 2 <em>(tool / project level tests)</em></p></li>
+<li><p>Response to feedback: 1 <em>(response to the received feedback)</em></p></li>
+</ul>
+<p><strong>Individual grade (10 points):</strong></p>
+<ul class="simple">
+<li><p>Narrative self-report: 1 <em>(quality and honesty of the self-report)</em></p></li>
+<li><p>Complexity: 3 <em>(level and complexity of the implemented tools, i.e., the amount of programming work)</em></p></li>
+<li><p>Functionality of the code: 1 <em>(is your individual contribution running and doing what it is supposed to do)</em></p></li>
+<li><p>Unit tests: 2 <em>(individual function tests)</em></p></li>
+<li><p>Documentation: 2 <em>(Individual contributions’ docstrings and comments)</em></p></li>
+<li><p>PEP8: 1 <em>(compliance to pep8)</em></p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>I will try and test the code (using <code class="docutils literal notranslate"><span class="pre">pytest</span></code>) on my computer - any new data or library that is necessary should be documented in the code, or in the command line utility documentation!</p>
 </div>
-</section>
-</section>
-<section id="what-is-this-python-interpreter">
-<h2>What is this Python “interpreter”?<a class="headerlink" href="#what-is-this-python-interpreter" title="Link to this heading">#</a></h2>
-<p>Start with reading the definition from <a href="https://techterms.com/definition/interpreter">the Tech Terms Dictionary</a>.</p>
-<p>Put simply, the Python interpreter is a program executing Python programs or commands. It reads the programs you write and executes the instructions they contain. We will look into interpreters in a little more detail later in the semester, when we will talk about compiled and interpreted languages.</p>
-</section>
-<section id="what-is-a-python-installation">
-<h2>What is a “Python installation”?<a class="headerlink" href="#what-is-a-python-installation" title="Link to this heading">#</a></h2>
-<p><a class="reference internal" href="02a-Details-Windows.html"><span class="doc std std-doc">Explanation for Windows users</span></a>
-: the difference between the command prompt, the miniforge prompt, and the Python interpreter</p>
-<p><a class="reference internal" href="02b-Details-Linux.html"><span class="doc std std-doc">Explanation for Linux/macOS users</span></a>
-: what did <code class="docutils literal notranslate"><span class="pre">mambaforge</span></code> do to your terminal?</p>
-</section>
-<section id="learning-checklist">
-<h2>Learning checklist<a class="headerlink" href="#learning-checklist" title="Link to this heading">#</a></h2>
-<p><label><input type="checkbox" id="week01_01" class="box"> I know how to install python + mamba on my computer. What this means (especially mamba) will be explained in more detail next week.</input></label>
-<label><input type="checkbox" id="week01_02" class="box"> I know how to open a <strong>Python interpreter</strong> from the miniforge prompt (or the terminal in Linux / Mac OS) and close it with <code class="docutils literal notranslate"><span class="pre">exit()</span></code>.</input></label><br />
-<label><input type="checkbox" id="week01_03" class="box"> Linux/Mac only: I understand the differences between a terminal and a Python interpreter. I have a basic understanding of what changed in my computer when I installed mambaforge.</input></label>
-<label><input type="checkbox" id="week01_04" class="box"> Windows only: I understand the differences between the command prompt, the miniforge prompt, and the Python interpreter.</input></label></p>
-</section>
-<div class="toctree-wrapper compound">
+<section id="the-wrfvis-package">
+<h2>The WRFvis package<a class="headerlink" href="#the-wrfvis-package" title="Link to this heading">#</a></h2>
+<p>I have put together a small package called <strong>WRFvis</strong>. Its design is based on the <a class="reference external" href="https://github.com/fmaussion/scispack">template package</a> and the <a class="reference external" href="https://github.com/fmaussion/climvis">ClimVis package</a> written by Fabien Maussion.</p>
+<p><strong>Download the zipped package from <a class="reference external" href="https://github.com/manuelalehner/wrfvis/archive/main.zip">here</a> and extract it. Read the README and the package requirements first.</strong></p>
+<p><strong>Now install wrfvis in development mode. If you are working on your own computer run:</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pip install -e .
+</pre></div>
 </div>
+<p>from the root directory. <strong>If you are working on a computer on which you have no admin rights, run:</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pip install --user -e .
+</pre></div>
+</div>
+<p>instead.</p>
+<p><strong>Try the command line interface (<code class="docutils literal notranslate"><span class="pre">wrfvis_gridcell</span> <span class="pre">-h</span></code>) from a terminal. Now explore <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>: can you identify what makes the command available from the terminal? Where is the code executing the command <code class="docutils literal notranslate"><span class="pre">wrfvis_gridcell</span></code>?</strong></p>
+<p><strong>Familiarize yourself with the tool. Can you understand what the role of each function is?</strong></p>
+<p><strong>Can you run the tests successfully? Probably not. Somewhere in <code class="docutils literal notranslate"><span class="pre">cfg.py</span></code>, a hard coded path is pointing to a non-existing directory.</strong></p>
+<p>You can access an example WRF dataset <a class="reference external" href="https://fileshare.uibk.ac.at/f/df7c7b3410a448f3b527/">here</a>. Working with the dataset might be faster if you download it to your computer or to an external hard disk, but the file is rather large (about 12 GB). Because of the large file size, running all the tests may also take some time. The WRF output comes from a simulation of a cold-air pool on the Seefeld Plateau (<a class="reference external" href="https://zenodo.org/records/13842030">https://zenodo.org/records/13842030</a>).</p>
+<p>Make sure you are able to run the command succesfully before going on. For example, <code class="docutils literal notranslate"><span class="pre">wrfvis_gridcell</span> <span class="pre">-p</span> <span class="pre">T</span> <span class="pre">-l</span> <span class="pre">11</span> <span class="pre">45</span> <span class="pre">200</span></code> should work fine and display a page in your browser. But remember that it will take some time because of the file size.</p>
+</section>
+<section id="some-information-about-wrf-model-output">
+<h2>Some information about WRF model output<a class="headerlink" href="#some-information-about-wrf-model-output" title="Link to this heading">#</a></h2>
+<p>The goal of WRFvis is to visualize output from the <a class="reference external" href="https://www.mmm.ucar.edu/models/wrf">WRF</a> numerical weather prediction model.</p>
+<p>Some of the WRF output variables are <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/users/wrf_users_guide/build/html/output.html#special-wrf-output-variables">perturbation variables</a>. To get physically meaningful values, you need to perform some calculations, for example, adding two output variables. Potential temperature is such an example. Have a look at the wrfvis code and find the line, where the timeseries of full potential temperature is calculated.</p>
+<p>WRF uses a so-called Arakawa-C grid (see, e.g., Fig. 3 in <a class="reference external" href="https://journals.ametsoc.org/view/journals/mwre/138/3/2009mwr2990.1.xml">this publication</a>), where mass-related variables (e.g., pressure and temperature) are defined at the center of the grid cells and the wind components in the center of the respective faces of the grid cell. The dimensions of the variable <em>T</em> are thus (Time, bottom_top, south_north, west_east), of <em>U</em> (Time, bottom_top, south_north, west_east_stag), of <em>V</em> (Time, bottom_top, south_north_stag, west_east), and of <em>W</em> (Time, bottom_top_stag, south_north, west_east). The length of the staggered dimension (e.g., <code class="docutils literal notranslate"><span class="pre">bottom_top_stag</span></code>) is always longer by one element than the unstaggered dimension (e.g., <code class="docutils literal notranslate"><span class="pre">bottom_stag</span></code>). Have a look at the wrfvis code and find where the geopotential height (with dimension <code class="docutils literal notranslate"><span class="pre">bottom_top_stag</span></code>) is unstaggered in the vertical direction. To calculate the horizontal wind components at the mass grid points, you thus need to unstagger them similarly to the geopotential height in the vertical direction. Alternatively, there are also staggered longitude (<em>XLONG_U</em> and <em>XLONG_V</em>) and latitude (<em>XLAT_U</em> and <em>XLAT_V</em>) arrays in the model output.</p>
+<p>If you are interested, there is more information in the <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/users/wrf_users_guide/build/html/index.html">WRF user manual</a>, including a description of possible <a class="reference external" href="https://www2.mmm.ucar.edu/wrf/users/wrf_users_guide/build/html/output_variables.html">output variables</a>.</p>
+</section>
+<section id="guided-exercise-make-the-tool-more-robust">
+<h2>Guided exercise: make the tool more robust<a class="headerlink" href="#guided-exercise-make-the-tool-more-robust" title="Link to this heading">#</a></h2>
+<p>Here are a couple of smaller tasks to get you started:</p>
+<ul>
+<li><p>Add a safety check in the code to make sure that the WRF output file specified in <code class="docutils literal notranslate"><span class="pre">cfg.py</span></code> actually exists. If the data file does not exist, print the following message and exit the program:</p>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">specified</span> <span class="pre">WRF</span> <span class="pre">output</span> <span class="pre">file</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">exist.</span> <span class="pre">Please</span> <span class="pre">set</span> <span class="pre">a</span> <span class="pre">valid</span> <span class="pre">path</span> <span class="pre">in</span> <span class="pre">cfg.py.</span></code></p>
+</li>
+<li><p>The current implementation extracts the model timeseries from the grid point closest to the specified longitude and latitude and the vertical model level closest to the specified height above ground. This works fine for 3D variables, but not for 2D surface variables (e.g., radiation, sensible heat flux, …). Add a check whether the user-specified parameter refers to a 2D variable and if so, adjust the code to extract the timeseries correctly.</p></li>
+</ul>
+<p><em>Hint: 2D variables have only 3 dimensions (time, longitude, latitude) and no height dimensions (<code class="docutils literal notranslate"><span class="pre">top_bottom</span></code> or <code class="docutils literal notranslate"><span class="pre">top_bottom_stag</span></code>).</em></p>
+</section>
+<section id="project-make-the-package-better">
+<h2>Project: make the package better<a class="headerlink" href="#project-make-the-package-better" title="Link to this heading">#</a></h2>
+<p>Now you should be ready to contribute to this great package! <strong>Add at least N+1 simple functionalities</strong> to it, where N is your group size. This functionality can be anything you want, as long as it makes you write some code.</p>
+<p>Here are some ideas of functionalities that you can adapt at wish.</p>
+<ul class="simple">
+<li><p>You could use the python <a class="reference external" href="https://github.com/python-windrose/windrose">windrose</a> package to plot a windrose from the gridcell data instead of the time series (see above for working with wind data from the WRF output).</p></li>
+<li><p>You could add a new command line tool to plot vertical profiles instead of timeseries from a single grid cell.</p></li>
+<li><p>You could expand the tool for plotting vertical profiles to produce a Skew-T diagram.</p></li>
+<li><p>You could add a new command line tool to plot horizontal or vertical cross sections.</p></li>
+<li><p>You could add the possibility to plot derived parameters that are calculated from the parameters in the WRF output.</p></li>
+<li><p>You could add the possibility to plot multiple timeseries from different grid points in a single plot for comparison.</p></li>
+<li><p><strong>Come up with your own ideas that interest you</strong>!</p></li>
+</ul>
+</section>
+<section id="expectations">
+<h2>Expectations<a class="headerlink" href="#expectations" title="Link to this heading">#</a></h2>
+<p><strong>In addition to the joint package, each group member and the entire group needs to write a short narrative self-report (a few lines per point) addressing the following points:</strong></p>
+<ul class="simple">
+<li><p>What task was assigned to you when you started?</p></li>
+<li><p>What changed during the implementation, that is, what is the outcome of the project?</p></li>
+<li><p>What was the biggest challenge you faced in the implementation?</p></li>
+<li><p>Group question: what was the biggest challenge when merging everyone’s work into one package?</p></li>
+</ul>
+<p><strong>The narrative report should be written in markdown format, and will count towards your individual grade.</strong></p>
+<p>Some tasks in the list above are simpler than others. There is no threshold on the number of lines of code, because producing many lines of code is <strong>not</strong> a measure of quality. The goal is that you get better at programming during the project, regardless of your starting level.</p>
+<p>The list of possible topics should help you decide on what to code, but aside from that here is a vague rule of thumb: if you coded 10 lines of code (without comments), it is probably not enough (unless they are very clever lines of code). If you coded 1000 lines of code, it is probably too much.</p>
+<p>It is okay to select an easy task, as long as you write something on your own, and write good code. The difficulty of the task will, however, influence the grade in addition to the quality of the code and the tests. If you pick an “easy” task, you could also pick two or three tasks instead of just one. Try to split the tasks within the group to get a coherent product!</p>
+<p>You all have very different backgrounds and interest. Try to find a project you like, and convince me that you pushed your own programming limit a little bit and that you learned something in the process.</p>
+<p>Ah! And <strong>don’t forget to write tests.</strong></p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -634,7 +630,7 @@ I should explain what we have just done in case you are interested:</p>
         },
         kernelOptions: {
             name: "python3",
-            path: "./unit_01"
+            path: "./unit_09"
         },
         predefinedOutput: true
     }
@@ -652,20 +648,20 @@ I should explain what we have just done in case you are interested:</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="01b-Linux.html"
+       href="01-Package-structure.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">An introduction to the Linux terminal</p>
+        <p class="prev-next-title">Structure of a python package</p>
       </div>
     </a>
     <a class="right-next"
-       href="02a-Details-Windows.html"
+       href="../unit_10/01-Documentation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">For Windows users: the difference between the command prompt, the miniforge prompt, and the Python interpreter</p>
+        <p class="prev-next-title">Documenting your code</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -685,15 +681,11 @@ I should explain what we have just done in case you are interested:</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#install-miniconda">Install Miniconda</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#on-windows">On Windows</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#on-mac-os-and-linux">On Mac OS and Linux</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#testing-your-installation">Testing your installation</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-this-python-interpreter">What is this Python “interpreter”?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-is-a-python-installation">What is a “Python installation”?</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#learning-checklist">Learning checklist</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-wrfvis-package">The WRFvis package</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#some-information-about-wrf-model-output">Some information about WRF model output</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guided-exercise-make-the-tool-more-robust">Guided exercise: make the tool more robust</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-make-the-package-better">Project: make the package better</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expectations">Expectations</a></li>
 </ul>
   </nav></div>
 
