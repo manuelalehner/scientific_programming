@@ -75,3 +75,6 @@ parts:
     chapters:
     - file: unit_12/01-OOP-Part-2
     - file: unit_12/Assignment-12
+  - caption: Unit 13 - Object Oriented Programming III
+    chapters:
+    - file: unit_13/01-OOP-Part-3
