@@ -1,0 +1,80 @@
+# Table of contents
+# Learn more at https://jupyterbook.org/customize/toc.html
+
+format: jb-book
+root: welcome
+  #parts:
+  #  - caption: Introduction
+  #    chapters:
+  #  - file: intro/syllabus
+  #  - file: intro/faq
+  #  - file: intro/references
+  #  - file: intro/help
+  #  - caption: Unit 01 - Terminal & Python primer
+  #    chapters:
+  #    - file: unit_01/01-Terminal
+  #      sections:
+  #      - file: unit_01/01a-Windows
+  #      - file: unit_01/01b-Linux
+  #    - file: unit_01/02-Installation
+  #      sections:
+  #      - file: unit_01/02a-Details-Windows
+  #      - file: unit_01/02b-Details-Linux
+  #    - file: unit_01/03-Getting-Started
+  #    - file: unit_01/Assignment-01
+  #  - caption: Unit 02 - Python packages and environments
+  #    chapters:
+  #    - file: unit_02/01-install-packages
+  #    - file: unit_02/02-ipython-spyder
+  #  - caption: Unit 03 - Python basics
+  #    chapters:
+  #    - file: unit_03/01-Language-Fundamentals
+  #    - file: unit_03/Assignment-03
+  #  - caption: Unit 04 - Variables scopes, modules, and strings
+  #    chapters:
+  #    - file: unit_04/01-Import-Scopes
+  #    - file: unit_04/02-Strings-Paths
+  #    - file: unit_04/Assignment-04
+  #  - caption: Unit 05 - Floating point arithmetics, Numpy basics
+  #    chapters:
+  #    - file: unit_05/01-Why-Numpy
+  #    - file: unit_05/02-Numbers
+  #    - file: unit_05/Assignment-05
+  #  - caption: Unit 06 - Scientific Python
+  #    chapters:
+  #    - file: unit_06/01-Numpy-ndarrays
+  #    - file: unit_06/02-Scientific-Python
+  #    - file: unit_06/Assignment-06
+  #  - caption: Unit 07 - Good practice, getting help, and ChatGPT
+  #    chapters:
+  #    - file: unit_07/01-Good-practices
+  #    - file: unit_07/02-Tips-and-Tricks
+  #    - file: unit_07/03-Python-and-ChatGPT
+  #    - file: unit_07/Assignment-07
+  #  - caption: Intermezzo
+  #    chapters:
+  #    - file: intermezzo/01-WRF_xarray
+  #    - file: intermezzo/02-Revision_Midterm
+  #    - caption: Unit 08 - Testing
+  #    chapters:
+  #    - file: unit_08/01-Exceptions
+  #    - file: unit_08/02-Testing
+  #    - file: unit_08/Assignment-08
+  #    - caption: Unit 09 - Python Packages and Semester project
+  #    chapters:
+  #    - file: unit_09/01-Package-structure
+  #    - file: unit_09/02-Programming-project
+  #  - caption: Unit 10 - Code documentation
+  #    chapters:
+  #    - file: unit_10/01-Documentation
+  #  - caption: Unit 11 - Object Oriented Programming I
+  #    chapters:
+  #    - file: unit_11/01-OOP-Part-1
+  #    - file: unit_11/Assignment-11
+  #  - caption: Unit 12 - Object Oriented Programming II
+  #    chapters:
+  #    - file: unit_12/01-OOP-Part-2
+  #    - file: unit_12/Assignment-12
+  #  - caption: Unit 13 - Object Oriented Programming III
+  #    chapters:
+  #    - file: unit_13/01-OOP-Part-3
