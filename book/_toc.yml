@@ -3,13 +3,13 @@
 
 format: jb-book
 root: welcome
-  #parts:
-  #  - caption: Introduction
-  #    chapters:
-  #  - file: intro/syllabus
-  #  - file: intro/faq
-  #  - file: intro/references
-  #  - file: intro/help
+parts:
+- caption: Introduction
+  chapters:
+  - file: intro/syllabus
+  - file: intro/faq
+  - file: intro/references
+  - file: intro/help
   #  - caption: Unit 01 - Terminal & Python primer
   #    chapters:
   #    - file: unit_01/01-Terminal
