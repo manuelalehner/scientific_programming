@@ -39,7 +39,7 @@ This class follows the [flipped classroom](https://en.wikipedia.org/wiki/Flipped
 **Each week of the semester is organized as follows**:
 - On Wednesday, you will receive instructions for the following week (which materials to read/watch, a quiz, and the programming assignments). You study the materials during the week and answer the quiz questions.
 - On Monday (08:15-09:00), we meet to discuss the assignment solutions from the previous week (assignments are mandatory but not graded, see "Grading" below).
-- On Tuesday (10:15-12:00), we meet to discuss the current material (the one distributed on the previous Wedesday) and work on the assignments together (the ones to be discussed on the subsequent Monday). The discussion will be based on the short online quizzes and on th questions you bring to the classroom. The quizzes are intended for you to see if you have understood the new material correctly.
+- On Tuesday (10:15-12:00), we meet to discuss the current material (the one distributed on the previous Wedesday) and work on the assignments together (the ones to be discussed on the subsequent Monday). The discussion will be based on the short online quizzes and on th questions you bring to the classroom. The quizzes are intended for you to see if you have understood the new material correctly. Note that four of the Tuesday classes had to be moved to either Monday or Friday (see weekly lesson plan below).
 
 ```{important}
 You will receive 5 ECTS if you pass the course: with 1 ECTS corresponding to 25 hours of work, this represents 8-9 hours of work per week (15 weeks). For this course, it means that you will spend more time working independently at home than in class.
@@ -64,18 +64,18 @@ Your final grade will be a combination of a mid-term exam (20%), a final exam (5
 
 This is a tentative schedule, which may change slightly during the semester.
 
-- Week 01 (06/07 Oct) - Welcome and getting started with Python and the command line
-- Week 02 (13/14 Oct) - *Assignment 02*, Python packages, programming environments, and language fundamentals
-- Week 03 (20/21 Oct) - *Assignment 03*, Variable scopes, modules, and strings
-- Week 04 (27/28 Oct) - *Assignment 04*, Floating point arithmetics and introduction to numpy
-- Week 05 (03/04 Nov) - *Assignment 05*, Numpy arrays and the scientific python stack
-- Week 06 (10/11 Nov) - *Assignment 06*, Programming style, and using AI for programming
-- Week 07 (17/18 Nov) - *Assignment 07*, *Revision*
-- Week 08 (24/25 Nov) - **Mid-term exam**
-- Week 09 (01/02 Dec) - Code testing
-- Week 10 (08/09 Dec) - *Assignment 08*, Python packages and **Group Project** 
-- Week 11 (15/16 Dec) - Code Documentation
-- Week 12 (12/13 Jan) - Object Oriented Programming
-- Week 13 (19/20 Jan) - *Assignment 10*, Object Oriented Programming
-- Week 14 (26/27 Jan) - *Assignment 11*, **Final project submission** and **Project presentations**
-- Week 15 (02/03 Feb) - **Final exam**
+- Week 01 (Mon 06/Tue 07 Oct) - Welcome and getting started with Python and the command line
+- Week 02 (Mon 13/**Mon 13 (1015-1200, seminar room)** Oct) - *Assignment 02*, Python packages, programming environments, and language fundamentals
+- Week 03 (Mon 20/Tue 21 Oct) - *Assignment 03*, Variable scopes, modules, and strings
+- Week 04 (Mon 27/Tue 28 Oct) - *Assignment 04*, Floating point arithmetics and introduction to numpy
+- Week 05 (Mon 03/Tue 04 Nov) - *Assignment 05*, Numpy arrays and the scientific python stack
+- Week 06 (Mon 10/Tue 11 Nov) - *Assignment 06*, Programming style, and using AI for programming
+- Week 07 (Mon 17/Tue 18 Nov) - *Assignment 07*, *Revision*
+- Week 08 (Mon 24/Tue 25 Nov) - **Mid-term exam**
+- Week 09 (Mon 01/Tue 02 Dec) - Code testing
+- Week 10 (Mon 08/**Fri 12 (0830-1000)** Dec) - *Assignment 08*, Python packages and **Group Project** 
+- Week 11 (Mon 15/Tue 16 Dec) - Code Documentation
+- Week 12 (Mon 12/**Fri 16 (0830-1000)** Jan) - Object Oriented Programming
+- Week 13 (Mon 19/**Fri 23 (0830-1000)** Jan) - *Assignment 10*, Object Oriented Programming
+- Week 14 (Mon 26/Tue 27 Jan) - *Assignment 11*, **Final project submission** and **Project presentations**
+- Week 15 (Mon 02/Tue 03 Feb) - **Final exam**
