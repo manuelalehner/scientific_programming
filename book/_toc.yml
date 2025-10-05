@@ -10,18 +10,17 @@ parts:
   - file: intro/faq
   - file: intro/references
   - file: intro/help
-  #  - caption: Unit 01 - Terminal & Python primer
-  #    chapters:
-  #    - file: unit_01/01-Terminal
-  #      sections:
-  #      - file: unit_01/01a-Windows
-  #      - file: unit_01/01b-Linux
-  #    - file: unit_01/02-Installation
-  #      sections:
-  #      - file: unit_01/02a-Details-Windows
-  #      - file: unit_01/02b-Details-Linux
-  #    - file: unit_01/03-Getting-Started
-  #    - file: unit_01/Assignment-01
+- caption: Unit 01 - Terminal & Python primer
+  chapters:
+  - file: unit_01/01-Terminal
+    sections:
+    - file: unit_01/01a-Windows
+    - file: unit_01/01b-Linux
+  - file: unit_01/02-Installation
+    sections:
+    - file: unit_01/02a-Details-Windows
+    - file: unit_01/02b-Details-Linux
+  - file: unit_01/03-Getting-Started
   #  - caption: Unit 02 - Python packages and environments
   #    chapters:
   #    - file: unit_02/01-install-packages
