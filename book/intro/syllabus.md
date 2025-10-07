@@ -74,7 +74,7 @@ This is a tentative schedule, which may change slightly during the semester.
 - Week 07 (Mon 17/Tue 18 Nov) - *Assignment 07*, *Revision*
 - Week 08 (Mon 24/Tue 25 Nov) - **Mid-term exam**
 - Week 09 (Mon 01/Tue 02 Dec) - Code testing
-- Week 10 (Mon 08/**Fri 12 (0830-1000)** Dec) - *Assignment 08*, Python packages and **Group Project** 
+- Week 10 (**Tue 9 (1015-1100)**/**Fri 12 (0830-1000)** Dec) - *Assignment 08*, Python packages and **Group Project** 
 - Week 11 (Mon 15/Tue 16 Dec) - Code Documentation
 - Week 12 (Mon 12/**Fri 16 (0830-1000)** Jan) - Object Oriented Programming
 - Week 13 (Mon 19/**Fri 23 (0830-1000)** Jan) - *Assignment 10*, Object Oriented Programming
