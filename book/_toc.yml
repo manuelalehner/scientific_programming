@@ -39,11 +39,11 @@ parts:
   - file: unit_05/01-Why-Numpy
   - file: unit_05/02-Numbers
   - file: unit_05/Assignment-05
-  #  - caption: Unit 06 - Scientific Python
-  #    chapters:
-  #    - file: unit_06/01-Numpy-ndarrays
-  #    - file: unit_06/02-Scientific-Python
-  #    - file: unit_06/Assignment-06
+- caption: Unit 06 - Scientific Python
+  chapters:
+  - file: unit_06/01-Numpy-ndarrays
+  - file: unit_06/02-Scientific-Python
+  - file: unit_06/Assignment-06
   #  - caption: Unit 07 - Good practice, getting help, and ChatGPT
   #    chapters:
   #    - file: unit_07/01-Good-practices
