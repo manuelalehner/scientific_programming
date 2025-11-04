@@ -44,12 +44,12 @@ parts:
   - file: unit_06/01-Numpy-ndarrays
   - file: unit_06/02-Scientific-Python
   - file: unit_06/Assignment-06
-  #  - caption: Unit 07 - Good practice, getting help, and ChatGPT
-  #    chapters:
-  #    - file: unit_07/01-Good-practices
-  #    - file: unit_07/02-Tips-and-Tricks
-  #    - file: unit_07/03-Python-and-ChatGPT
-  #    - file: unit_07/Assignment-07
+- caption: Unit 07 - Good practice, getting help, and ChatGPT
+  chapters:
+  - file: unit_07/01-Good-practices
+  - file: unit_07/02-Tips-and-Tricks
+  - file: unit_07/03-Python-and-ChatGPT
+  - file: unit_07/Assignment-07
   #  - caption: Intermezzo
   #    chapters:
   #    - file: intermezzo/01-WRF_xarray
