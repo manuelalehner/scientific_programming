@@ -55,7 +55,7 @@ At the end of each lesson, there is a "learning checklist": go over it at the en
 
 Your final grade will be a combination of a mid-term exam (20%), a final exam (50%), and a programming project (30%). Participation in both exams, handing in and presenting the programming project, at least one assignment presentation, and completing at least 50% of the quizzes are necessary to pass the class. At the beginning of the course, you will be assigned to small groups of 3-5 students. For the programming project and the assingment presentations, you will work in these groups.
 
-1. The **mid-term exam** (open-book exam, combination of muliple choice, essay, and programming questions) will take place on **Tuesday 24.11.2025** from 10:15 to 12:00.
+1. The **mid-term exam** (open-book exam, combination of muliple choice, essay, and programming questions) will take place on **Tuesday 25.11.2025** from 10:15 to 12:00.
 2. The **final exam** (open-book exam, combination of muliple choice, essay, and programming questions) will take place on **Tuesday 03.02.2026** from 10:15 to 12:00.
 3. Each week you will be given a short **quiz** to test your understanding of the lecture material. You will have to fill out the quiz prior to the in-class discussion (Tuesday classes). The quizzes are not graded, but you need to complete at least half of the quizzes for a positive grade (submitted the latest 15 min before the class start time).
 4. Each week there will be an **assignment** (unless specified otherwise, e.g. while you are working on the group project). These assignments can be worked through alone or in groups. The assignments will be discussed on Mondays and, each week, one group will be asked to present their results to the rest of the class. The presentation is not graded, but participation and at least one group presentation are required to pass the class. Further information about the style of the presentations will be provided in class.
@@ -72,11 +72,11 @@ This is a tentative schedule, which may change slightly during the semester.
 - Week 05 (Mon 03/Tue 04 Nov) - *Assignment 05*, Numpy arrays and the scientific python stack
 - Week 06 (Mon 10/Tue 11 Nov) - *Assignment 06*, Programming style, and using AI for programming
 - Week 07 (Mon 17/Tue 18 Nov) - *Assignment 07*, *Revision*
-- Week 08 (Mon 24/Tue 25 Nov) - **Mid-term exam**
+- Week 08 (Mon 24/Tue 25 Nov) - **Mid-term exam (25 Nov)**
 - Week 09 (Mon 01/Tue 02 Dec) - Code testing
 - Week 10 (**Tue 9 (1015-1100)**/**Fri 12 (0830-1000)** Dec) - *Assignment 08*, Python packages and **Group Project** 
 - Week 11 (Mon 15/Tue 16 Dec) - Code Documentation
 - Week 12 (Mon 12/**Fri 16 (0830-1000)** Jan) - Object Oriented Programming
 - Week 13 (Mon 19/**Fri 23 (0830-1000)** Jan) - *Assignment 10*, Object Oriented Programming
 - Week 14 (Mon 26/Tue 27 Jan) - *Assignment 11*, **Final project submission** and **Project presentations**
-- Week 15 (Mon 02/Tue 03 Feb) - **Final exam**
+- Week 15 (Mon 02/Tue 03 Feb) - **Final exam (3 Feb)**
