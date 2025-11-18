@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Assignment #06 &#8212; Scientific Programming</title>
+    <title>Exercise - Midterm revision &#8212; Scientific Programming</title>
   
   
   
@@ -58,11 +58,12 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'unit_06/Assignment-06';</script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'intermezzo/02-Revision_Midterm';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Good practices, programming style and conventions" href="../unit_07/01-Good-practices.html" />
-    <link rel="prev" title="The scientific Python stack" href="02-Scientific-Python.html" />
+    <link rel="prev" title="Intermezzo: ERA5 and xarray" href="01-ERA5_xarray.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -224,10 +225,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../unit_05/Assignment-05.html">Assignment #05</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 06 - Scientific Python</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="01-Numpy-ndarrays.html">Arrays in NumPy: indexing, ufuncs, broadcasting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02-Scientific-Python.html">The scientific Python stack</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Assignment #06</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../unit_06/01-Numpy-ndarrays.html">Arrays in NumPy: indexing, ufuncs, broadcasting</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_06/02-Scientific-Python.html">The scientific Python stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_06/Assignment-06.html">Assignment #06</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 07 - Good practice, getting help, and ChatGPT</span></p>
 <ul class="nav bd-sidenav">
@@ -237,9 +238,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../unit_07/Assignment-07.html">Assignment #07</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Intermezzo</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../intermezzo/01-ERA5_xarray.html">Intermezzo: ERA5 and xarray</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../intermezzo/02-Revision_Midterm.html">Exercise - Midterm revision</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01-ERA5_xarray.html">Intermezzo: ERA5 and xarray</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Exercise - Midterm revision</a></li>
 </ul>
 
     </div>
@@ -294,7 +295,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/manuelalehner/scientific_programming/master?urlpath=lab/tree/book/unit_06/Assignment-06.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/manuelalehner/scientific_programming/master?urlpath=lab/tree/book/intermezzo/02-Revision_Midterm.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -342,7 +343,7 @@
       
       
       
-      <li><a href="https://github.com/manuelalehner/scientific_programming/edit/master/book/unit_06/Assignment-06.ipynb" target="_blank"
+      <li><a href="https://github.com/manuelalehner/scientific_programming/edit/master/book/intermezzo/02-Revision_Midterm.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -359,7 +360,7 @@
       
       
       
-      <li><a href="https://github.com/manuelalehner/scientific_programming/issues/new?title=Issue%20on%20page%20%2Funit_06/Assignment-06.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/manuelalehner/scientific_programming/issues/new?title=Issue%20on%20page%20%2Fintermezzo/02-Revision_Midterm.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -389,7 +390,7 @@
       
       
       
-      <li><a href="../_sources/unit_06/Assignment-06.ipynb" target="_blank"
+      <li><a href="../_sources/intermezzo/02-Revision_Midterm.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -473,7 +474,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Assignment #06</h1>
+    <h1>Exercise - Midterm revision</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -483,9 +484,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-06-01-indexing">Exercise #06-01: Indexing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-06-02-average-temperature">Exercise #06-02: Average temperature</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-06-03-plotting-gridded-data">Exercise #06-03: Plotting gridded data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-to-read-in-the-data">Function to read in the data</a></li>
 </ul>
             </nav>
         </div>
@@ -497,131 +496,68 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="assignment-06">
-<h1>Assignment #06<a class="headerlink" href="#assignment-06" title="Link to this heading">#</a></h1>
-<p><a class="reference external" href="http://www.numpy.org/">NumPy</a> and <a class="reference external" href="https://matplotlib.org/">Matplotlib</a> are two fundamental pillars of the scientific Python stack. You will find <em>numerous</em> tutorials for both libraries online. You can learn the basics of both tools by yourself, at the pace that suits you, e.g., with the following two tutorials:</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="exercise-midterm-revision">
+<h1>Exercise - Midterm revision<a class="headerlink" href="#exercise-midterm-revision" title="Link to this heading">#</a></h1>
+<p>The main goal of the exercise is to cover as many of the topics as possible, which we have discussed in class so far.</p>
+<p>You can download the necessary data files for the exercise <a class="reference external" href="https://fileshare.uibk.ac.at/d/616b71a582d7402a9ece/">here</a>. Each file contains one hour of 20-Hz wind data (3D wind components) and a quality flag.</p>
+<ol class="arabic simple">
+<li><p>Write a module <code class="docutils literal notranslate"><span class="pre">wind_timeseries.py</span></code> that does not execute when imported (<code class="docutils literal notranslate"><span class="pre">import</span> <span class="pre">wind_timeseries</span></code>), but performs the steps outlined below when run as a script (<code class="docutils literal notranslate"><span class="pre">%run</span> <span class="pre">wind_timeseries</span></code>).</p></li>
+<li><p>Define two global variables that contain the directory where you saved the data files (a <code class="docutils literal notranslate"><span class="pre">string</span></code>) and the list of filenames (as a <code class="docutils literal notranslate"><span class="pre">tuple</span></code>).</p></li>
+<li><p>Loop over all data files and read in the data (point 4), quality control the data (point 5), calculate wind speed (point 6), and plot the wind speed time series (point 7).</p></li>
+<li><p>Use the function <code class="docutils literal notranslate"><span class="pre">read_data</span></code> at the end of this document to read in the data (either copy and paste it into your module or put it in a separate module and import it into your module). Create the filename using the <code class="docutils literal notranslate"><span class="pre">os.path</span></code> module.</p></li>
+<li><p>Write a function to quality control the data.</p>
 <ul class="simple">
-<li><p><a class="reference external" href="http://scipy-lectures.org/intro/numpy/index.html">NumPy tutorial</a></p></li>
-<li><p><a class="reference external" href="http://scipy-lectures.org/intro/matplotlib/index.html">Matplotlib tutorial</a></p></li>
+<li><p>The function should take one positional argument (the numpy array containing the wind components) and one keyword argument (the numpy array containing the diagnostic flags, with a default value of None). Make sure that the keyword argument cannot be called as a positional argument.</p></li>
+<li><p>If the keyword argument is provided, find all the indices where the diagnostic flag is larger than 0 using <code class="docutils literal notranslate"><span class="pre">np.where</span></code>. Replace the wind components at these times with <code class="docutils literal notranslate"><span class="pre">np.nan</span></code>. Remember that the indices refer to all three wind components.</p></li>
+<li><p>Replace all wind components with a magnitude larger than 10 m s<span class="math notranslate nohighlight">\(^{-1}\)</span> (can also be negative) with <code class="docutils literal notranslate"><span class="pre">np.nan</span></code>.</p></li>
+<li><p>Do you need to return the modified array containing the wind components with <code class="docutils literal notranslate"><span class="pre">return</span></code> or not to make the changes available to the parent function?</p></li>
 </ul>
-<p>They can be quite long if you are new to NumPy and you do not need to go through them all today. Sections 1.4.1.1 to 1.4.1.5 in the <a class="reference external" href="http://scipy-lectures.org/intro/numpy/index.html">NumPy tutorial</a> should give you enough information for today’s assignments, or you can try without it and learn on the fly - your choice!</p>
-<section id="exercise-06-01-indexing">
-<h2>Exercise #06-01: Indexing<a class="headerlink" href="#exercise-06-01-indexing" title="Link to this heading">#</a></h2>
-<p>Given a 2D NumPy array defined as:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">],</span>
-              <span class="p">[</span><span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">]])</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p>The following indexing operations all select the same values out of the array:</p>
+</li>
+<li><p>Write a function to calculate the wind speed.</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">x[:,</span> <span class="pre">1]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x[slice(0,</span> <span class="pre">2,</span> <span class="pre">1),</span> <span class="pre">1]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x[(slice(0,</span> <span class="pre">2,</span> <span class="pre">1),</span> <span class="pre">1)]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x[slice(0,</span> <span class="pre">2,</span> <span class="pre">1),</span> <span class="pre">slice(1,</span> <span class="pre">2,</span> <span class="pre">1)]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x[...,</span> <span class="pre">1]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x[::1,</span> <span class="pre">1]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x[[0,</span> <span class="pre">1],</span> <span class="pre">1]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x[:,</span> <span class="pre">-2]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x[:,</span> <span class="pre">1:2]</span></code></p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">x[:,</span> <span class="pre">[1]]</span></code></p></li>
+<li><p>The function takes two positional arguments: the numpy array containing the wind components and the list of variables.</p></li>
+<li><p>Calculate the wind speed from the three wind components and add the new 1D array to the array containing the wind components so that it now has the size 72000 x 4.</p></li>
+<li><p>Add the new variable name ‘wspd’ to the list of variable names.</p></li>
+<li><p>Do you need to return the modified array containing the wind components and the modified list of variable names with <code class="docutils literal notranslate"><span class="pre">return</span></code> to make the changes available to the parent function?</p></li>
 </ul>
-<p>This can be checked with the following test:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">numpy.testing</span><span class="w"> </span><span class="kn">import</span> <span class="n">assert_equal</span>
-
-<span class="n">ref</span> <span class="o">=</span> <span class="mi">7</span>
-
-<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="o">...</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[::</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[(</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="mi">1</span><span class="p">)]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[</span><span class="nb">slice</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="nb">slice</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">)]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">:</span><span class="mi">2</span><span class="p">]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-<span class="n">assert_equal</span><span class="p">(</span><span class="n">ref</span><span class="p">,</span> <span class="n">x</span><span class="p">[:,</span> <span class="p">[</span><span class="mi">1</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
-</pre></div>
-</div>
-</div>
-</div>
-<p><strong>Questions:</strong></p>
+</li>
+<li><p>Write a function to plot the wind speed.</p>
 <ul class="simple">
-<li><p>What is the <code class="docutils literal notranslate"><span class="pre">...</span></code> syntax doing? Again, it is the literal equivalent of an actual Python object: which one?</p></li>
-<li><p>Some of these indexing operations are truly equivalent to the “obvious” one, <code class="docutils literal notranslate"><span class="pre">x[:,</span> <span class="pre">1]</span></code>. List them.</p></li>
-<li><p>Classify these operations (i) into basic and advanced operations, and (ii) by the shape of their output. Explain.</p></li>
-<li><p>If you would like the array <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">=</span> <span class="pre">x[:,</span> <span class="pre">1:2]</span></code> to have a shape of (2, ) like most of the other operations listed above, how can you reshape it?</p></li>
+<li><p>The function takes three positional arguments: a 1D numpy array containing the wind speed, a string containing the variable name (from the list of variables), and the timestamp.</p></li>
+<li><p>Add a title to the plot that reads, e.g., ‘20-Hz wspd - 2023-06-11 14:00’, where the variable name (‘wspd’) and the timestamp are supposed to come from the function arguments.</p></li>
+<li><p>Save the plot as a png file.</p></li>
 </ul>
-<p><em>Hint</em>: Take also a look at the <a class="reference external" href="https://numpy.org/doc/stable/user/basics.indexing.html">NumPy documentation about indexing</a>.</p>
-</section>
-<section id="exercise-06-02-average-temperature">
-<h2>Exercise #06-02: Average temperature<a class="headerlink" href="#exercise-06-02-average-temperature" title="Link to this heading">#</a></h2>
-<p>A dataset of monthly temperature averages for Innsbruck airport between 1960 and 2024 was prepared using data from the GeoSphere Austria Data Hub (dataset Messstationen Monatsdate). The dataset can be downloaded from this lecture’s github via:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">urllib.request</span><span class="w"> </span><span class="kn">import</span> <span class="n">Request</span><span class="p">,</span> <span class="n">urlopen</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">json</span>
+</li>
+<li><p>Make sure that your code uses meaningful variable names and follows the <a class="reference external" href="https://peps.python.org/pep-0008/">PEP 8</a> guidelines regarding indentation, line breaks, whitespace, and import statements.</p></li>
+</ol>
+<section id="function-to-read-in-the-data">
+<h2>Function to read in the data<a class="headerlink" href="#function-to-read-in-the-data" title="Link to this heading">#</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">read_data</span><span class="p">(</span><span class="n">ecfile</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39; read in csv file with EC data and store the wind data in numpy array &#39;&#39;&#39;</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/manuelalehner/scientific_programming/master/data/innsbruck_temp.json&#39;</span>
-<span class="n">req</span> <span class="o">=</span> <span class="n">urlopen</span><span class="p">(</span><span class="n">Request</span><span class="p">(</span><span class="n">url</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
-<span class="n">inn_data</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">loads</span><span class="p">(</span><span class="n">req</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">))</span>
-</pre></div>
-</div>
-</div>
-</div>
-<ul class="simple">
-<li><p>Explore the inn_data variable. What is the type of “inn_data”, and of the data it contains?</p></li>
-<li><p>Convert the data series to NumPy arrays.</p></li>
-<li><p>Using NumPy/SciPy, Matplotlib, and the standard library only, compute and plot the mean monthly annual cycle of temperature for 1991-2020 and the mean annual temperature timeseries for 1960-2024.</p></li>
-<li><p>Compute the linear trend (using scipy.stats.linregress) of the average annual temperature over the period 1960-2024.</p></li>
-<li><p>Repeat for the winter (DJF) and summer (JJA) trends.</p></li>
-</ul>
-<p><em>Tip 1: to select part of an array (indexing) based on a condition, you can use the following syntax:</em></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
-<span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
-<span class="n">y</span> <span class="o">=</span> <span class="n">x</span><span class="o">**</span><span class="mi">2</span>
-<span class="n">y</span><span class="p">[</span><span class="n">x</span> <span class="o">&gt;</span> <span class="mi">4</span><span class="p">]</span>  <span class="c1"># select y based on the values in x</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([25, 36, 49, 64, 81])
-</pre></div>
-</div>
-</div>
-</div>
-<p><em>Tip 2: there is more than one way to compute the annual and monthly means. Some use loops, some use reshaping of the original 1D array.</em></p>
-</section>
-<section id="exercise-06-03-plotting-gridded-data">
-<h2>Exercise #06-03: Plotting gridded data<a class="headerlink" href="#exercise-06-03-plotting-gridded-data" title="Link to this heading">#</a></h2>
-<p><a class="reference external" href="https://confluence.ecmwf.int/display/CKB/ERA5">ERA5</a> is the global reanalysis product of ECMWF from 1940 to the present. For this exercise we are using monthly averaged daily precipitation for July 2025. You can download the dataset and retrieve the variables using the code snippet below.</p>
-<p><em>Note: You need to install the netcdf4 package for this exercise.</em></p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
-<span class="kn">import</span><span class="w"> </span><span class="nn">netCDF4</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nc</span>
+    <span class="c1"># read csv file into pandas dataframe</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">ecfile</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">parse_dates</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-<span class="n">url</span> <span class="o">=</span> <span class="s1">&#39;https://raw.githubusercontent.com/manuelalehner/scientific_programming/master/data/era5_precip_july2025.nc&#39;</span>
-<span class="n">ds</span> <span class="o">=</span> <span class="n">nc</span><span class="o">.</span><span class="n">Dataset</span><span class="p">(</span><span class="s1">&#39;era5_data&#39;</span><span class="p">,</span> <span class="n">memory</span><span class="o">=</span><span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
-<span class="n">precip</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;tp&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">,:,:])</span>
-<span class="n">lon</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;longitude&#39;</span><span class="p">][:])</span>
-<span class="n">lat</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">ds</span><span class="p">[</span><span class="s1">&#39;latitude&#39;</span><span class="p">][:])</span>
-<span class="n">ds</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="c1"># get the variable names from the dataframe columns</span>
+    <span class="n">wind_variables</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">to_list</span><span class="p">()</span>
+    <span class="n">wind_variables</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;diag&#39;</span><span class="p">)</span>
+
+    <span class="c1"># store the three wind components in a single 2D numpy array</span>
+    <span class="n">usonic</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;us&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+    <span class="n">vsonic</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;vs&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+    <span class="n">wsonic</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;ws&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+    <span class="n">uvw</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">concatenate</span><span class="p">(</span>
+        <span class="p">(</span><span class="n">usonic</span><span class="p">[</span><span class="o">...</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">],</span> <span class="n">vsonic</span><span class="p">[</span><span class="o">...</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">],</span> <span class="n">wsonic</span><span class="p">[</span><span class="o">...</span><span class="p">,</span><span class="n">np</span><span class="o">.</span><span class="n">newaxis</span><span class="p">]),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+    <span class="c1"># sonic diagnostic flag (bad data if &gt; 0)</span>
+    <span class="n">diag</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;diag&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+
+    <span class="c1"># timestamp at the start of the data file</span>
+    <span class="n">timestamp</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">index</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">uvw</span><span class="p">,</span> <span class="n">diag</span><span class="p">,</span> <span class="n">wind_variables</span><span class="p">,</span> <span class="n">timestamp</span>
 </pre></div>
 </div>
-</div>
-</div>
-<p>Since the longitudes range from 0 to 360°, the data have to be rearranged to produce a plot centered around Europe and Africa. Try to create a plot similar to the one below.</p>
-<img alt="../_images/unit06_era5_precip.png" src="../_images/unit06_era5_precip.png" />
-<p>Now highlight (you decide how) the areas with precipitation below 1 mm/day and above 10 mm/day.</p>
 </section>
 </section>
 
@@ -638,7 +574,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./unit_06"
+            path: "./intermezzo"
         },
         predefinedOutput: true
     }
@@ -656,22 +592,13 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="02-Scientific-Python.html"
+       href="01-ERA5_xarray.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">The scientific Python stack</p>
+        <p class="prev-next-title">Intermezzo: ERA5 and xarray</p>
       </div>
-    </a>
-    <a class="right-next"
-       href="../unit_07/01-Good-practices.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Good practices, programming style and conventions</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -689,9 +616,7 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-06-01-indexing">Exercise #06-01: Indexing</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-06-02-average-temperature">Exercise #06-02: Average temperature</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercise-06-03-plotting-gridded-data">Exercise #06-03: Plotting gridded data</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#function-to-read-in-the-data">Function to read in the data</a></li>
 </ul>
   </nav></div>
 
