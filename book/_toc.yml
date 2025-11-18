@@ -53,7 +53,7 @@ parts:
 - caption: Intermezzo
   chapters:
   - file: intermezzo/01-ERA5_xarray
-  #    - file: intermezzo/02-Revision_Midterm
+  - file: intermezzo/02-Revision_Midterm
   #    - caption: Unit 08 - Testing
   #    chapters:
   #    - file: unit_08/01-Exceptions
