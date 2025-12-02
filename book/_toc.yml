@@ -59,9 +59,9 @@ parts:
   - file: unit_08/01-Exceptions
   - file: unit_08/02-Testing
   - file: unit_08/Assignment-08
-  #    - caption: Unit 09 - Python Packages and Semester project
-  #    chapters:
-  #    - file: unit_09/01-Package-structure
+- caption: Unit 09 - Python Packages and Semester project
+  chapters:
+  - file: unit_09/01-Package-structure
   #    - file: unit_09/02-Programming-project
   #  - caption: Unit 10 - Code documentation
   #    chapters:
