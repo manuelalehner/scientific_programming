@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Getting started with Python &#8212; Scientific Programming</title>
+    <title>Term project: the ERA5vis package &#8212; Scientific Programming</title>
   
   
   
@@ -58,11 +58,11 @@
     <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
     <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'unit_01/03-Getting-Started';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'unit_09/02-Programming-project';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Installing Python packages" href="../unit_02/01-install-packages.html" />
-    <link rel="prev" title="For Linux/macOS users: what did mambaforge do to your terminal?" href="02b-Details-Linux.html" />
+    <link rel="next" title="Documenting your code" href="../unit_10/01-Documentation.html" />
+    <link rel="prev" title="Structure of a Python package" href="01-Package-structure.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -188,18 +188,18 @@
 <li class="toctree-l1"><a class="reference internal" href="../intro/help.html">Getting help</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 01 - Terminal &amp; Python primer</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="01-Terminal.html">Basic terminal commands and navigation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="01a-Windows.html">A Windows command prompt primer</a></li>
-<li class="toctree-l2"><a class="reference internal" href="01b-Linux.html">An introduction to the Linux terminal</a></li>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../unit_01/01-Terminal.html">Basic terminal commands and navigation</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../unit_01/01a-Windows.html">A Windows command prompt primer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unit_01/01b-Linux.html">An introduction to the Linux terminal</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="02-Installation.html">Installing Python on your computer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
-<li class="toctree-l2"><a class="reference internal" href="02a-Details-Windows.html">For Windows users: the difference between the command prompt, the miniforge prompt, and the Python interpreter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="02b-Details-Linux.html">For Linux/macOS users: what did <code class="docutils literal notranslate"><span class="pre">mambaforge</span></code> do to your terminal?</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../unit_01/02-Installation.html">Installing Python on your computer</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="../unit_01/02a-Details-Windows.html">For Windows users: the difference between the command prompt, the miniforge prompt, and the Python interpreter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../unit_01/02b-Details-Linux.html">For Linux/macOS users: what did <code class="docutils literal notranslate"><span class="pre">mambaforge</span></code> do to your terminal?</a></li>
 </ul>
 </details></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">Getting started with Python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../unit_01/03-Getting-Started.html">Getting started with Python</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 02 - Python packages and environments</span></p>
 <ul class="nav bd-sidenav">
@@ -248,9 +248,9 @@
 <li class="toctree-l1"><a class="reference internal" href="../unit_08/Assignment-08.html">Assignment #08: Exceptions and Testing</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 09 - Python Packages and Semester project</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="../unit_09/01-Package-structure.html">Structure of a Python package</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../unit_09/02-Programming-project.html">Term project: the ERA5vis package</a></li>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="01-Package-structure.html">Structure of a Python package</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Term project: the ERA5vis package</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 10 - Code documentation</span></p>
 <ul class="nav bd-sidenav">
@@ -309,7 +309,7 @@
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/manuelalehner/scientific_programming/master?urlpath=lab/tree/book/unit_01/03-Getting-Started.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/manuelalehner/scientific_programming/master?urlpath=lab/tree/book/unit_09/02-Programming-project.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch on Binder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -357,7 +357,7 @@
       
       
       
-      <li><a href="https://github.com/manuelalehner/scientific_programming/edit/master/book/unit_01/03-Getting-Started.ipynb" target="_blank"
+      <li><a href="https://github.com/manuelalehner/scientific_programming/edit/master/book/unit_09/02-Programming-project.ipynb" target="_blank"
    class="btn btn-sm btn-source-edit-button dropdown-item"
    title="Suggest edit"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -374,7 +374,7 @@
       
       
       
-      <li><a href="https://github.com/manuelalehner/scientific_programming/issues/new?title=Issue%20on%20page%20%2Funit_01/03-Getting-Started.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/manuelalehner/scientific_programming/issues/new?title=Issue%20on%20page%20%2Funit_09/02-Programming-project.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -404,7 +404,7 @@
       
       
       
-      <li><a href="../_sources/unit_01/03-Getting-Started.ipynb" target="_blank"
+      <li><a href="../_sources/unit_09/02-Programming-project.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -488,7 +488,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Getting started with Python</h1>
+    <h1>Term project: the ERA5vis package</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -498,12 +498,10 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standard-command-line-interpreter">The standard command-line interpreter</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-scripts">Running scripts</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-a-python-script-from-the-terminal">Running a Python script from the terminal</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-home-points">Take home points</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-era5vis-package">The ERA5vis package</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guided-exercise-make-the-package-more-robust">Guided exercise: make the package more robust</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-make-the-package-better">Project: make the package better</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expectations">Expectations</a></li>
 </ul>
             </nav>
         </div>
@@ -515,48 +513,91 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="getting-started-with-python">
-<h1>Getting started with Python<a class="headerlink" href="#getting-started-with-python" title="Link to this heading">#</a></h1>
-<p>In this chapter we are getting used to the Python command line, and we are going to write our first small program.</p>
-<p><strong>Prerequisites</strong>: you have Python installed, as described in <a class="reference internal" href="02-Installation.html"><span class="doc">Installing Python on your computer</span></a>. Alternatively, you can also use MyBinder or JupyterHub through OLAT for this unit.</p>
-<section id="the-standard-command-line-interpreter">
-<h2>The standard command-line interpreter<a class="headerlink" href="#the-standard-command-line-interpreter" title="Link to this heading">#</a></h2>
-<p>Let’s open a Python interpreter and type in some commands:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="gp">&gt;&gt;&gt; </span><span class="n">a</span> <span class="o">=</span> <span class="mi">2</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">b</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span>
-<span class="go">5</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">*</span><span class="n">b</span>
-<span class="go">6</span>
-<span class="gp">&gt;&gt;&gt; </span><span class="n">a</span><span class="o">**</span><span class="mi">3</span>
-</pre></div>
-</div>
-<p>This should look quite familiar to you, whatever language you learned before. We defined variables, and did some arithmetics with them. On line 3 we used the <code class="docutils literal notranslate"><span class="pre">print()</span></code> function to display the output of our computations, but as it turns out it is not necessary: the command line shell will print the output anyway. This functionality is called <a class="reference external" href="https://en.wikipedia.org/wiki/Read%E2%80%93eval%E2%80%93print_loop">REPL</a>, and it is a feature of modern interpreted languages. We will come back to this later.</p>
-</section>
-<section id="running-scripts">
-<h2>Running scripts<a class="headerlink" href="#running-scripts" title="Link to this heading">#</a></h2>
-<p>Of course, the command-line interpreter is only useful for small tasks or for data exploration. Most of the time, you will want to write <strong>scripts</strong> (a collection of commands executed in order to reach a certain goal) or more complex <strong>programs</strong> (the difference between “scripts” and “programs” is fuzzy, but for now let’s call a “program” a tool which involves writing several functions and/or files).</p>
-<section id="running-a-python-script-from-the-terminal">
-<h3>Running a Python script from the terminal<a class="headerlink" href="#running-a-python-script-from-the-terminal" title="Link to this heading">#</a></h3>
-<p>Python scripts are simple text files. Per convention we like to give them a suffix: <code class="docutils literal notranslate"><span class="pre">.py</span></code>. This suffix is required for python modules but not mandatory for scripts with a shebang. In general it is a good idea to use the <code class="docutils literal notranslate"><span class="pre">.py</span></code> suffix though.</p>
-<p>Let’s create a new file, <code class="docutils literal notranslate"><span class="pre">my_python_script.py</span></code> (using a text editor of your choice, for example <code class="docutils literal notranslate"><span class="pre">gedit</span></code> in ubuntu or <code class="docutils literal notranslate"><span class="pre">wordpad</span></code> in Windows), and add these few lines of code to it:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="n">b</span> <span class="o">=</span> <span class="mi">6</span>
-<span class="n">c</span> <span class="o">=</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;The product of </span><span class="si">{}</span><span class="s1"> and </span><span class="si">{}</span><span class="s1"> is </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">))</span>
-</pre></div>
-</div>
-<p>Now you should be able to run the script by calling Python in a terminal:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ python my_python_script.py
-</pre></div>
-</div>
-</section>
-</section>
-<section id="take-home-points">
-<h2>Take home points<a class="headerlink" href="#take-home-points" title="Link to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="term-project-the-era5vis-package">
+<h1>Term project: the ERA5vis package<a class="headerlink" href="#term-project-the-era5vis-package" title="Link to this heading">#</a></h1>
+<p>This is the main project of the semester and will count for 30% of the final grade. The submission is going to happen in three stages:</p>
 <ul class="simple">
-<li><p>Python scripts are text files ending with <code class="docutils literal notranslate"><span class="pre">.py</span></code>, which can be run from the terminal (<code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">my_file.py</span></code>).</p></li>
+<li><p><strong>Feedback meetings (after the Christmas break):</strong> We will arrange individual meetings with each group to receive some feedback. You will show me the structure of your package, the functionality of your code, which tests you are writing, who is writing what, a sample docstring, etc. You will also submit a first version of your package (one <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file per group) at least 24 h before our meeting so that I can test it.</p></li>
+<li><p><strong>Final submission (Tuesday, 27 January 2026 at 00:00):</strong> Every group will upload one <code class="docutils literal notranslate"><span class="pre">.zip</span></code> file containing your version of the ERA5vis package. An upload folder will be available on OLAT.</p></li>
+<li><p><strong>Class presentations (Tuesday, 27 January 2026):</strong> Every group will briefly present their project to show what it can be used for. This is not graded. The goal is to simply share your amazing project ideas with the whole class.</p></li>
 </ul>
+<p>Here is a <em>tentative</em> grading rubric.</p>
+<p><strong>Group grade (10 points):</strong></p>
+<ul class="simple">
+<li><p>Originality: 1 <em>(did you do something more than following the list of suggestions)</em></p></li>
+<li><p>Functionality of the code: 1 <em>(can the package be installed and run on my computer)</em></p></li>
+<li><p>Documentation: 2 <em>(joint project documentation, e.g., README)</em></p></li>
+<li><p>Traceability: 1 <em>(who did what, are the author(s) name(s) provided in the function’s docstrings)</em></p></li>
+<li><p>Coherence: 2 <em>(how do the individual contributions fit together)</em></p></li>
+<li><p>Joint task/tests: 2 <em>(jointly written tool/tests)</em></p></li>
+<li><p>Response to feedback: 1 <em>(response to the received feedback)</em></p></li>
+</ul>
+<p><strong>Individual grade (10 points):</strong></p>
+<ul class="simple">
+<li><p>Narrative self-report: 1 <em>(quality and honesty of the self-report)</em></p></li>
+<li><p>Implemented tools: 3 <em>(level and complexity of the implemented tools, i.e., the amount of programming work)</em></p></li>
+<li><p>Functionality of the code: 1 <em>(is your individual contribution running and doing what it is supposed to do)</em></p></li>
+<li><p>Tests: 2 <em>(tests for individual contributions)</em></p></li>
+<li><p>Documentation: 2 <em>(Individual contributions’ docstrings and comments)</em></p></li>
+<li><p>Programming style: 1 <em>(compliance to PEP 8)</em></p></li>
+</ul>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>I will try and test the code (using <code class="docutils literal notranslate"><span class="pre">pytest</span></code>) on my computer - any new data or library that is necessary should be documented in the code, or in the command line utility documentation!</p>
+</div>
+<section id="the-era5vis-package">
+<h2>The ERA5vis package<a class="headerlink" href="#the-era5vis-package" title="Link to this heading">#</a></h2>
+<p>I have put together a small package called <strong>ERA5vis</strong>. Its structure is based on the <a class="reference external" href="https://github.com/fmaussion/scispack">template package</a> and the <a class="reference external" href="https://github.com/fmaussion/climvis">ClimVis package</a> written by Fabien Maussion.</p>
+<p><strong>Download the zipped package from <a class="reference external" href="https://github.com/manuelalehner/era5vis/archive/main.zip">here</a> and extract it. Read the README and the package requirements first.</strong></p>
+<p><strong>Now install the package in development mode:</strong></p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>pip install -e .
+</pre></div>
+</div>
+<p><strong>Try the command line interface (<code class="docutils literal notranslate"><span class="pre">era5vis_modellevel</span> <span class="pre">-h</span></code>) from a terminal. Now explore <code class="docutils literal notranslate"><span class="pre">setup.py</span></code>: can you find the line that makes the command available from the terminal? Where is the code that is being executed when you call <code class="docutils literal notranslate"><span class="pre">era5vis_modellevel</span></code>?</strong></p>
+<p><strong>Familiarize yourself with the tool. Can you understand what the role of each function is?</strong></p>
+<p><strong>Can you run the tests successfully? Probably not. Somewhere in <code class="docutils literal notranslate"><span class="pre">cfg.py</span></code>, a hard-coded path is pointing to a directory that does not exist on your system.</strong></p>
+<p>You can download an example ERA5 dataset from our OLAT course (folder Semester Project/data). This is the same dataset that we have already used for an earlier assignment.</p>
+<p>Make sure you are able to run the command succesfully before moving on. For example, <code class="docutils literal notranslate"><span class="pre">era5vis_modellevel</span> <span class="pre">-p</span> <span class="pre">z</span> <span class="pre">-lvl</span> <span class="pre">500</span></code> should work fine and display a page in your browser.</p>
+</section>
+<section id="guided-exercise-make-the-package-more-robust">
+<h2>Guided exercise: make the package more robust<a class="headerlink" href="#guided-exercise-make-the-package-more-robust" title="Link to this heading">#</a></h2>
+<p>Here are two smaller tasks to get you started. Each of you should try to complete these exercises to familiarize with the package before you start the joint group project.</p>
+<ul>
+<li><p>The package currently contains no check whether the user-specified variable, model level, time stamp actually exist in the data file. A function definition line has alrady been created in <code class="docutils literal notranslate"><span class="pre">era5.py</span></code> (function <code class="docutils literal notranslate"><span class="pre">check_data_availability</span></code>) and a call to this function has already been added to function <code class="docutils literal notranslate"><span class="pre">core.write_html</span></code>. Write the function code to check if variable, model level, and time stamp are in the data file and if not raise an exception.</p></li>
+<li><p>Add a check to the code to make sure that the data file specified in <code class="docutils literal notranslate"><span class="pre">cfg.py</span></code> actually exists. If the data file does not exist, print the following message and exit the program:</p>
+<p><code class="docutils literal notranslate"><span class="pre">The</span> <span class="pre">specified</span> <span class="pre">data</span> <span class="pre">file</span> <span class="pre">does</span> <span class="pre">not</span> <span class="pre">exist.</span> <span class="pre">Please</span> <span class="pre">set</span> <span class="pre">a</span> <span class="pre">valid</span> <span class="pre">path</span> <span class="pre">in</span> <span class="pre">cfg.py.</span></code></p>
+</li>
+</ul>
+</section>
+<section id="project-make-the-package-better">
+<h2>Project: make the package better<a class="headerlink" href="#project-make-the-package-better" title="Link to this heading">#</a></h2>
+<p>Now you should be ready to contribute to the package! <strong>As a group, add at least N+1 simple functionalities</strong> to it, where N is your group size. This functionality can be anything you want, as long as it makes you write some code.</p>
+<p>Here are some ideas:</p>
+<ul class="simple">
+<li><p>You could add a new command-line tool to plot vertical cross sections.</p></li>
+<li><p>You could extend the existing command-line tool to cross sections in general depending on the user input, i.e., including vertical cross sections (you may want to rename the tool in this case).</p></li>
+<li><p>You could add a command-line tool to plot time series or vertical profiles.</p></li>
+<li><p>You could add the possibility to plot variables that have to be first calculated from fields within the dataset (e.g., wind speed).</p></li>
+<li><p>You could add the possibility to interpolate to model levels that are not in the data file.</p></li>
+<li><p>You could add an API data download option (<a class="reference external" href="https://cds.climate.copernicus.eu/how-to-api">Climate Data Store Api</a>).</p></li>
+<li><p><strong>Come up with your own ideas that interest you</strong>!</p></li>
+</ul>
+<p>Depending on the functionalities you are planning to add, you may want to download additional data. ERA5 data are available via the <a class="reference external" href="https://cds.climate.copernicus.eu/datasets">Climate Data Store</a>, including the <a class="reference external" href="https://cds.climate.copernicus.eu/datasets/reanalysis-era5-pressure-levels?tab=overview">hourly data on pressure levels</a> that we are using here (you can, however, also use other ERA5 datasets if you like). To download data, you need to create an account.</p>
+</section>
+<section id="expectations">
+<h2>Expectations<a class="headerlink" href="#expectations" title="Link to this heading">#</a></h2>
+<p><strong>Every member of the group should add one functionality, including tests for the new functionality.</strong> It should be evident from the code (e.g., docstrings) who wrote which part of the code. Choose and distribute the tasks according to your respective programming skills. There is no minimum on the number of lines of code you should write, because producing many lines of code is <strong>not</strong> a measure of quality. The list of possible topics should help you decide on what to code, but aside from that here is a vague rule of thumb: if you coded 10 lines of code (without comments), it is probably not enough (unless they are very clever lines of code). If you coded 1000 lines of code, it is probably too much.</p>
+<p>By this time, I have a relatively good feeling for your programming skills and I do not want to see code that was clearly not written by you but rather by ChatGPT or your colleagues. The goal is that you get better at programming during the project, regardless of your starting level. Try to find a project you like, and convince me that you pushed your own programming limit a little bit and that you learned something in the process. So it is okay to select an easy task, as long as you write something on your own, and write good code. The difficulty of the task will, however, influence the grade in addition to the quality of the code and the tests. If you pick an “easy” task, you could also pick two or three tasks instead of just one.</p>
+<p><strong>In addition, you should add one joint functionality to which all of the group members contribute.</strong> Again, don’t forget about the tests.</p>
+<p><strong>Make sure to combine your individual contributions so that the final package is coherent.</strong></p>
+<p><strong>In addition to the joint package, each group member needs to write a short narrative self-report (a few lines per point) addressing the following points:</strong></p>
+<ul class="simple">
+<li><p>What task was assigned to you when you started?</p></li>
+<li><p>What changed during the implementation, that is, what is the outcome of the project?</p></li>
+<li><p>What was the biggest challenge you faced in the implementation?</p></li>
+<li><p>What was the biggest challenge when merging everyone’s work into one package?</p></li>
+</ul>
+<p><strong>The narrative report can be submitted either in markdown format, simple text format, or a PDF, and will count towards your individual grade.</strong></p>
 </section>
 </section>
 
@@ -573,7 +614,7 @@ document.write(`
         },
         kernelOptions: {
             name: "python3",
-            path: "./unit_01"
+            path: "./unit_09"
         },
         predefinedOutput: true
     }
@@ -591,20 +632,20 @@ document.write(`
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="02b-Details-Linux.html"
+       href="01-Package-structure.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">For Linux/macOS users: what did <code class="docutils literal notranslate"><span class="pre">mambaforge</span></code> do to your terminal?</p>
+        <p class="prev-next-title">Structure of a Python package</p>
       </div>
     </a>
     <a class="right-next"
-       href="../unit_02/01-install-packages.html"
+       href="../unit_10/01-Documentation.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Installing Python packages</p>
+        <p class="prev-next-title">Documenting your code</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -624,12 +665,10 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-standard-command-line-interpreter">The standard command-line interpreter</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#running-scripts">Running scripts</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#running-a-python-script-from-the-terminal">Running a Python script from the terminal</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#take-home-points">Take home points</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#the-era5vis-package">The ERA5vis package</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#guided-exercise-make-the-package-more-robust">Guided exercise: make the package more robust</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project-make-the-package-better">Project: make the package better</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#expectations">Expectations</a></li>
 </ul>
   </nav></div>
 

@@ -61,7 +61,7 @@
     <script>DOCUMENTATION_OPTIONS.pagename = 'unit_09/01-Package-structure';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Documenting your code" href="../unit_10/01-Documentation.html" />
+    <link rel="next" title="Term project: the ERA5vis package" href="02-Programming-project.html" />
     <link rel="prev" title="Assignment #08: Exceptions and Testing" href="../unit_08/Assignment-08.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -250,6 +250,7 @@
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 09 - Python Packages and Semester project</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Structure of a Python package</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02-Programming-project.html">Term project: the ERA5vis package</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Unit 10 - Code documentation</span></p>
 <ul class="nav bd-sidenav">
@@ -781,7 +782,7 @@ detected by pytest.</p>
 </pre></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">.</span></code> command will look for a <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file <strong>in the current folder</strong> (this is why the dot <code class="docutils literal notranslate"><span class="pre">.</span></code> is used) and if found, use it to determine the package’s name and other installation options. The <code class="docutils literal notranslate"><span class="pre">-e</span></code> optional argument installs the package in “editable” or “development” mode. In simple terms, this option will create a <a class="reference external" href="https://en.wikipedia.org/wiki/Symbolic_link">symbolic link</a> to the package directory instead of copying the files. Therefore, any changes to the code will always be available the next time you open a new Python interpreter.</p>
-<p>If we perform an editable installation, we also need another file in our directory called <a class="reference external" href="https://packaging.python.org/en/latest/guides/writing-pyproject-toml/"><code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code></a>. When used together with a <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file, it only needs to specify that we are using <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> to build the project. In our <a class="reference internal" href="#./02-Programming-project"><span class="xref myst">semester project</span></a>, we will make use of such a <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file.</p>
+<p>If we perform an editable installation, we also need another file in our directory called <a class="reference external" href="https://packaging.python.org/en/latest/guides/writing-pyproject-toml/"><code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code></a>. When used together with a <code class="docutils literal notranslate"><span class="pre">setup.py</span></code> file, it only needs to specify that we are using <code class="docutils literal notranslate"><span class="pre">setuptools</span></code> to build the project. In our <a class="reference internal" href="02-Programming-project.html"><span class="doc std std-doc">semester project</span></a>, we will make use of such a <code class="docutils literal notranslate"><span class="pre">pyproject.toml</span></code> file.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.</span></code> is the recommended way to install any local package, in pip or in conda environments. On computers for which you do not have the super-user permissions, use <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">--user</span> <span class="pre">-e</span> <span class="pre">.</span></code></p>
@@ -850,11 +851,11 @@ detected by pytest.</p>
       </div>
     </a>
     <a class="right-next"
-       href="../unit_10/01-Documentation.html"
+       href="02-Programming-project.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Documenting your code</p>
+        <p class="prev-next-title">Term project: the ERA5vis package</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>

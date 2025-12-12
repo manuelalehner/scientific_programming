@@ -62,7 +62,7 @@ parts:
 - caption: Unit 09 - Python Packages and Semester project
   chapters:
   - file: unit_09/01-Package-structure
-  #    - file: unit_09/02-Programming-project
+  - file: unit_09/02-Programming-project
 - caption: Unit 10 - Code documentation
   chapters:
   - file: unit_10/01-Documentation
