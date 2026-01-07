@@ -66,10 +66,10 @@ parts:
 - caption: Unit 10 - Code documentation
   chapters:
   - file: unit_10/01-Documentation
-  #  - caption: Unit 11 - Object Oriented Programming I
-  #    chapters:
-  #    - file: unit_11/01-OOP-Part-1
-  #    - file: unit_11/Assignment-11
+- caption: Unit 11 - Object Oriented Programming I
+  chapters:
+  - file: unit_11/01-OOP-Part-1
+  - file: unit_11/Assignment-11
   #  - caption: Unit 12 - Object Oriented Programming II
   #    chapters:
   #    - file: unit_12/01-OOP-Part-2
