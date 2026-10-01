@@ -38,7 +38,7 @@ The class follows the [flipped classroom](https://en.wikipedia.org/wiki/Flipped_
 
 **Each week of the semester is organized as follows**:
 - On Monday after class, you will receive the lecture notes for the following week (materials to read, a quiz, and the programming assignments). You study the materials until Monday and answer the quiz questions. The quizzes are intended for you to see if you have understood the new material correctly. 
-- On Monday (08:15-09:00), we meet and (mostly) discuss the assignment solutions from the previous week (assignments are mandatory but not graded, see "Grading" below) and to discuss the quiz. The discussion will be based on the short online quizzes and on the questions you bring to the classroom. 
+- On Monday (08:15-09:00), we meet and (mostly) discuss the assignment solutions from the previous week (one assignment presentation is mandatory but not graded, see "Grading" below) and to discuss the quiz. The discussion will be based on the short online quizzes and on the questions you bring to the classroom. 
 - On Thursday (08:15-10:00), we meet to work on exercises and the assignments. 
 
 There may be some deviations from the above schedule because of public holidays and to better accommodate some of the course content.
