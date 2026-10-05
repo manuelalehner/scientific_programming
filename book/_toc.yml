@@ -8,3 +8,16 @@ parts:
   chapters:
   - file: intro/syllabus
   - file: intro/resources
+- caption: Unit 01 - Getting started
+  chapters:
+  - file: unit_01/01-Installation
+    sections:
+    - file: unit_01/01a-Details-Windows
+    - file: unit_01/01b-Details-Linux
+  - file: unit_01/02-First-Script
+  - file: unit_01/03-Install-Packages
+  - file: unit_01/04-Development-Environments
+- caption: Unit 02 - Python basics
+  chapters:
+  - file: unit_02/01-Language-Fundamentals
+  - file: unit_02/02-String-Formatting
