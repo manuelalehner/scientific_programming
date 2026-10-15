@@ -21,6 +21,7 @@ parts:
   chapters:
   - file: unit_02/01-Language-Fundamentals
   - file: unit_02/02-String-Formatting
+  - file: unit_02/03-Git-Positron
   - file: unit_02/Assignment-02
 - caption: Unit 03 - Variables scopes, modules, and file paths
   chapters:
