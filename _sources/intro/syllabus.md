@@ -78,7 +78,7 @@ This is a tentative schedule, which may change slightly during the semester.
 - Week 05 (Thu 05 Nov) - *Assignment 04*, Numpy arrays and the scientific python stack (pandas, matplotlib)
 - Week 06 (Mon 09/Thu 12 Nov) - *Assignment 05*, Programming style and AI
 - Week 07 (Mon 16/Thu 19 Nov) - *Assignment 06*, *Revision*
-- Week 08 (Mon 23/Thu 26 Nov) - Code documentation, **Mid-term exam (26 Nov)**
+- Week 08 (Mon 23/Thu 26 Nov) - **Mid-term exam (23 Nov)**, Code documentation
 - Week 09 (Mon 30 Nov/Thu 03 Dec) - Code testing
 - Week 10 (Mon 07/Thu 10 Dec) - *Assignment 08*, Python packages
 - Week 11 (Mon 14/Thu 17 Dec) - *Assignment 09*, Group Project
