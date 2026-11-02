@@ -37,3 +37,4 @@ parts:
   chapters:
   - file: unit_05/01-Numpy-ndarrays
   - file: unit_05/02-Scientific-Python
+  - file: unit_05/Assignment-05

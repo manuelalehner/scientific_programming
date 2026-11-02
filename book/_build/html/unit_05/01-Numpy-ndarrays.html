@@ -210,6 +210,7 @@
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">Arrays in NumPy: indexing, ufuncs, broadcasting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02-Scientific-Python.html">The scientific Python stack</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Assignment-05.html">Assignment #05</a></li>
 </ul>
 
     </div>
@@ -751,7 +752,7 @@ The same is true for the “delete” function in your operating system. Even af
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>246 ns ± 9.37 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>254 ns ± 2.55 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -763,7 +764,7 @@ The same is true for the “delete” function in your operating system. Even af
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.7 μs ± 11.6 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.69 μs ± 4.81 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -968,10 +969,10 @@ The same is true for the “delete” function in your operating system. Even af
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.92 μs ± 3.31 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.92 μs ± 5.52 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.49 μs ± 4.57 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.47 μs ± 8.56 ns per loop (mean ± std. dev. of 7 runs, 100,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1133,7 +1134,7 @@ The same is true for the “delete” function in your operating system. Even af
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>125 ns ± 0.829 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>124 ns ± 0.762 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1145,7 +1146,7 @@ The same is true for the “delete” function in your operating system. Even af
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>104 ns ± 0.39 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>105 ns ± 1.05 ns per loop (mean ± std. dev. of 7 runs, 10,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1411,7 +1412,7 @@ The same is true for the “delete” function in your operating system. Even af
 <section id="universal-functions">
 <h2>Universal functions<a class="headerlink" href="#universal-functions" title="Link to this heading">#</a></h2>
 <p>A universal function (or <code class="docutils literal notranslate"><span class="pre">ufunc</span></code> for short) is a function that operates on <code class="docutils literal notranslate"><span class="pre">ndarrays</span></code> in an element-by-element fashion. <code class="docutils literal notranslate"><span class="pre">ufuncs</span></code> are a core element of the NumPy library, and you already used them without noticing: arithmetic operations like multiplication or addition are <code class="docutils literal notranslate"><span class="pre">ufuncs</span></code>, and trigonometric operations like <code class="docutils literal notranslate"><span class="pre">np.sin</span></code> or <code class="docutils literal notranslate"><span class="pre">np.cos</span></code> are <code class="docutils literal notranslate"><span class="pre">ufuncs</span></code> as well.</p>
-<p>NumPy <code class="docutils literal notranslate"><span class="pre">ufuncs</span></code> are coded in C, which means that they can apply repeated operations on array elements much faster than their Python equivalent. NumPy users use <code class="docutils literal notranslate"><span class="pre">ufuncs</span></code> to <strong>vectorize</strong> their code. The <a class="reference internal" href="#../unit_05/Assignment-05.ipynb"><span class="xref myst">Monte-Carlo estimation of <span class="math notranslate nohighlight">\(\pi\)</span></span></a> exercise is an example of such a vectorization process. There are two possible solutions to the problem of estimating <span class="math notranslate nohighlight">\(\pi\)</span>: one of them contains a for-loop, while the vectorized solution did not require any loop.</p>
+<p>NumPy <code class="docutils literal notranslate"><span class="pre">ufuncs</span></code> are coded in C, which means that they can apply repeated operations on array elements much faster than their Python equivalent. NumPy users use <code class="docutils literal notranslate"><span class="pre">ufuncs</span></code> to <strong>vectorize</strong> their code. The <a class="reference internal" href="Assignment-05.html"><span class="std std-doc">Monte-Carlo estimation of <span class="math notranslate nohighlight">\(\pi\)</span></span></a> exercise is an example of such a vectorization process. There are two possible solutions to the problem of estimating <span class="math notranslate nohighlight">\(\pi\)</span>: one of them contains a for-loop, while the vectorized solution did not require any loop.</p>
 <p>Note that some <code class="docutils literal notranslate"><span class="pre">ufuncs</span></code> are hidden from you: calling <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">+</span> <span class="pre">b</span></code> on <code class="docutils literal notranslate"><span class="pre">ndarrays</span></code> is actually calling <code class="docutils literal notranslate"><span class="pre">np.add</span></code> internally. How NumPy can mess around with the Python syntax in this way is going to be the topic of another lecture.</p>
 <p>The NumPy documentation lists <a class="reference external" href="https://numpy.org/doc/stable/reference/ufuncs.html#available-ufuncs">all available ufuncs</a> to date. Have a quick look at them, just to see how many there are!</p>
 </section>
