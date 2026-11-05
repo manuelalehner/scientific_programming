@@ -38,3 +38,7 @@ parts:
   - file: unit_05/01-Numpy-ndarrays
   - file: unit_05/02-Scientific-Python
   - file: unit_05/Assignment-05
+- caption: Unit 06 - Good practice, getting help, and AI
+  chapters:
+  - file: unit_06/01-Good-practices
+  - file: unit_06/02-Tips-and-Tricks
