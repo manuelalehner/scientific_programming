@@ -43,3 +43,6 @@ parts:
   - file: unit_06/01-Good-practices
   - file: unit_06/02-Tips-and-Tricks
   - file: unit_06/Assignment-06
+- caption: Intermezzo
+  chapters:
+  - file: intermezzo/01-ERA5_xarray
