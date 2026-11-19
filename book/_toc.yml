@@ -47,3 +47,6 @@ parts:
   chapters:
   - file: intermezzo/01-ERA5_xarray
   - file: intermezzo/02-Revision_Midterm
+- caption: Unit 07 - Code documentation
+  chapters:
+  - file: unit_07/01-Documentation
