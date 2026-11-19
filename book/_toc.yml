@@ -46,3 +46,4 @@ parts:
 - caption: Intermezzo
   chapters:
   - file: intermezzo/01-ERA5_xarray
+  - file: intermezzo/02-Revision_Midterm
