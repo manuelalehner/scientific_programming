@@ -50,3 +50,7 @@ parts:
 - caption: Unit 07 - Code documentation
   chapters:
   - file: unit_07/01-Documentation
+- caption: Unit 08 - Testing
+  chapters:
+  - file: unit_08/01-Exceptions
+  - file: unit_08/02-Testing
